@@ -1,0 +1,462 @@
+[ 2017-05-26T02:24:04+08:00 ] ::1 /shopping-system/Public/Uploads/Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000897s ]
+
+[ 2017-05-26T02:24:04+08:00 ] ::1 /shopping-system/Public/Uploads/Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Public/Uploads/Goods/2017-05-26/thumb_sm_592706df9d6ed.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001963s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Public/Uploads/Goods/2017-05-26/thumb_sm_592704504dba5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Public/Uploads/Goods/2017-05-26/thumb_sm_59272091b460e.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Public/Uploads/Goods/2017-05-26/thumb_sm_59270414eb2bd.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000829s ]
+
+[ 2017-05-26T02:24:16+08:00 ] ::1 /shopping-system/Public/Uploads/Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+
+[ 2017-05-26T02:31:38+08:00 ] ::1 /shopping-system/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+ERR: 无法加载控制器:Shopping-system
+
+[ 2017-05-26T02:31:45+08:00 ] ::1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+
+[ 2017-05-26T02:31:46+08:00 ] ::1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001083s ]
+
+[ 2017-05-26T02:31:46+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000987s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001069s ]
+
+[ 2017-05-26T02:31:57+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+
+[ 2017-05-26T02:31:57+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2017-05-26T02:31:57+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001304s ]
+
+[ 2017-05-26T02:32:17+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+
+[ 2017-05-26T02:32:17+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001056s ]
+
+[ 2017-05-26T02:32:17+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001115s ]
+
+[ 2017-05-26T02:32:17+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001329s ]
+
+[ 2017-05-26T02:32:17+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000441s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002485s ]
+
+[ 2017-05-26T02:33:00+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+
+[ 2017-05-26T02:33:00+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+
+[ 2017-05-26T02:33:00+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+
+[ 2017-05-26T02:33:00+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+
+[ 2017-05-26T02:33:00+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+
+[ 2017-05-26T02:36:51+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+
+[ 2017-05-26T02:36:51+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+
+[ 2017-05-26T02:36:51+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-05-26T02:36:52+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005352s ]
+
+[ 2017-05-26T02:36:52+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001554s ]
+
+[ 2017-05-26T02:41:41+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+
+[ 2017-05-26T02:41:41+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+
+[ 2017-05-26T02:41:41+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001026s ]
+
+[ 2017-05-26T02:41:41+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+
+[ 2017-05-26T02:41:41+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002504s ]
+
+[ 2017-05-26T02:42:46+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+
+[ 2017-05-26T02:42:46+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+
+[ 2017-05-26T02:42:46+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+
+[ 2017-05-26T02:42:46+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+
+[ 2017-05-26T02:42:46+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006454s ]
+
+[ 2017-05-26T02:44:01+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001241s ]
+
+[ 2017-05-26T02:44:01+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+
+[ 2017-05-26T02:44:01+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+
+[ 2017-05-26T02:44:01+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004204s ]
+
+[ 2017-05-26T02:44:01+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000175s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002214s ]
+
+[ 2017-05-26T02:44:33+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+
+[ 2017-05-26T02:44:33+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+
+[ 2017-05-26T02:44:33+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+
+[ 2017-05-26T02:44:33+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001531s ]
+
+[ 2017-05-26T02:44:33+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-05-26T02:44:45+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001492s ]
+
+[ 2017-05-26T02:44:45+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000868s ]
+
+[ 2017-05-26T02:44:45+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001089s ]
+
+[ 2017-05-26T02:44:45+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001593s ]
+
+[ 2017-05-26T02:44:45+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003820s ]
+
+[ 2017-05-26T02:45:53+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+
+[ 2017-05-26T02:45:53+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002649s ]
+
+[ 2017-05-26T02:45:53+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+
+[ 2017-05-26T02:45:53+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T02:45:53+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001789s ]
+
+[ 2017-05-26T02:46:03+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+
+[ 2017-05-26T02:46:03+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+
+[ 2017-05-26T02:46:03+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+
+[ 2017-05-26T02:46:03+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002198s ]
+
+[ 2017-05-26T02:46:03+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001034s ]
+
+[ 2017-05-26T02:52:35+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001893s ]
+
+[ 2017-05-26T02:52:35+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001421s ]
+
+[ 2017-05-26T02:52:35+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001139s ]
+
+[ 2017-05-26T02:52:35+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001344s ]
+
+[ 2017-05-26T02:52:35+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+
+[ 2017-05-26T02:52:53+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+
+[ 2017-05-26T02:52:53+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+
+[ 2017-05-26T02:52:53+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-05-26T02:52:53+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+
+[ 2017-05-26T02:52:53+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001103s ]
+
+[ 2017-05-26T02:54:42+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+
+[ 2017-05-26T02:54:42+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+
+[ 2017-05-26T02:54:42+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bf2e5d0a.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+
+[ 2017-05-26T02:54:42+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+
+[ 2017-05-26T02:54:43+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_5620462741c29.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+
+[ 2017-05-26T02:54:43+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_562068ae6c614.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+
+[ 2017-05-26T02:54:43+08:00 ] 127.0.0.1 /Goods/2015-10-19/thumb_3_56243bebac574.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+
+[ 2017-05-26T02:54:43+08:00 ] 127.0.0.1 /Goods/2015-10-16/thumb_3_56204695240b5.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.024979s ]
+

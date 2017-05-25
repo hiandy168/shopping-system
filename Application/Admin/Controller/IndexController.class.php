@@ -1,8 +1,8 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class IndexController extends CommenController {
     public function index(){
-    	echo "hello world!";
+    	$this->display();
     }
 }
