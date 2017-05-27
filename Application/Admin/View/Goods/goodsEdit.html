@@ -5,6 +5,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
 <link href="__ADMIN__/css/main.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
+<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Plugins/umeditor/third-party/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Plugins/umeditor/third-party/template.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/umeditor/umeditor.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Plugins/umeditor/lang/zh-cn/zh-cn.js"></script>
 </head>
 <body>
 <h1>
@@ -22,17 +30,17 @@
         </p>
     </div>
     <div id="tabbody-div">
-        <form enctype="multipart/form-data" action="" method="post">
+        <form enctype="multipart/form-data" method="post" id="goodsEdit">
             <table width="90%" id="general-table" align="center">
                 <tr>
                     <td class="label">商品名称：</td>
-                    <td><input type="text" name="goods_name" value="<{$row.goods_name}>"size="30" />
+                    <td><input type="text" name="goods_name" value="{$goods_detail.goods_name}" size="30" id="goods_name"/>
                     <span class="require-field">*</span></td>
                 </tr>
                 <tr>
                     <td class="label">商品货号： </td>
                     <td>
-                        <input type="text" name="goods_sn" value="<{$row.goods_sn}>" size="20"/>
+                        <input type="text" name="goods_sn" value="{$goods_detail.goods_sn}" size="20" id="goods_sn"/>
                         <span id="goods_sn_notice"></span><br />
                         <span class="notice-span"id="noticeGoodsSN">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
                     </td>
@@ -40,10 +48,10 @@
                 <tr>
                     <td class="label">商品分类：</td>
                     <td>
-                        <select name="cat_id">
-                            <option value="0">请选择...</option>
-                            <foreach name="cat_list" item="cat_val">
-                            <option value="<{$cat_val.cat_id}>" <if condition="$cat_val['cat_id'] eq $row['cat_id']"> selected="true"</if> ><{$cat_val.lev|str_repeat='&nbsp;&nbsp;',###}><{$cat_val.cat_name}></option>
+                        <select name="cat_id" id="cat_id">
+                            <option value="0">请选择........</option>
+                            <foreach name="cat_list" item="val">
+                                <option value="{$val.id}">{$val.level|str_repeat='&nbsp;&nbsp;',###}-{$val.cat_name}</option>
                             </foreach>
                         </select>
                         <span class="require-field">*</span>
@@ -52,10 +60,10 @@
                 <tr>
                     <td class="label">商品品牌：</td>
                     <td>
-                        <select name="brand_id">
+                        <select name="brand_id" id="brand_id">
                             <option value="0">请选择...</option>
-                            <foreach name="brand_list" item="brand_val">
-                            <option value="<{$brand_val.brand_id}>"><{$brand_val.brand_name}></option>
+                            <foreach name="brand_list" item="val">
+                                <option value="{$val.id}">{$val.brand_name}</option>
                             </foreach>
                         </select>
                     </td>
@@ -63,65 +71,130 @@
                 <tr>
                     <td class="label">本店售价：</td>
                     <td>
-                        <input type="text" name="shop_price" value="<{$row.shop_price}>" size="20"/>
+                        <input type="text" name="shop_price" value="{$goods_detail.shop_price}" size="20" id="shop_price"/>
                         <span class="require-field">*</span>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">商品数量：</td>
                     <td>
-                        <input type="text" name="goods_number" size="8" value="<{$row.goods_number}>"/>
+                        <input type="text" name="goods_number" size="8" value="{$goods_detail.goods_number}" id="goods_number"/>
                     </td>
                 </tr>
+                <tr>
                     <td class="label">是否上架：</td>
                     <td>
-                        <input type="radio" name="is_onsale" value="1" <if condition="$val.is_onsale eq 1"> checked="true" </if> /> 是
-                        <input type="radio" name="is_onsale" value="0" <if condition="$val.is_onsale eq 0"> checked="true" </if> /> 否
+                        <input type="radio" name="is_on_sale" value="是" id='is_on_sale_1'/> 是
+                        <input type="radio" name="is_on_sale" value="否" id='is_on_sale_0'/> 否
                     </td>
                 </tr>
                 <tr>
                     <td class="label">加入推荐：</td>
                     <td>
-                        <input type="checkbox" name="is_best" value="1" <if condition="$row.is_best eq  1"> checked="true" </if> /> 精品 
-                        <input type="checkbox" name="is_new" value="1" <if condition="$row.is_new eq  1"> checked="true" </if> /> 新品 
-                        <input type="checkbox" name="is_hot" value="1" <if condition="$row.is_hot eq  1"> checked="true" </if> /> 热销
+                        <input type="checkbox" name="is_best" value="1" id="is_best"/> 精品 
+                        <input type="checkbox" name="is_new" value="1" id="is_new"/> 新品 
+                        <input type="checkbox" name="is_hot" value="1" id="is_hot"/> 热销
                     </td>
                 </tr>
                 <tr>
                     <td class="label">推荐排序：</td>
                     <td>
-                        <input type="text" name="sort_order" size="5" value="<{$val.sort_order}>"/>
+                        <input type="text" name="sort_num" size="5" value="{$goods_detail.sort_num}"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">市场售价：</td>
                     <td>
-                        <input type="text" name="market_price" value="<{$row.market_price}>" size="20" />
+                        <input type="text" name="market_price" value="{$goods_detail.market_price}" size="20" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">商品关键词：</td>
+                    <td class="label">商品LOGO：</td>
                     <td>
-                        <input type="text" name="keywords" value="<{$row.keywords}>" size="40" /> 用空格分隔
+                        <span>当前logo</span>
+                        <img src="/{$goods_detail.sm_logo}"/><br/>
+                        <input type="file" name="logo" size="35" id="logo"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="label">商品简单描述：</td>
                     <td>
-                        <textarea name="goods_brief" cols="40" rows="3"><{$row.goods_brief}></textarea>
+                        <textarea id="goods_desc" name="goods_desc" cols="40" rows="3">{$goods_detail.goods_desc}</textarea>
                     </td>
                 </tr>
             </table>
             <div class="button-div">
-                <input type="submit" value=" 确定 " class="button"/>
-                <input type="reset" value=" 重置 " class="button" />
+                <input type="hidden" name="id" value="{$goods_detail.id}"/>
+                <input type="submit" value=" 确 定 " class="button"/>
+                <input type="reset" value=" 重 置 " class="button" />
             </div>
         </form>
     </div>
 </div>
-
-<div id="footer">
-共执行 9 个查询，用时 0.025161 秒，Gzip 已禁用，内存占用 3.258 MB<br />
-版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。</div>
+<div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
+<script>
+    var xhr;
+    function loadXMLDoc(data,url,cfunc){
+        if(window.XMLHttpRequest){
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xhr=new XMLHttpRequest();
+        }else{
+            // code for IE6, IE5
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.onreadystatechange=cfunc;
+        xhr.open("post",url,true);
+        xhr.send(data);
+    }
+    var form = document.getElementById('goodsEdit');
+    form.onsubmit = function(evt){
+        //收集表单域信息
+        var data = new FormData(this);
+        loadXMLDoc(data,"__ACTION__",function(){
+            if(xhr.readyState!=4){
+                //layer加载层
+                layer.load(2);
+                // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+            }
+            if(xhr.readyState==4 && xhr.status==200){
+                layer.closeAll('loading');
+                var object=JSON.parse(xhr.responseText,function(key,value){
+                    if (value=='success') {
+                        layer.alert('商品信息更新成功！',function(){
+                            window.location.href = "__CONTROLLER__/goodsList/from/goodsEdit";
+                            icon: 6;
+                        });
+                    }else if(key!=''){
+                        layer.tips(value, '#'+key, {tipsMore: true});
+                    }
+                });
+            }
+        });
+        evt.preventDefault();
+    }
+    UM.getEditor('goods_desc',{
+        initialFrameWidth:'100%', //初始化编辑器宽度
+        initialFrameHeight:150  //初始化编辑器高度
+    });
+    //渲染默认被选择的单选框和复选框
+    window.onload=function(){
+        if("{$goods_detail.is_on_sale}"=='是'){
+            $('#is_on_sale_1').attr('checked','true');
+        }else if("{$goods_detail.is_on_sale}"=='否'){
+            $('#is_on_sale_0').attr('checked','true');
+        }
+        if("{$goods_detail.is_best}"=='是'){
+            $('#is_best').attr('checked','true');
+        }
+        if("{$goods_detail.is_new}"=='是'){
+            $('#is_new').attr('checked','true');
+        }
+        if("{$goods_detail.is_hot}"=='是'){
+            $('#is_hot').attr('checked','true');
+        }
+        $('#brand_id').val("{$goods_detail.brand_id}");
+        $('#cat_id').val("{$goods_detail.cat_id}");
+    }
+</script>
 </html>

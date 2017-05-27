@@ -4,19 +4,19 @@
 <title>ECSHOP 管理中心 - 商品品牌 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/shopping-system/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
-<link href="/shopping-system/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/shopping-system/Admin/Brand/brandAdd.html">添加新品牌</a></span>
-    <span class="action-span1"><a href="/shopping-system/Admin">ECSHOP 管理中心</a></span>
+    <span class="action-span"><a href="/Admin/Brand/brandAdd.html">添加新品牌</a></span>
+    <span class="action-span1"><a href="/Admin">ECSHOP 管理中心</a></span>
     <span id="search_id" class="action-span1"> - 商品品牌 </span>
     <div style="clear:both"></div>
 </h1>
 <div class="form-div">
     <form action="" name="searchForm">
-    <img src="/shopping-system/Public/Admin/images/icon_search.gif" width="26" height="22" border="0" alt="search" />
+    <img src="/Public/Admin/images/icon_search.gif" width="26" height="22" border="0" alt="search" />
     <input type="text" name="brand_name" size="15" />
     <input type="submit" value=" 搜索 " class="button" />
     </form>
@@ -26,28 +26,30 @@
         <table cellpadding="3" cellspacing="1">
             <tr>
                 <th>品牌名称</th>
+                <th>品牌logo</th>
                 <th>品牌网址</th>
                 <th>品牌描述</th>
                 <th>排序</th>
                 <th>是否显示</th>
                 <th>操作</th>
             </tr>
-            <tr>
-                <td class="first-cell">
-                    <span style="float:right"><a href="" target="_brank"><img src="" width="16" height="16" border="0" alt="品牌LOGO" /></a></span>
-                    <span></span>
-                </td>
-                <td align="center">
-                    <a href="<<?php echo ($val["site_url"]); ?>>" target="_brank"></a>
-                </td>
-                <td align="center">公司网站：</td>
-                <td align="center"><span></span></td>
-                <td align="center"><img src="" /></td>
-                <td align="center">
-                <a href="#" title="编辑">编辑</a> |
-                <a href="#" title="编辑">移除</a> 
-                </td>
-            </tr>
+            <?php if(is_array($brand_list)): $i = 0; $__LIST__ = $brand_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><tr>
+                    <td><?php echo ($vol["brand_name"]); ?></td>
+                    <td class="first-cell">
+                        <span style="float:right"><a href="http://<?php echo ($vol["site_url"]); ?>" target="_brank"><img src="" width="16" height="16" border="0" alt="品牌LOGO" /></a></span>
+                        <span></span>
+                    </td>
+                    <td align="center">
+                        <a href="http://<?php echo ($vol["site_url"]); ?>" target="_brank"><?php echo ($vol["site_url"]); ?></a>
+                    </td>
+                    <td align="center"><?php echo ($vol["brand_desc"]); ?></td>
+                    <td align="center"><?php echo ($vol["sort_num"]); ?></td>
+                    <td align="center"><img src="" /></td>
+                    <td align="center">
+                    <a href="#" title="编辑">编辑</a> |
+                    <a href="#" title="编辑">移除</a> 
+                    </td>
+                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             <tr>
                 <td align="right" nowrap="true" colspan="6">
                     <div id="turn-page">

@@ -26,28 +26,32 @@
         <table cellpadding="3" cellspacing="1">
             <tr>
                 <th>品牌名称</th>
+                <th>品牌logo</th>
                 <th>品牌网址</th>
                 <th>品牌描述</th>
                 <th>排序</th>
                 <th>是否显示</th>
                 <th>操作</th>
             </tr>
-            <tr>
-                <td class="first-cell">
-                    <span style="float:right"><a href="" target="_brank"><img src="" width="16" height="16" border="0" alt="品牌LOGO" /></a></span>
-                    <span></span>
-                </td>
-                <td align="center">
-                    <a href="<{$val.site_url}>" target="_brank"></a>
-                </td>
-                <td align="center">公司网站：</td>
-                <td align="center"><span></span></td>
-                <td align="center"><img src="" /></td>
-                <td align="center">
-                <a href="#" title="编辑">编辑</a> |
-                <a href="#" title="编辑">移除</a> 
-                </td>
-            </tr>
+            <volist name="brand_list" id="vol">
+                <tr>
+                    <td>{$vol.brand_name}</td>
+                    <td class="first-cell">
+                        <span style="float:right"><a href="http://{$vol.site_url}" target="_brank"><img src="" width="16" height="16" border="0" alt="品牌LOGO" /></a></span>
+                        <span></span>
+                    </td>
+                    <td align="center">
+                        <a href="http://{$vol.site_url}" target="_brank">{$vol.site_url}</a>
+                    </td>
+                    <td align="center">{$vol.brand_desc}</td>
+                    <td align="center">{$vol.sort_num}</td>
+                    <td align="center"><img src="" /></td>
+                    <td align="center">
+                    <a href="#" title="编辑">编辑</a> |
+                    <a href="#" title="编辑">移除</a> 
+                    </td>
+                </tr>
+            </volist>
             <tr>
                 <td align="right" nowrap="true" colspan="6">
                     <div id="turn-page">

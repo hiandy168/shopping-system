@@ -5,13 +5,13 @@
 <title>ECSHOP 管理中心 - 商品分类 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/shopping-system/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
-<link href="/shopping-system/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/shopping-system/Admin/Category/categoryAdd">添加新分类</a></span>
-    <span class="action-span1"><a href="/shopping-system/Admin">ECSHOP 管理中心</a></span>
+    <span class="action-span"><a href="/Admin/Category/categoryAdd">添加新分类</a></span>
+    <span class="action-span1"><a href="/Admin">ECSHOP 管理中心</a></span>
     <span id="search_id" class="action-span1"> - 商品分类 </span>
     <div style="clear:both"></div>
 </h1>

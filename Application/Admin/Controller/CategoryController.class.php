@@ -7,5 +7,6 @@ class CategoryController extends CommenController {
 		$res = $catModel->where("is_show='是'")->select();
 		$cat_list = $catModel->getLevel($res,0,'id','parent_id','level');
 		echo json_encode($cat_list);
+		$this->display();
 	}
 }

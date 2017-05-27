@@ -74,7 +74,7 @@
         <input type="number" placeholder="价格下限" style="width:60px;text-align:center;" id="price_low" onkeyup="javascript:searchc(1)"/> —
         <input type="number" placeholder="价格上限" style="width:60px;text-align:center;" id="price_up" onkeyup="javascript:searchc(1)"/>
 
-        <input type="radio" value="" name="radio" class="price_order_by" id="price_natural"/>自然排序
+        <input type="radio" value="price_natural" name="radio" class="price_order_by" id="price_natural"/>默认排序
         <input type="radio" value="price_asc" name="radio" class="price_order_by" id="price_asc"/>升序
         <input type="radio" value="price_desc" name="radio" class="price_order_by" id="price_desc"/>降序
 
@@ -114,7 +114,7 @@
                 <th>操作</th>
             </tr>
             <volist name="goods_list" id="vol">
-            <tr>
+            <tr class="tron">
                 <td>{$i}</td>
                 <td>{$vol.goods_name}</td>
                 <td><img src="/{$vol.sm_logo}"/></td>
@@ -128,9 +128,9 @@
                 <td>{$vol.sort_num}</td>
                 <td>{$vol.goods_number}</td>
                 <td>
-                <a href="__CONTROLLER__/goodsView/id={$vol.id}" title="查看"><img src="__ADMIN__/images/icon_view.gif" width="16" height="16" border="0" /></a>
-                <a href="__CONTROLLER__/goodsEdit/id={$vol.id}" title="编辑"><img src="__ADMIN__/images/icon_edit.gif" width="16" height="16" border="0" /></a>
-                <a href="__CONTROLLER__/goodsTrash/id={$vol.id}" onclick="" title="回收站"><img src="__ADMIN__/images/icon_trash.gif" width="16" height="16" border="0" /></a></td>
+                <a href="__CONTROLLER__/goodsView/id/{$vol.id}" title="查看"><img src="__ADMIN__/images/icon_view.gif" width="16" height="16" border="0" /></a>
+                <a href="__CONTROLLER__/goodsEdit/id/{$vol.id}" title="编辑"><img src="__ADMIN__/images/icon_edit.gif" width="16" height="16" border="0" /></a>
+                <a href="javascript:trash_confirm({$vol.id})" title="回收站" id="goodsToTrash"><img src="__ADMIN__/images/icon_trash.gif" width="16" height="16" border="0" /></a></td>
             </tr>
             </volist>
         </table>
@@ -155,11 +155,11 @@
     <!-- 分页结束 -->
     </div>
 </form>
-
 <div id="footer">
 版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
 <script>
+//前期为原生js代码
 var cat_search = document.getElementById('cat_search');
 var brand_search = document.getElementById('brand_search');
 var type_search = document.getElementById('type_search');
@@ -176,8 +176,22 @@ var price_up = document.getElementById('price_up');
 var time_start = document.getElementById('time_start');
 var time_end = document.getElementById('time_end');
 var price_order_by = document.getElementsByClassName('price_order_by');
+//渲染鼠标选中的tr行背景颜色改变
+$(".tron").mouseover(function(){
+    $(this).find('td').css('backgroundColor','#ccc');
+});
+$(".tron").mouseout(function(){
+    $(this).find('td').css('backgroundColor','#fff');
+});
 var xhr;
+/**
+ * 用于查询数据的函数，页面所有连接调用此函数，根据不同的条件，调用ajax向服务器查询数据
+ * @param  int tar_page 目标页码，用于分页查询，不翻页默认都是传递1
+ */
 function searchc(tar_page){
+    if(tar_page==curt_page.value&&tar_page!=1){
+        layer.msg('这已经是最后一页了');return;
+    }
     if(parseInt(price_low.value) > parseInt(price_up.value)){
         layer.tips('请搞清楚上限和下限谁大！','#price_low',{tips:[1,'#0FA6D8']});return;
     }
@@ -188,17 +202,59 @@ function searchc(tar_page){
     data += time_end.value!==''?'/time_end/'+time_end.value:'';
     if (price_order_by[0].checked==false) {
         data += price_order_by[1].checked==true?'/price_order/'+price_order_by[1].value:'/price_order/'+price_order_by[2].value;
+    }else{
+        data += '/price_order/'+price_order_by[0].value;
     }
     loadXMLDoc("__ACTION__/"+data,function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
         if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
             var obj = JSON.parse(xhr.responseText);
             resetpageUrl(obj.pages);
             resetpageNum(curt_page,obj.pages.pageNum);
             curt_page.value = tar_page;
             resetdata(tableList,obj.goods_list);
+            if (obj.goods_list.length==0) {
+                layer.msg('啥也没查到！');return;
+            }
         }
     });
 }
+/**
+ * 将商品移至回收站时，调用此函数
+ * @param  int delete_id 回收商品的ID
+ */
+function deletec(delete_id){
+    loadXMLDoc("__CONTROLLER__/goodsToTrash/id/"+delete_id,function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('商品信息已移至回收站！',function(){
+                        window.location.href = "__CONTROLLER__/goodsList/from/goodsEdit";
+                        icon: 6;
+                    });
+                }else if(key!=''){
+                    layer.tips(value, '#'+key, {tipsMore: true});
+                }
+            });
+        }
+    });
+}
+/**
+ * 创建ajax对象，并向服务器发起请求
+ * @param  string url    请求的链接
+ * @param  mixed  cfunc  回调函数
+ */
 function loadXMLDoc(url,cfunc){
         if(window.XMLHttpRequest){
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -211,16 +267,37 @@ function loadXMLDoc(url,cfunc){
         xhr.open("get",url,true);
         xhr.send();
 }
+/**
+ * 页面加载完毕时，加载此函数
+ * 主要渲染之前标签的值
+ */
 window.onload=function(){
     //显示默认数据
     rowsNum.value = {$pages.rowsNum};
     price_order_by[0].checked = 'checked';
+    //如果传递了查询条件变量，说明是回收站后或编辑后的返回显示
+    if ({$search_condition}!=null) {
+        $('#cat_search').val("{$search_condition['cat_id']}");
+        $('#brand_search').val("{$search_condition['brand_id']}");
+        $('#type_search').val("{$search_condition['intro_type']}");
+        $('#sale_search').val("{$search_condition['is_on_sale']}");
+        $('#price_low').val("{$search_condition['price_low']}");
+        $('#price_up').val("{$search_condition['price_up']}");
+        $('#time_start').val("{$search_condition['time_start']}");
+        $('#time_end').val("{$search_condition['time_end']}");
+        $(".price_order_by[value={$search_condition['price_order']}]").attr("checked",true);
+    }
+
 }
-function resetpageUrl(obj){
-    prev.href="javascript:searchc("+obj.prev+")";
-    next.href="javascript:searchc("+obj.next+")";
-    pageNum.href="javascript:searchc("+obj.pageNum+")";
-    pageNum1.innerHTML="当前共有"+obj.pageNum+"页，当前为第";
+/**
+ * 重新生成分页的链接
+ * @param  array arr 获取的页码信息数组
+ */
+function resetpageUrl(arr){
+    prev.href="javascript:searchc("+arr.prev+")";
+    next.href="javascript:searchc("+arr.next+")";
+    pageNum.href="javascript:searchc("+arr.pageNum+")";
+    pageNum1.innerHTML="当前共有"+arr.pageNum+"页，当前为第";
 }
 /**
  * 用于重新生成跳转页码的select标签
@@ -240,6 +317,11 @@ function resetpageNum(tag_id,pageNum){
         tag_id.appendChild(option);
     }
 }
+/**
+ * 用于重新生成查询得到的数据
+ * @param  string tag_id    渲染数据的父标签id
+ * @param  array data_list  查询得到的数据
+ */
 function resetdata(tag_id,data_list){
     var n = tag_id.children[0].children.length;
     for(var i=1;i<n;i++){
@@ -254,7 +336,7 @@ function resetdata(tag_id,data_list){
         var img6 = document.createElement("img");
         var img7 = document.createElement("img");
         var img8 = document.createElement("img");
-        img1.src = "/"+data_list[k].sm_logo;
+        img1.src = '/'+data_list[k].sm_logo;
         img2.src = data_list[k].is_on_sale=='是'?"__ADMIN__/images/yes.gif":"__ADMIN__/images/no.gif";
         img3.src = data_list[k].is_best=='是'?"__ADMIN__/images/yes.gif":"__ADMIN__/images/no.gif";
         img4.src = data_list[k].is_new=='是'?"__ADMIN__/images/yes.gif":"__ADMIN__/images/no.gif";
@@ -266,6 +348,7 @@ function resetdata(tag_id,data_list){
         img7.width="16"; img7.height="16"; img7.border="0";
         img8.width="16"; img8.height="16"; img8.border="0";
         var tr = document.createElement("tr");
+        tr.class="tron";
         var td1 = document.createElement("td");
         td1.innerHTML = k+1;
         tr.appendChild(td1);
@@ -316,17 +399,18 @@ function resetdata(tag_id,data_list){
 
         var td12 = document.createElement("td");
             var a1 = document.createElement("a");
-            a1.title="编辑";a1.href="__CONTROLLER__/goodsView/id="+data_list[k].id;
+            a1.title="查看";a1.href="__CONTROLLER__/goodsView/id/"+data_list[k].id;
             a1.appendChild(img6);
             td12.appendChild(a1);
 
             var a2 = document.createElement("a");
-            a2.title="查看";a2.href="__CONTROLLER__/goodsEdit/id="+data_list[k].id;
+            a2.title="编辑";a2.href="__CONTROLLER__/goodsEdit/id/"+data_list[k].id;
             a2.appendChild(img7);
             td12.appendChild(a2);
 
             var a3 = document.createElement("a");
-            a3.title="回收站";a3.href="__CONTROLLER__/goodsTrash/id="+data_list[k].id;
+            a3.title="回收站";a3.href="javascript:trash_confirm("+data_list[k].id+")";
+            a3.id="goodsToTrash";
             a3.appendChild(img8);
             td12.appendChild(a3);
         tr.appendChild(td12);
@@ -337,5 +421,22 @@ function resetdata(tag_id,data_list){
 $.timepicker.setDefaults($.timepicker.regional['zh-CN']);
 $('#time_start').datetimepicker();
 $('#time_end').datetimepicker();
+/**
+ * 点击回收按钮时，调用此函数确认操作
+ * @param  int confirm_id 要删除商品的ID
+ */
+function trash_confirm(confirm_id){
+    layer.msg('确定移至回收站？', {
+      time: 5000 
+      ,btn: ['是的！', '算了..']
+      ,yes: function(index){
+        layer.close(index);
+        deletec(confirm_id);
+      }
+      ,no:function(index){
+        layer.close(index);
+      }
+    });
+}
 </script>
 </html>

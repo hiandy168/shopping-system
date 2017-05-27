@@ -80,7 +80,7 @@
                 <tr>
                     <td class="label">是否上架：</td>
                     <td>
-                        <input type="radio" name="is_on_sale" value="是" checked="checked"/> 是
+                        <input type="radio" name="is_on_sale" value="是" checked="true"/> 是
                         <input type="radio" name="is_on_sale" value="否"/> 否
                     </td>
                 </tr>
@@ -118,14 +118,13 @@
                 </tr>
             </table>
             <div class="button-div">
-                <input type="submit" value=" 确定 " class="button"/>
-                <input type="reset" value=" 重置 " class="button" />
+                <input type="submit" value=" 确 定 " class="button"/>
+                <input type="reset" value=" 重 置 " class="button" />
             </div>
         </form>
     </div>
 </div>
-<div id="footer">
-版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
+<div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
 <script>
     var xhr;
@@ -146,8 +145,13 @@
         //收集表单域信息
         var data = new FormData(this);
         loadXMLDoc(data,"/Admin/Goods/goodsAdd",function(){
+            if(xhr.readyState!=4){
+                //layer加载层
+                layer.load(2);
+                // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+            }
             if(xhr.readyState==4 && xhr.status==200){
-                console.log(xhr.responseText);
+                layer.closeAll('loading');
                 var object=JSON.parse(xhr.responseText,function(key,value){
                     if (value=='success') {
                         layer.alert('新商品添加成功！',function(){

@@ -5,13 +5,13 @@
 <title>ECSHOP 管理中心 - 添加品牌 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/shopping-system/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
-<link href="/shopping-system/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/shopping-system/Admin/Brand/brandList.html">商品品牌</a></span>
-    <span class="action-span1"><a href="/shopping-system/Admin">ECSHOP 管理中心</a></span>
+    <span class="action-span"><a href="/Admin/Brand/brandList.html">商品品牌</a></span>
+    <span class="action-span1"><a href="/Admin">ECSHOP 管理中心</a></span>
     <span id="search_id" class="action-span1"> - 添加品牌 </span>
     <div style="clear:both"></div>
 </h1>
@@ -53,8 +53,8 @@
             <tr>
                 <td class="label">是否显示</td>
                 <td>
-                    <input type="radio" name="is_show" value="1" checked="checked" /> 是
-                    <input type="radio" name="is_show" value="0"  /> 否(当品牌下还没有商品的时候，首页及分类页的品牌区将不会显示该品牌。)
+                    <input type="radio" name="is_show" value="是" checked="checked" /> 是
+                    <input type="radio" name="is_show" value="否"  /> 否(当品牌下还没有商品的时候，首页及分类页的品牌区将不会显示该品牌。)
                 </td>
             </tr>
             <tr>
