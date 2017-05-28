@@ -9,25 +9,55 @@ class GoodsModel extends Model{
 	// 是否批处理验证
     protected $patchValidate    =   true;
     //定义添加操作，允许接收的表单字段
-	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num';
+	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price';
     //定义更新操作，允许接收的表单字段
-	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num';
+	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price';
 
 	//自定义设置验证规则，$_validate属于父类Model
 	protected $_validate = [
 		//为表单域定义具体验证规则
 		//array(字段名称/表单域name属性值,验证规则,错误提示[,验证条件,附加规则,验证时间])
 		
-		//require验证必须存在,1必须验证
+		//require验证必须存在，条件1必须验证
 		['goods_name','require',' * 所以您卖的是叫啥！',1],
-		['goods_name','',' * 商品名称居然都能重复！',1,'unique',1],//验证时间1代表新增时才验证数据
-		['goods_sn','',' * 该货号已存在！',0,'unique',1],//验证时间1代表新增时才验证数据
+		//条件1必须验证，验证时间1代表新增时才验证数据
+		['goods_name','',' * 商品名称居然都能重复！',1,'unique',1],
+		//条件0存在字段则验证，验证时间1代表新增时才验证数据
+		['goods_sn','',' * 该货号已存在！',0,'unique',1],
+		//若存在字段则验证，货号长度需小于等于13位，跟从数据库设计的要求
+		['goods_sn','0,13',' * 货号格式或长度不合适！',0,'length'],
+		//验证店铺价格必须存在，条件1必须验证
 		['shop_price','require',' * 您是要送给别人么！',1],
+		//验证店铺价格应是货币格式
 		['shop_price','currency',' * 您知道这并不是一个价格！',1],
+		//验证市场价格应是货币格式
 		['market_price','currency',' * 您知道这并不是一个价格！',2],
+		//验证库存数量应是数字
 		['goods_number','number',' * 商品数量应该是个数字',2],
-		['cat_id',0,' * 你必须选择一种分类',1,'notequal']
+		//验证分类选择不能是0
+		['cat_id',0,' * 你必须选择一种分类',1,'notequal'],
+		//条件2代表不为空时调用函数验证，验证时间2代表编辑时才验证数据
+		['goods_sn','check_good_sn',' * 该货号重复了！',2,'callback',2],
+		//条件2代表不为空时调用函数验证，验证时间2代表编辑时才验证数据
+		['goods_name','check_good_name',' * 该名称重复了！',2,'callback',2],
 	];
+	public function check_good_sn($arg){
+		//定义规则，如果修改的货号已存在，则返回false
+		//要排除自己，因为如果没做修改，表单照样接收，验证会跟自己重复
+		$sql = 'select goods_sn from ss_goods where id != '.I('post.id')." and goods_sn = '{$arg}'";
+		if($this->db->query($sql)){
+			return false;
+		}
+		return true;
+	}
+	public function check_good_name($arg){
+		//查询除了自己这个id的记录中，还有没有同名的记录行
+		$sql = 'select goods_name from ss_goods where id != '.I('post.id')." and goods_name = '{$arg}'";
+		if($this->db->query($sql)){
+			return false;
+		}
+		return true;
+	}
 	//这个方法会在执行数据insert前自动调用
 	protected function _before_insert(&$data,$option){
 		/*********插入图片前先处理图片*********/
@@ -48,7 +78,34 @@ class GoodsModel extends Model{
 		$data['addtime'] = date('Y-m-d H:i:s',time());
 		//调用自定义的防止XSS注入的函数过滤出HTML代码，此函数包含了htmlpurifier插件包
 		$data['goods_desc'] = removeXSS($_POST['goods_desc']);
-		$data['goods_sn'] = I('post.goods_sn')?I('post.goods_sn'):time();
+		$data['goods_sn'] = I('post.goods_sn')!=false?I('post.goods_sn'):time();
+	}
+	//商品信息添加成功之后，会自动调用此方法，其中$data['id']就是新商品的id
+	//要调用此方法，数据的主键ID不能是复合主键，Model父类中的add方法中有定义
+	protected function _after_insert($data,$option){
+		//先获取表单中的会员价格信息
+		$mp = I('post.member_price');
+		$mpModel = M('member_price');
+		foreach ($mp as $k => $v) {
+			//将用户的输入永远转化为浮点型，非数字转化为0
+			//这里用框架没有很好的方法去验证，因为member_price是个数组
+			$_v = (float)$v;
+			//如果有价格则写入此价格，没价格或者价格格式不对，则不写入
+			if($_v>0){
+				$mpModel->add([
+					'price'=>$v,
+					'level_id'=>$k,
+					'goods_id'=>$data['id'],
+				]);
+			}else{
+				//如果有会员价格没填，则默认为店铺价
+				$mpModel->add([
+					'price'=>$data['shop_price'],
+					'level_id'=>$k,
+					'goods_id'=>$data['id'],
+				]);
+			}
+		}
 	}
 	protected function _before_update(&$data,$option){
 		/*********在更新信息之前先处理图片*********/
@@ -88,6 +145,7 @@ class GoodsModel extends Model{
 		$data['updtime'] = date('Y-m-d H:i:s',time());
 		//调用自定义的防止XSS注入的函数过滤出HTML代码，此函数包含了htmlpurifier插件包
 		$data['goods_desc'] = removeXSS($_POST['goods_desc']);
+		$data['goods_sn'] = I('post.goods_sn')!=false?I('post.goods_sn'):time();
 	}
 	protected function _after_update($data,$option){
 		$old_logo_url = session('old_logo_update');
@@ -164,30 +222,6 @@ class GoodsModel extends Model{
 		}
 	}
 	/**
-	 * 获取分页页码
-	 * @param  int 	$totalRows [总数据行数]
-	 * @param  int 	$tar_page  [目标页码]
-	 * @param  int  $rowsNum   [每行显示数目]
-	 * @return array            [返回页码数据]
-	 */
-	public function getPageNumber(int $totalRows,int $tar_page,int $rowsNum){
-		//每页条目默认必须至少为1
-		$rowsNum = $rowsNum>0?$rowsNum:1;
-		//记录总页数，ceil向上取整，无论有没有数据，页码至少为1
-		$res['pageNum'] = (int)ceil($totalRows/$rowsNum)==0?1:(int)ceil($totalRows/$rowsNum);
-		//求出上一页的页码
-		$res['prev'] = $tar_page>1?$tar_page-1:1;
-		//当前页的第一条记录位置
-		$res['firstRows'] = ($tar_page-1)*$rowsNum;
-		//求出下一页的页码
-		$res['next'] = $tar_page<$res['pageNum']?$tar_page+1:$tar_page;
-		//分页成功后，目标页码即为当前页码
-		$res['cur_page'] = $tar_page;
-		//分页成功后，返回每页显示条目数
-		$res['rowsNum'] = $rowsNum;
-		return $res;
-	}
-	/**
 	 * [getLimitData description]
 	 * @param  integer $tar_page  目标页码
 	 * @param  integer $rowsNum   每页条目
@@ -199,8 +233,10 @@ class GoodsModel extends Model{
 		$condition['is_delete'] = '否';
 		//总记录行数
 		$totalRows = $this->where($sql)->where($condition)->order($order)->count();
+		//获取分页类模型
+		$fenye = new \Think\Fenye();
 		//获取分页页码
-		$pages = $this->getPageNumber($totalRows,$tar_page,$rowsNum);
+		$pages = $fenye->getPageNumber($totalRows,$tar_page,$rowsNum);
 		//分页查询
 		$goods_list = $this->where($sql)->where($condition)->order($order)->limit($pages['firstRows'],$pages['rowsNum'])->select();
 		return [

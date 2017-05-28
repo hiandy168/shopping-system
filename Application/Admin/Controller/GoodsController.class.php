@@ -8,10 +8,14 @@ class GoodsController extends CommenController {
 	 */
 	public function goodsList(){
 		$goodsModel = D('goods');
+		$catModel = D('category');
+		$catres = $catModel->where("is_show='是'")->select();
 		if (I('get.tar_page')) {
 			//以下组装$where的条件
 			if (I('get.cat_id')!=='0') {
-				$condition['cat_id'] = I('get.cat_id');//分类ID
+				//根据分类查询商品时，获取指定分类及其子分类的所有商品
+				$cat_id_list = $catModel->getLevelId($catres,I('get.cat_id'),'id','parent_id','level');
+				$condition['cat_id'] = ['in',$cat_id_list];//分类ID
 			}
 			if (I('get.brand_id')!=='0') {
 				$condition['brand_id'] = I('get.brand_id');//品牌ID
@@ -66,13 +70,11 @@ class GoodsController extends CommenController {
 				$search_condition = $search[5];
 			}else{
 				session('search',null);
-				//初始默认显示所有数据的的第一页
-				$res = $goodsModel->getLimitData(1,9);
+				//初始默认显示所有数据的的第一页,（页码、条目）
+				$res = $goodsModel->getLimitData(1,5);
 				$search_condition = 'null';
 			}
 			//以下获取总的品牌和分类列表用户显示在搜索栏
-			$catModel = D('category');
-			$catres = $catModel->where("is_show='是'")->select();
 			$cat_list = $catModel->getLevel($catres,0,'id','parent_id','level');
 			$brandModel = D('brand');
 			$brand_list = $brandModel->where("is_show='是'")->select();
@@ -110,11 +112,18 @@ class GoodsController extends CommenController {
 			$catModel = D('category');
 			$res = $catModel->where("is_show='是'")->select();
 			$cat_list = $catModel->getLevel($res,0,'id','parent_id','level');
+
 			$brandModel = D('brand');
 			$brand_list = $brandModel->where("is_show='是'")->select();
+
+			//创建模型关联会员级别表，并取出所有会员级别信息
+			$memberModel = D('member_level');
+			$member_level_list = $memberModel->select();
+
 			$this->assign([
 				'brand_list'=> $brand_list,
-				'cat_list'	=> $cat_list
+				'cat_list'	=> $cat_list,
+				'member_level_list'=>$member_level_list
 			]);
 			$this->display();
 		}
@@ -127,7 +136,7 @@ class GoodsController extends CommenController {
 		$model = D('Goods');
 		//判断是否提交了表单
 		if (IS_POST) {
-			//接收并验证表单,使用I方法过滤表单数据，1指定为添加
+			//接收并验证表单,使用I方法过滤表单数据，2指定为更新
 			$data = $model->create(I('post.'),2);
 			if ($data) {
 				// $sign = $model->fetchSql(true)->where('id = '.I('post.id'))->save($data);
@@ -150,10 +159,15 @@ class GoodsController extends CommenController {
 			$cat_list = $catModel->getLevel($res,0,'id','parent_id','level');
 			$brandModel = D('brand');
 			$brand_list = $brandModel->where("is_show='是'")->select();
+
+			$mpModel = D('member_price');
+			$condition['goods_id'] = $id;
+			$goods_detail_member_price_list = $mpModel->field('l.*,r.level_name')->table('ss_member_price as l,ss_member_level as r')->where('l.level_id = r.id')->where($condition)->select();
 			$this->assign([
 				'brand_list'=> $brand_list,
 				'cat_list'	=> $cat_list,
-				'goods_detail'=>$goods_detail
+				'goods_detail'=>$goods_detail,
+				'goods_detail_member_price_list'=>$goods_detail_member_price_list
 			]);
 			$this->display();
 		}

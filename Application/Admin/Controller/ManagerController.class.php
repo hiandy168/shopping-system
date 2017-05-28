@@ -30,6 +30,10 @@ class ManagerController extends Controller {
     		$this->display();
     	}
     }
+    /**
+     * ajax调用此方法验证验证码
+     * @return string 返回验证提示信息
+     */
     public function check(){
     	$res = $this->check_captcha(addslashes(trim($_GET['captcha'])));
     	if($res){

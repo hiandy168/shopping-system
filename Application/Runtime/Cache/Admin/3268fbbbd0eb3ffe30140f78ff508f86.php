@@ -30,51 +30,53 @@
     <div style="clear:both"></div>
 </h1>
 <div class="form-div">
-    <form action="" name="searchForm">
     <ol>
         <span>筛选：</span>
         <!-- 分类 -->
-        <select name="cat_id" id="cat_search" onchange="javascript:searchc(1)" onmouseover="this.style.cursor='pointer'">
+        <select name="cat_id" id="cat_search" onchange="javascript:searchc(1,'a')" onmouseover="this.style.cursor='pointer'">
             <option value="0">所有分类</option>
             <?php if(is_array($cat_list)): $i = 0; $__LIST__ = $cat_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vol["id"]); ?>"><?php echo (str_repeat('&nbsp;&nbsp;',$vol["level"])); ?>-<?php echo ($vol["cat_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
         </select>
         <!-- 品牌 -->
-        <select name="brand_id" id="brand_search" onchange="javascript:searchc(1)" onmouseover="this.style.cursor='pointer'">
+        <select name="brand_id" id="brand_search" onchange="javascript:searchc(1,'a')" onmouseover="this.style.cursor='pointer'">
             <option value="0">所有品牌</option>
             <?php if(is_array($brand_list)): $i = 0; $__LIST__ = $brand_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vol["id"]); ?>"><?php echo ($vol["brand_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
         </select>
         <!-- 推荐 -->
-        <select name="intro_type" id="type_search" onchange="javascript:searchc(1)" onmouseover="this.style.cursor='pointer'">
+        <select name="intro_type" id="type_search" onchange="javascript:searchc(1,'a')" onmouseover="this.style.cursor='pointer'">
             <option value="is_all">全部推荐</option>
             <option value="is_best">精品</option>
             <option value="is_new">新品</option>
             <option value="is_hot">热销</option>
         </select>
         <!-- 上架 -->
-        <select name="is_on_sale" id="sale_search" onchange="javascript:searchc(1)" onmouseover="this.style.cursor='pointer'">
+        <select name="is_on_sale" id="sale_search" onchange="javascript:searchc(1,'a')" onmouseover="this.style.cursor='pointer'">
             <option value='is_all'>全部商品</option>
             <option value="1">上架</option>
             <option value="0">下架</option>
         </select>
         <!-- 每页条目 -->
-        <select name="rowsNum" id="rowsNum" onchange="javascript:searchc(1)" onmouseover="this.style.cursor='pointer'">
+        <select name="rowsNum" id="rowsNum" onchange="javascript:searchc(1,'a')" onmouseover="this.style.cursor='pointer'">
             <option value="1">每页1条</option>
+            <option value="2">每页2条</option>
             <option value="3">每页3条</option>
+            <option value="4">每页4条</option>
             <option value="5">每页5条</option>
+            <option value="6">每页6条</option>
             <option value="7">每页7条</option>
+            <option value="8">每页8条</option>
             <option value="9">每页9条</option>
+            <option value="10">每页10条</option>
         </select>
     </ol>
     <ol>
         <span>价格区间：</span>
-        <input type="number" placeholder="价格下限" style="width:60px;text-align:center;" id="price_low" onkeyup="javascript:searchc(1)"/> —
-        <input type="number" placeholder="价格上限" style="width:60px;text-align:center;" id="price_up" onkeyup="javascript:searchc(1)"/>
+        <input type="number" placeholder="价格下限" style="width:60px;text-align:center;" id="price_low" onkeyup="javascript:searchc(1,'a')"/> —
+        <input type="number" placeholder="价格上限" style="width:60px;text-align:center;" id="price_up" onkeyup="javascript:searchc(1,'a')"/>
 
         <input type="radio" value="price_natural" name="radio" class="price_order_by" id="price_natural"/>默认排序
         <input type="radio" value="price_asc" name="radio" class="price_order_by" id="price_asc"/>升序
-        <input type="radio" value="price_desc" name="radio" class="price_order_by" id="price_desc"/>降序
-
-        
+        <input type="radio" value="price_desc" name="radio" class="price_order_by" id="price_desc"/>降序       
     </ol>
     <ol>
         <span>时间区间：</span>
@@ -85,8 +87,7 @@
     <span>以上改变会自动搜索，也可以点击这里：</span>
         <!-- 关键字 -->
     <!--     关键字 <input type="text" name="keyword" size="15" id="keywords"/> -->
-        <input  style="cursor:pointer;width:60px;text-align:center;background:url('/Public/Admin/images/icon_search.gif') no-repeat;" type="button" value="  搜 索" class="button" id="search" onclick="javascript:searchc(1)""/>
-    </form>
+        <input style="cursor:pointer;width:60px;text-align:center;background:url('/Public/Admin/images/icon_search.gif') no-repeat;" type="button" value="  搜 索" class="button" id="search" onclick="javascript:searchc(1,'a')""/>
     </ol>
 </div>
 
@@ -133,13 +134,15 @@
         <table id="page-table" cellspacing="0">
             <tr id="pagesfoot">
                 <td colspan=12 style="text-align: center;font-size:16px;">
-                    <a href="javascript:searchc(1)" id="first"">首页</a>
-                    <a href="javascript:searchc(<?php echo ($pages["prev"]); ?>)" id="prev"">上一页</a>
-                    <a href="javascript:searchc(<?php echo ($pages["next"]); ?>)" id="next"">下一页</a>
-                    <a href="javascript:searchc(<?php echo ($pages["pageNum"]); ?>)" id="pageNum"">尾页</a>
+                    <a href="javascript:searchc(1,'l')" id="first"">首页</a>
+
+                    <a href="javascript:searchc(<?php echo ($pages["prev"]); ?>,'l')" id="prev"">上一页</a>
+                    <a href="javascript:searchc(<?php echo ($pages["next"]); ?>,'r')" id="next"">下一页</a>
+                    <a href="javascript:searchc(<?php echo ($pages["pageNum"]); ?>,'r')" id="pageNum"">尾页</a>
                     <span id="pageNum1">当前共有<?php echo ($pages["pageNum"]); ?>页，当前为第</span>
-                    <select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value)">
-                        <?php $__FOR_START_10795__=0;$__FOR_END_10795__=$pages["pageNum"];for($i=$__FOR_START_10795__;$i < $__FOR_END_10795__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+
+                    <select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
+                        <?php $__FOR_START_20098__=0;$__FOR_END_20098__=$pages["pageNum"];for($i=$__FOR_START_20098__;$i < $__FOR_END_20098__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                     </select>页，可切换选择
                 </td>
             </tr>
@@ -180,9 +183,12 @@ var xhr;
  * 用于查询数据的函数，页面所有连接调用此函数，根据不同的条件，调用ajax向服务器查询数据
  * @param  int tar_page 目标页码，用于分页查询，不翻页默认都是传递1
  */
-function searchc(tar_page){
-    if(tar_page==curt_page.value&&tar_page!=1){
+function searchc(tar_page,poi){
+    if(tar_page==curt_page.value&&poi=='r'){
         layer.msg('这已经是最后一页了');return;
+    }
+    if(tar_page==curt_page.value&&poi=='l'){
+        layer.msg('这已经是第一页了');return;
     }
     if(parseInt(price_low.value) > parseInt(price_up.value)){
         layer.tips('请搞清楚上限和下限谁大！','#price_low',{tips:[1,'#0FA6D8']});return;
@@ -278,6 +284,7 @@ window.onload=function(){
         $('#time_start').val("<?php echo ($search_condition['time_start']); ?>");
         $('#time_end').val("<?php echo ($search_condition['time_end']); ?>");
         $(".price_order_by[value=<?php echo ($search_condition['price_order']); ?>]").attr("checked",true);
+        $('#curt_page').val("<?php echo ($search_condition['tar_page']); ?>");
     }
 
 }
@@ -286,9 +293,9 @@ window.onload=function(){
  * @param  array arr 获取的页码信息数组
  */
 function resetpageUrl(arr){
-    prev.href="javascript:searchc("+arr.prev+")";
-    next.href="javascript:searchc("+arr.next+")";
-    pageNum.href="javascript:searchc("+arr.pageNum+")";
+    prev.href="javascript:searchc("+arr.prev+",'l')";
+    next.href="javascript:searchc("+arr.next+",'r')";
+    pageNum.href="javascript:searchc("+arr.pageNum+",'r')";
     pageNum1.innerHTML="当前共有"+arr.pageNum+"页，当前为第";
 }
 /**
@@ -317,6 +324,7 @@ function resetpageNum(tag_id,pageNum){
 function resetdata(tag_id,data_list){
     var n = tag_id.children[0].children.length;
     for(var i=1;i<n;i++){
+        //找到table下tr里的td，从其父元素中依次移除第二个，因为移除一个，之前的第三个就成了第二个
         tag_id.children[0].children[0].parentNode.removeChild(tag_id.children[0].children[1]);
     }
     for(var k=0;k<data_list.length;k++){

@@ -26,12 +26,13 @@
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
-            <span class="tab-front" id="general-tab">通用信息</span>
+            <span class="tab-front" id="tab-first">基本信息</span>
+            <span class="tab-back">其他信息</span>
         </p>
     </div>
     <div id="tabbody-div">
         <form enctype="multipart/form-data" method="post" id="goodsEdit">
-            <table width="90%" id="general-table" align="center">
+            <table width="90%" id="general-table" align="center" class="tab_table">
                 <tr>
                     <td class="label">商品名称：</td>
                     <td><input type="text" name="goods_name" value="<?php echo ($goods_detail["goods_name"]); ?>" size="30" id="goods_name"/>
@@ -65,10 +66,24 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="label">商品LOGO：</td>
+                    <td>
+                        <span>当前logo</span>
+                        <img src="/<?php echo ($goods_detail["sm_logo"]); ?>"/><br/>
+                        <input type="file" name="logo" size="35" id="logo" onmouseover="this.style.cursor='pointer'"/>
+                    </td>
+                </tr>
+                <tr>
                     <td class="label">本店售价：</td>
                     <td>
                         <input type="text" name="shop_price" value="<?php echo ($goods_detail["shop_price"]); ?>" size="20" id="shop_price"/>
                         <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">市场售价：</td>
+                    <td>
+                        <input type="text" name="market_price" value="<?php echo ($goods_detail["market_price"]); ?>" size="20" />
                     </td>
                 </tr>
                 <tr>
@@ -98,18 +113,13 @@
                         <input type="text" name="sort_num" size="5" value="<?php echo ($goods_detail["sort_num"]); ?>"/>
                     </td>
                 </tr>
+            </table>
+            <table width="90%" align="center" class="tab_table" style="display:none;">
                 <tr>
-                    <td class="label">市场售价：</td>
+                    <td class="label">会员价格：</td>
                     <td>
-                        <input type="text" name="market_price" value="<?php echo ($goods_detail["market_price"]); ?>" size="20" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="label">商品LOGO：</td>
-                    <td>
-                        <span>当前logo</span>
-                        <img src="/<?php echo ($goods_detail["sm_logo"]); ?>"/><br/>
-                        <input type="file" name="logo" size="35" id="logo"/>
+                        <?php if(is_array($goods_detail_member_price_list)): $i = 0; $__LIST__ = $goods_detail_member_price_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><span style="width:50px"><?php echo ($vol["level_name"]); ?>：￥</span><input type="text" name="member_price[<?php echo ($vol["level_id"]); ?>]" value="<?php echo ($vol["price"]); ?>"><br/><?php endforeach; endif; else: echo "" ;endif; ?>
+                       <!-- 这里应联表查询，获取会员级别名称、会员级别ID，此商品不同级别价格 -->
                     </td>
                 </tr>
                 <tr>
@@ -121,8 +131,8 @@
             </table>
             <div class="button-div">
                 <input type="hidden" name="id" value="<?php echo ($goods_detail["id"]); ?>"/>
-                <input type="submit" value=" 确 定 " class="button"/>
-                <input type="reset" value=" 重 置 " class="button" />
+                <input type="submit" value=" 确 定 " class="button" onmouseover="this.style.cursor='pointer'"/>
+                <input style="width:50px;" type="bubtton" value=" 返 回 " class="button" onclick="location='/Admin/Goods/goodsList/from/goodsEdit'" onmouseover="this.style.cursor='pointer'"/>
             </div>
         </form>
     </div>
@@ -130,67 +140,84 @@
 <div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
 <script>
-    var xhr;
-    function loadXMLDoc(data,url,cfunc){
-        if(window.XMLHttpRequest){
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xhr=new XMLHttpRequest();
-        }else{
-            // code for IE6, IE5
-            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+var xhr;
+function loadXMLDoc(data,url,cfunc){
+    if(window.XMLHttpRequest){
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr=new XMLHttpRequest();
+    }else{
+        // code for IE6, IE5
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.onreadystatechange=cfunc;
+    xhr.open("post",url,true);
+    xhr.send(data);
+}
+var form = document.getElementById('goodsEdit');
+form.onsubmit = function(evt){
+    //收集表单域信息
+    var data = new FormData(this);
+    loadXMLDoc(data,"/Admin/Goods/goodsEdit",function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
         }
-        xhr.onreadystatechange=cfunc;
-        xhr.open("post",url,true);
-        xhr.send(data);
-    }
-    var form = document.getElementById('goodsEdit');
-    form.onsubmit = function(evt){
-        //收集表单域信息
-        var data = new FormData(this);
-        loadXMLDoc(data,"/Admin/Goods/goodsEdit",function(){
-            if(xhr.readyState!=4){
-                //layer加载层
-                layer.load(2);
-                // layer.msg('请稍等！正在努力加载中！', {icon: 4});
-            }
-            if(xhr.readyState==4 && xhr.status==200){
-                layer.closeAll('loading');
-                var object=JSON.parse(xhr.responseText,function(key,value){
-                    if (value=='success') {
-                        layer.alert('商品信息更新成功！',function(){
-                            window.location.href = "/Admin/Goods/goodsList/from/goodsEdit";
-                            icon: 6;
-                        });
-                    }else if(key!=''){
-                        layer.tips(value, '#'+key, {tipsMore: true});
-                    }
-                });
-            }
-        });
-        evt.preventDefault();
-    }
-    UM.getEditor('goods_desc',{
-        initialFrameWidth:'100%', //初始化编辑器宽度
-        initialFrameHeight:150  //初始化编辑器高度
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('商品信息更新成功！',function(){
+                        window.location.href = "/Admin/Goods/goodsList/from/goodsEdit";
+                        icon: 6;
+                    });
+                }else if(key!=''){
+                    curChange(0,$('#tab-first'));
+                    layer.tips(value, '#'+key, {tipsMore: true});
+                }
+            });
+        }
     });
-    //渲染默认被选择的单选框和复选框
-    window.onload=function(){
-        if("<?php echo ($goods_detail["is_on_sale"]); ?>"=='是'){
-            $('#is_on_sale_1').attr('checked','true');
-        }else if("<?php echo ($goods_detail["is_on_sale"]); ?>"=='否'){
-            $('#is_on_sale_0').attr('checked','true');
-        }
-        if("<?php echo ($goods_detail["is_best"]); ?>"=='是'){
-            $('#is_best').attr('checked','true');
-        }
-        if("<?php echo ($goods_detail["is_new"]); ?>"=='是'){
-            $('#is_new').attr('checked','true');
-        }
-        if("<?php echo ($goods_detail["is_hot"]); ?>"=='是'){
-            $('#is_hot').attr('checked','true');
-        }
-        $('#brand_id').val("<?php echo ($goods_detail["brand_id"]); ?>");
-        $('#cat_id').val("<?php echo ($goods_detail["cat_id"]); ?>");
+    evt.preventDefault();
+}
+UM.getEditor('goods_desc',{
+    initialFrameWidth:'100%', //初始化编辑器宽度
+    initialFrameHeight:150  //初始化编辑器高度
+});
+/*****************切换table的代码******************/
+$('#tabbar-div p span').click(function(){
+    //电机的是第几个按钮
+    var i = $(this).index();
+    curChange(i,this);
+});
+function curChange(i,w){
+    //县隐藏所有的table
+    $('.tab_table').hide();
+    //再将指定的table显示出来
+    $('.tab_table').eq(i).show();
+    //同时先将所有按钮的样式改为tab-back
+    $('.tab-front').removeClass('tab-front').addClass('tab-back');
+    //再将点击的那个按钮的样式改为tab-front
+    $(w).removeClass('tab-back').addClass('tab-front');
+}
+//渲染默认被选择的单选框和复选框
+window.onload=function(){
+    if("<?php echo ($goods_detail["is_on_sale"]); ?>"=='是'){
+        $('#is_on_sale_1').attr('checked','true');
+    }else if("<?php echo ($goods_detail["is_on_sale"]); ?>"=='否'){
+        $('#is_on_sale_0').attr('checked','true');
     }
+    if("<?php echo ($goods_detail["is_best"]); ?>"=='是'){
+        $('#is_best').attr('checked','true');
+    }
+    if("<?php echo ($goods_detail["is_new"]); ?>"=='是'){
+        $('#is_new').attr('checked','true');
+    }
+    if("<?php echo ($goods_detail["is_hot"]); ?>"=='是'){
+        $('#is_hot').attr('checked','true');
+    }
+    $('#brand_id').val("<?php echo ($goods_detail["brand_id"]); ?>");
+    $('#cat_id').val("<?php echo ($goods_detail["cat_id"]); ?>");
+}
 </script>
 </html>

@@ -26,12 +26,13 @@
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
-            <span class="tab-front" id="general-tab">通用信息</span>
+            <span class="tab-front" id="tab-first">基本信息</span>
+            <span class="tab-back">其他信息</span>
         </p>
     </div>
     <div id="tabbody-div">
         <form enctype="multipart/form-data" method="post" id="goodsAdd">
-            <table width="90%" id="general-table" align="center">
+            <table width="90%" id="general-table" align="center" class="tab_table">
                 <tr>
                     <td class="label">商品名称：</td>
                     <td><input type="text" name="goods_name" value="" size="30" id="goods_name"/>
@@ -65,10 +66,22 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="label">商品LOGO：</td>
+                    <td>
+                        <input type="file" name="logo" size="35" id="logo" onmouseover="this.style.cursor='pointer'"/>
+                    </td>
+                </tr>
+                <tr>
                     <td class="label">本店售价：</td>
                     <td>
                         <input type="text" name="shop_price" value="" size="20" id="shop_price"/>
                         <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">市场售价：</td>
+                    <td>
+                        <input type="text" name="market_price" value="" size="20" />
                     </td>
                 </tr>
                 <tr>
@@ -98,28 +111,24 @@
                         <input type="text" name="sort_num" size="5" value="100"/>
                     </td>
                 </tr>
+            </table>
+            <table width="90%" align="center" class="tab_table" style="display:none;">
                 <tr>
-                    <td class="label">市场售价：</td>
+                    <td class="label">会员价格：</td>
                     <td>
-                        <input type="text" name="market_price" value="" size="20" />
+                       <?php if(is_array($member_level_list)): $i = 0; $__LIST__ = $member_level_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><span style="width:50px"><?php echo ($vol["level_name"]); ?>：￥</span><input type="text" name="member_price[<?php echo ($vol["id"]); ?>]" value=""><br/><?php endforeach; endif; else: echo "" ;endif; ?>
                     </td>
                 </tr>
                 <tr>
-                    <td class="label">商品LOGO：</td>
-                    <td>
-                        <input type="file" name="logo" size="35" id="logo"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="label">商品简单描述：</td>
+                    <td class="label">商品描述：</td>
                     <td>
                         <textarea id="goods_desc" name="goods_desc" cols="40" rows="3"></textarea>
                     </td>
                 </tr>
             </table>
             <div class="button-div">
-                <input type="submit" value=" 确 定 " class="button"/>
-                <input type="reset" value=" 重 置 " class="button" />
+                <input type="submit" value=" 确 定 " class="button" onmouseover="this.style.cursor='pointer'"/>
+                <input type="reset" value=" 重 置 " class="button" onmouseover="this.style.cursor='pointer'"/>
             </div>
         </form>
     </div>
@@ -127,48 +136,65 @@
 <div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
 <script>
-    var xhr;
-    function loadXMLDoc(data,url,cfunc){
-        if(window.XMLHttpRequest){
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xhr=new XMLHttpRequest();
-        }else{
-            // code for IE6, IE5
-            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+var xhr;
+function loadXMLDoc(data,url,cfunc){
+    if(window.XMLHttpRequest){
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr=new XMLHttpRequest();
+    }else{
+        // code for IE6, IE5
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.onreadystatechange=cfunc;
+    xhr.open("post",url,true);
+    xhr.send(data);
+}
+var form = document.getElementById('goodsAdd');
+form.onsubmit = function(evt){
+    //收集表单域信息
+    var data = new FormData(this);
+    loadXMLDoc(data,"/Admin/Goods/goodsAdd",function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
         }
-        xhr.onreadystatechange=cfunc;
-        xhr.open("post",url,true);
-        xhr.send(data);
-    }
-    var form = document.getElementById('goodsAdd');
-    form.onsubmit = function(evt){
-        //收集表单域信息
-        var data = new FormData(this);
-        loadXMLDoc(data,"/Admin/Goods/goodsAdd",function(){
-            if(xhr.readyState!=4){
-                //layer加载层
-                layer.load(2);
-                // layer.msg('请稍等！正在努力加载中！', {icon: 4});
-            }
-            if(xhr.readyState==4 && xhr.status==200){
-                layer.closeAll('loading');
-                var object=JSON.parse(xhr.responseText,function(key,value){
-                    if (value=='success') {
-                        layer.alert('新商品添加成功！',function(){
-                            window.location.href = "/Admin/Goods/goodsList";
-                            icon: 6;
-                        });
-                    }else if(key!=''){
-                        layer.tips(value, '#'+key, {tipsMore: true});
-                    }
-                });
-            }
-        });
-        evt.preventDefault();
-    }
-    UM.getEditor('goods_desc',{
-        initialFrameWidth:'100%', //初始化编辑器宽度
-        initialFrameHeight:150  //初始化编辑器高度
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('新商品添加成功！',function(){
+                        window.location.href = "/Admin/Goods/goodsList";
+                        icon: 6;
+                    });
+                }else if(key!=''){
+                    curChange(0,$('#tab-first'));
+                    layer.tips(value, '#'+key, {tipsMore: true});
+                }
+            });
+        }
     });
+    evt.preventDefault();
+}
+UM.getEditor('goods_desc',{
+    initialFrameWidth:'80%', //初始化编辑器宽度
+    initialFrameHeight:150  //初始化编辑器高度
+});
+/*****************切换table的代码******************/
+$('#tabbar-div p span').click(function(){
+    //电机的是第几个按钮
+    var i = $(this).index();
+    curChange(i,this);
+});
+function curChange(i,w){
+    //县隐藏所有的table
+    $('.tab_table').hide();
+    //再将指定的table显示出来
+    $('.tab_table').eq(i).show();
+    //同时先将所有按钮的样式改为tab-back
+    $('.tab-front').removeClass('tab-front').addClass('tab-back');
+    //再将点击的那个按钮的样式改为tab-front
+    $(w).removeClass('tab-back').addClass('tab-front');
+}
 </script>
 </html>

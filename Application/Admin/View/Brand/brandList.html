@@ -25,6 +25,7 @@
     <div class="list-div" id="listDiv">
         <table cellpadding="3" cellspacing="1">
             <tr>
+                <th>序号</th>
                 <th>品牌名称</th>
                 <th>品牌logo</th>
                 <th>品牌网址</th>
@@ -35,8 +36,9 @@
             </tr>
             <volist name="brand_list" id="vol">
                 <tr>
-                    <td>{$vol.brand_name}</td>
-                    <td class="first-cell">
+                    <td align="center">{$i}</td>
+                    <td align="center">{$vol.brand_name}</td>
+                    <td class="first-cell" align="center">
                         <span style="float:right"><a href="http://{$vol.site_url}" target="_brank"><img src="" width="16" height="16" border="0" alt="品牌LOGO" /></a></span>
                         <span></span>
                     </td>
@@ -74,9 +76,7 @@
         </table>
     </div>
 </form>
-
 <div id="footer">
-共执行 3 个查询，用时 0.021251 秒，Gzip 已禁用，内存占用 2.194 MB<br />
-版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。</div>
+版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
 </html>
