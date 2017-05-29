@@ -27,5 +27,5 @@ return array(
 
 	'URL_MODEL'             =>  2,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
 	'TMPL_TEMPLATE_SUFFIX'  =>  '.html',     // 默认模板文件后缀
-	'DEFAULE_FILTER'        =>  'trim,htmlspecialchars,addslashes',
+	'DEFAULT_FILTER'        =>  'trim,htmlspecialchars,addslashes',//默认I方法的过滤函数
 );

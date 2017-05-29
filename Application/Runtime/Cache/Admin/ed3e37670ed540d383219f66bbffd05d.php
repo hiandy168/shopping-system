@@ -29,7 +29,7 @@
             <tr>
                 <td class="label">会员用户名：</td>
                 <td>
-                    <input type="text" name="username" maxlength="60" value="" id="username"/>
+                    <input type="text" name="username" maxlength="60" value="<?php echo ($user_detail["username"]); ?>" id="username"/>
                     <span class="require-field">*</span>
                 </td>
             </tr>
@@ -50,21 +50,22 @@
             <tr>
                 <td class="label">会员头像：</td>
                 <td>
-                    <input type="file" name="face" id="face" size="45" disabled="false"><br/>
+                    <img src="/<?php echo ($user_detail["sm_face"]); ?>" alt="头像" /><br/>
+                    <input type="file" name="face" id="face" size="45"/><br/>
                     <span class="notice-span" style="display:block"  id="warn_brandlogo">请上传图片，做为个人头像！</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">初始积分：</td>
                 <td>
-                    <input type="text" name="jifen" maxlength="40" size="15" value="" />
+                    <input type="text" name="jifen" maxlength="40" size="15" value="<?php echo ($user_detail["jifen"]); ?>" />
                 </td>
             </tr>
             <tr>
                 <td colspan="2" align="center"><br />
                     <input type="hidden" name="id" value="<?php echo ($user_detail["id"]); ?>"/>
-                    <input type="submit" class="button" value=" 确定 " />
-                    <input type="reset" class="button" value=" 重置 " />
+                    <input type="submit" class="button" value=" 确定 " onmouseover="this.style.cursor='pointer'"/>
+                    <input style="width:45px;" type="bubtton" value=" 返 回 " class="button" onclick="location='/Admin/User/userList/from/userEdit'" onmouseover="this.style.cursor='pointer'"/>
                 </td>
             </tr>
         </table>
@@ -86,7 +87,7 @@ $('#userEdit').submit(function(evt){
             layer.closeAll('loading');
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
-                    layer.alert('用户信息更新！',function(){
+                    layer.alert('用户信息更新成功！',function(){
                         window.location.href = "/Admin/User/userList";
                         icon: 6;
                     });

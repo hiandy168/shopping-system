@@ -24,7 +24,7 @@
 <div class="form-div">
     <img src="/Public/Admin/images/icon_search.gif" width="26" height="22" border="0" alt="search" />
     <input type="text" name="username" size="15" id="username"/>
-    <input type="button" value=" 搜索 " class="button" onclick="javascript:searchc(1,'a')"/>
+    <input type="button" value=" 搜索 " class="button" onclick="javascript:searchc(1,'s')"/>
 </div>
 <form method="post" action="" name="listForm">
     <div class="list-div" id="listDiv">
@@ -42,7 +42,7 @@
                     <td><?php echo ($vol["username"]); ?></td>
                     <td><?php echo ($vol["password"]); ?></td>
                     <td>
-                        <img src="<?php echo ($vol["face"]); ?>" class="face"/>
+                        <img src="/<?php echo ($vol["sm_face"]); ?>" class="face" alt="头像"/>
                     </td>
                     <td><?php echo ($vol["jifen"]); ?></td>
                     <td>
@@ -55,7 +55,7 @@
             <tr>
                 <td nowrap="true" colspan="6" style="text-align: center;font-size:16px;">
                     <div id="turn-page">
-                        总计 <span id="totalRecords"><?php echo ($totalRows); ?></span>
+                        总计 <span id="totalRecords"><?php echo ($pages["totalRows"]); ?></span>
                         个记录，共分为 <span id="totalPages"><?php echo ($pages["pageNum"]); ?></span>页，每页
 
                         <!-- 每页条目 -->
@@ -71,7 +71,7 @@
                             <a href="javascript:searchc(<?php echo ($pages["next"]); ?>,'r')" id="next"">下一页</a>
                             <a href="javascript:searchc(<?php echo ($pages["pageNum"]); ?>,'r')" id="pageNum"">尾页</a>
                             当前为第<select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                                <?php $__FOR_START_23602__=0;$__FOR_END_23602__=$pages["pageNum"];for($i=$__FOR_START_23602__;$i < $__FOR_END_23602__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                                <?php $__FOR_START_26761__=0;$__FOR_END_26761__=$pages["pageNum"];for($i=$__FOR_START_26761__;$i < $__FOR_END_26761__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                             </select>页，可切换选择
                         </span>
                     </div>
@@ -90,10 +90,10 @@ $('#username').change(function(){
 });
 function searchc(tar_page,poi){
     //长度为2表示，当前处于列表状态，上一次查询有指定用户名
-    if($('#username').val()==''&&poi=='a'&&$('#tableList').children().children().length>2){
+    if($('#username').val()==''&&poi=='s'&&$('#tableList').children().children().length>2){
         layer.msg('请先输入查询用户名！');return;
     }
-    if(poi=='a'&&mark!='changed'){
+    if(poi=='s'&&mark!='changed'){
         layer.msg('条件并未改变');return;
     }
     mark = '';
@@ -183,7 +183,7 @@ function resetdata(data_list){
     for(var k=0;k<data_list.length;k++){
         var tr = $('<tr></tr>');
         tr.attr('class','tron');
-        var img = $('<img/>');img.attr('alt','头像');
+        var img = $('<img/>');img.attr('alt','头像');img.attr('src','/'+data_list[k].sm_face);
         var td1 = $('<td></td>');
         var td2 = $('<td></td>');
         var td3 = $('<td></td>');

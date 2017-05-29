@@ -24,7 +24,7 @@
 <div class="form-div">
     <img src="__ADMIN__/images/icon_search.gif" width="26" height="22" border="0" alt="search" />
     <input type="text" name="username" size="15" id="username"/>
-    <input type="button" value=" 搜索 " class="button" onclick="javascript:searchc(1,'a')"/>
+    <input type="button" value=" 搜索 " class="button" onclick="javascript:searchc(1,'s')"/>
 </div>
 <form method="post" action="" name="listForm">
     <div class="list-div" id="listDiv">
@@ -43,7 +43,7 @@
                     <td>{$vol.username}</td>
                     <td>{$vol.password}</td>
                     <td>
-                        <img src="{$vol.face}" class="face"/>
+                        <img src="/{$vol.sm_face}" class="face" alt="头像"/>
                     </td>
                     <td>{$vol.jifen}</td>
                     <td>
@@ -57,7 +57,7 @@
             <tr>
                 <td nowrap="true" colspan="6" style="text-align: center;font-size:16px;">
                     <div id="turn-page">
-                        总计 <span id="totalRecords">{$totalRows}</span>
+                        总计 <span id="totalRecords">{$pages.totalRows}</span>
                         个记录，共分为 <span id="totalPages">{$pages.pageNum}</span>页，每页
 
                         <!-- 每页条目 -->
@@ -94,10 +94,10 @@ $('#username').change(function(){
 });
 function searchc(tar_page,poi){
     //长度为2表示，当前处于列表状态，上一次查询有指定用户名
-    if($('#username').val()==''&&poi=='a'&&$('#tableList').children().children().length>2){
+    if($('#username').val()==''&&poi=='s'&&$('#tableList').children().children().length>2){
         layer.msg('请先输入查询用户名！');return;
     }
-    if(poi=='a'&&mark!='changed'){
+    if(poi=='s'&&mark!='changed'){
         layer.msg('条件并未改变');return;
     }
     mark = '';
@@ -187,7 +187,7 @@ function resetdata(data_list){
     for(var k=0;k<data_list.length;k++){
         var tr = $('<tr></tr>');
         tr.attr('class','tron');
-        var img = $('<img/>');img.attr('alt','头像');
+        var img = $('<img/>');img.attr('alt','头像');img.attr('src','/'+data_list[k].sm_face);
         var td1 = $('<td></td>');
         var td2 = $('<td></td>');
         var td3 = $('<td></td>');

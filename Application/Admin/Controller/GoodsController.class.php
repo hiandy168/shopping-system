@@ -178,20 +178,23 @@ class GoodsController extends CommenController {
 	 */
 	public function goodsToTrash(){
 		$model = D('Goods');
-		$update_id = I('get.id');
+		$trash_id = I('get.id');
 		$data['is_delete'] = "是";
-		$data['id'] = $update_id;
-		// $sign = $model->fetchSql(true)->where('id='.$update_id)->save($data);
+		$data['id'] = $trash_id;
+		// $sign = $model->fetchSql(true)->where('id='.$trash_id)->save($data);
 		//如果成功放置回收站，则返回success
-		if ($model->where('id='.$update_id)->save($data)!==FALSE) {
+		if ($model->where('id='.$trash_id)->save($data)!==FALSE) {
 			$sign = 'success';
 		}else{
 			// $sign = $model->getError();
-			$sign = $MODEL->getError();
+			$sign = $model->getError();
 		}
 		echo json_encode($sign);
 	}
-
+	/**
+	 * 展示商品回收站
+	 * @return [type] [description]
+	 */
 	public function goodsTrash(){
 		$this->display();
 	}

@@ -8,6 +8,7 @@
 <link href="/Public/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 <script src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
 <script src="/Public/Plugins/layer/layer.js"></script>
+<!-- 文本编辑器的js文件 -->
 <script type="text/javascript" src="/Public/Plugins/umeditor/third-party/jquery.min.js"></script>
 <script type="text/javascript" src="/Public/Plugins/umeditor/third-party/template.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="/Public/Plugins/umeditor/umeditor.config.js"></script>
@@ -136,19 +137,6 @@
 <div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
 <script>
-var xhr;
-function loadXMLDoc(data,url,cfunc){
-    if(window.XMLHttpRequest){
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xhr=new XMLHttpRequest();
-    }else{
-        // code for IE6, IE5
-        xhr=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xhr.onreadystatechange=cfunc;
-    xhr.open("post",url,true);
-    xhr.send(data);
-}
 var form = document.getElementById('goodsAdd');
 form.onsubmit = function(evt){
     //收集表单域信息
@@ -176,6 +164,19 @@ form.onsubmit = function(evt){
     });
     evt.preventDefault();
 }
+var xhr;
+function loadXMLDoc(data,url,cfunc){
+    if(window.XMLHttpRequest){
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr=new XMLHttpRequest();
+    }else{
+        // code for IE6, IE5
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.onreadystatechange=cfunc;
+    xhr.open("post",url,true);
+    xhr.send(data);
+}
 UM.getEditor('goods_desc',{
     initialFrameWidth:'80%', //初始化编辑器宽度
     initialFrameHeight:150  //初始化编辑器高度
@@ -186,6 +187,7 @@ $('#tabbar-div p span').click(function(){
     var i = $(this).index();
     curChange(i,this);
 });
+//出现错误提示时，控制回到表格第一栏
 function curChange(i,w){
     //县隐藏所有的table
     $('.tab_table').hide();

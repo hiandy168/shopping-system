@@ -87,7 +87,7 @@
     <span>以上改变会自动搜索，也可以点击这里：</span>
         <!-- 关键字 -->
     <!--     关键字 <input type="text" name="keyword" size="15" id="keywords"/> -->
-        <input style="cursor:pointer;width:60px;text-align:center;background:url('/Public/Admin/images/icon_search.gif') no-repeat;" type="button" value="  搜 索" class="button" id="search" onclick="javascript:searchc(1,'a')""/>
+        <input style="cursor:pointer;width:60px;text-align:center;background:url('/Public/Admin/images/icon_search.gif') no-repeat;" type="button" value="  搜 索" class="button" id="search" onclick="javascript:searchc(1,'s')""/>
     </ol>
 </div>
 
@@ -142,7 +142,7 @@
                     <span id="pageNum1">当前共有<?php echo ($pages["pageNum"]); ?>页，当前为第</span>
 
                     <select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                        <?php $__FOR_START_20098__=0;$__FOR_END_20098__=$pages["pageNum"];for($i=$__FOR_START_20098__;$i < $__FOR_END_20098__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                        <?php $__FOR_START_2736__=0;$__FOR_END_2736__=$pages["pageNum"];for($i=$__FOR_START_2736__;$i < $__FOR_END_2736__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                     </select>页，可切换选择
                 </td>
             </tr>
@@ -210,7 +210,7 @@ function searchc(tar_page,poi){
             // layer.msg('请稍等！正在努力加载中！', {icon: 4});
         }
         if(xhr.readyState==4 && xhr.status==200){
-            layer.closeAll('loading');
+            layer.closeAll();//关闭所有弹出层
             var obj = JSON.parse(xhr.responseText);
             resetpageUrl(obj.pages);
             resetpageNum(curt_page,obj.pages.pageNum);

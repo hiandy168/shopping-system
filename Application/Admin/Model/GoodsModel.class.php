@@ -123,7 +123,8 @@ class GoodsModel extends Model{
 			}else{
 				//imageUrl自定义函数上传缩略图
 				$resz = $this->imageUrl($res);
-			}$data['logo'] = $res;
+			}
+			$data['logo'] = $res;
 			$data = array_merge($data,$resz);
 		}
 		if (isset($data['is_best'])) {
@@ -149,7 +150,7 @@ class GoodsModel extends Model{
 	}
 	protected function _after_update($data,$option){
 		$old_logo_url = session('old_logo_update');
-			$this->delete_old_logo($old_logo_url);
+		$this->delete_old_logo($old_logo_url);
 	}
 	///彻底删除商品信息前调用此函数
 	protected function _before_delete($option){

@@ -31,7 +31,6 @@ class UserController extends CommenController {
 			$this->assign([
 				'pages'=>$res['pages'],
 				'user_list'=>$res['user_list'],
-				'totalRows'=>$res['totalRows'],
 				'search_condition'=>$search_condition,
 			]);
 			$this->display();
@@ -58,9 +57,39 @@ class UserController extends CommenController {
 		}
 	}
 	public function userEdit(){
-		$this->display();
+		$model = D('user');
+		//判断是否提交了表单
+		if (IS_POST) {
+			//接收并验证表单,使用I方法过滤表单数据，2指定为更新
+			$data = $model->create(I('post.'),2);
+			if ($data) {
+				if ($model->where('id = '.I('post.id'))->save($data)!==FALSE) {
+					$sign = 'success';
+				}else{
+					$sign = $model->error;
+				}
+			}else{
+				$sign = $model->getError();
+			}
+			echo json_encode($sign);
+		}else{
+			//要修改信息的商品的ID
+			$id = I('get.id');
+			$user_detail = $model->where("id = {$id}")->find();
+			$this->assign([
+				'user_detail'=>$user_detail,
+			]);
+			$this->display();
+		}
 	}
 	public function userDelete(){
-
+		$model = D('user');
+		$delete_id = I('get.id');
+		if ($model->delete($delete_id)!==FALSE) {
+			$sign = 'success';
+		}else{
+			$sign = $model->getError();
+		}
+		echo json_encode($sign);
 	}
 }
