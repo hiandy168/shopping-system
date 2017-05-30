@@ -88,7 +88,7 @@ $('#userEdit').submit(function(evt){
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
                     layer.alert('用户信息更新成功！',function(){
-                        window.location.href = "__CONTROLLER__/userList";
+                        window.location.href = "__CONTROLLER__/userList/from/userEdit";
                         icon: 6;
                     });
                 }else if(key!=''){

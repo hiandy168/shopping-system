@@ -1,19 +1,19 @@
-<!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
+<?php if (!defined('THINK_PATH')) exit();?><!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>ECSHOP 管理中心 - 添加分类 </title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
-<link href="__ADMIN__/css/main.css" rel="stylesheet" type="text/css" />
-<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
-<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
+<link href="/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
+<link href="/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
+<script src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
+<script src="/Public/Plugins/layer/layer.js"></script>
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="__CONTROLLER__/categoryList">商品分类</a></span>
-    <span class="action-span1"><a href="__MODULE__">ECSHOP 管理中心</a></span>
+    <span class="action-span"><a href="/Admin/Category/categoryList">商品分类</a></span>
+    <span class="action-span1"><a href="/Admin">ECSHOP 管理中心</a></span>
     <span id="search_id" class="action-span1"> - 添加分类 </span>
     <div style="clear:both"></div>
 </h1>
@@ -23,7 +23,7 @@
             <tr>
                 <td class="label">分类名称:</td>
                 <td>
-                    <input type='text' name='cat_name' maxlength="20" value='{$category_detail.cat_name}' size='27' id="cat_name"/> <font color="red">*</font>
+                    <input type='text' name='cat_name' maxlength="20" value='<?php echo ($category_detail["cat_name"]); ?>' size='27' id="cat_name"/> <font color="red">*</font>
                 </td>
             </tr>
             <tr>
@@ -31,16 +31,14 @@
                 <td>
                     <select name="parent_id" id="parent_id">
                         <option value="0">顶级分类</option>
-                        <foreach name="cat_list" item="val">
-                            <option value="{$val.id}">{$val.level|str_repeat='&nbsp;&nbsp;',###}-{$val.cat_name}</option>
-                        </foreach>
+                        <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<?php echo ($val["id"]); ?>"><?php echo (str_repeat('&nbsp;&nbsp;',$val["level"])); ?>-<?php echo ($val["cat_name"]); ?></option><?php endforeach; endif; ?>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td class="label">排序:</td>
                 <td>
-                    <input type="text" name='sort_num'  value="{$category_detail.sort_num}" size="15" id="sort_num"/>
+                    <input type="text" name='sort_num'  value="<?php echo ($category_detail["sort_num"]); ?>" size="15" id="sort_num"/>
                 </td>
             </tr>
             <tr>
@@ -60,14 +58,14 @@
             <tr>
                 <td class="label">关键字:</td>
                 <td>
-                    <input type="text" name="keywords" value='{$category_detail.keywords}' size="50" id="keywords"/>
+                    <input type="text" name="keywords" value='<?php echo ($category_detail["keywords"]); ?>' size="50" id="keywords"/>
                 </td>
             </tr>
         </table>
         <div class="button-div">
-            <input type="hidden" name="id" value="{$category_detail.id}"/>
+            <input type="hidden" name="id" value="<?php echo ($category_detail["id"]); ?>"/>
             <input type="submit" value=" 确定 " onmouseover="this.style.cursor='pointer'"/>
-            <input style="width:45px;" type="bubtton" value=" 返 回 " class="button" onclick="location='__CONTROLLER__/categoryList/from/categoryEdit'" onmouseover="this.style.cursor='pointer'"/>
+            <input style="width:45px;" type="bubtton" value=" 返 回 " class="button" onclick="location='/Admin/Category/categoryList/from/categoryEdit'" onmouseover="this.style.cursor='pointer'"/>
         </div>
     </form>
 </div>
@@ -78,7 +76,7 @@
 $('#categoryEdit').submit(function(evt){
     //收集表单域信息
     var data = new FormData(this);
-    loadXMLDoc(data,"__ACTION__",function(){
+    loadXMLDoc(data,"/Admin/Category/categoryEdit",function(){
         if(xhr.readyState!=4){
             //layer加载层
             layer.load(2);
@@ -89,7 +87,7 @@ $('#categoryEdit').submit(function(evt){
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
                     layer.alert('分类信息更新成功！',function(){
-                        window.location.href = "__CONTROLLER__/categoryList/from/categoryEdit";
+                        window.location.href = "/Admin/Category/categoryList/from/categoryEdit";
                         icon: 6;
                     });
                 }else{
@@ -115,17 +113,17 @@ function loadXMLDoc(data,url,cfunc){
 }
 //渲染默认被选择的单选框和复选框
 window.onload=function(){
-    if("{$category_detail.is_show}"=='是'){
+    if("<?php echo ($category_detail["is_show"]); ?>"=='是'){
         $('#is_show_1').attr('checked','true');
-    }else if("{$category_detail.is_show}"=='否'){
+    }else if("<?php echo ($category_detail["is_show"]); ?>"=='否'){
         $('#is_show_0').attr('checked','true');
     }
-    if("{$category_detail.is_floor}"=='是'){
+    if("<?php echo ($category_detail["is_floor"]); ?>"=='是'){
         $('#is_floor_1').attr('checked','true');
-    }else if("{$category_detail.is_floor}"=='否'){
+    }else if("<?php echo ($category_detail["is_floor"]); ?>"=='否'){
         $('#is_floor_0').attr('checked','true');
     }
-    $('#parent_id').val({$category_detail.parent_id});
+    $('#parent_id').val(<?php echo ($category_detail["parent_id"]); ?>);
 }
 </script>
 </html>

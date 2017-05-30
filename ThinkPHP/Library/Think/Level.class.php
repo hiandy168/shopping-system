@@ -6,13 +6,14 @@ class Level{
 	/**
 	 * [classify description]
 	 * @param  array   $data        要分层的数组数据
+	 * 
+	 * @param  integer $id          默认0为顶级分类，对所有数据都进行统计
 	 *                              开始分类的主键id，只对该id类及其子类进行统计分层
-	 * @param  integer $id          默认0对为顶级分类，对所有数据都进行统计
 	 *
 	 * @param  string  $field_id    $data主键id的字段名称，可能每张表不一样,默认为'id'
 	 * @param  string  $field_pid   $data父类id的字段名称，可能每张表不一样,默认为'pid'
 	 *
-	 * @param  string  $level 		返回的等级字段名称，默认为'level'
+	 * @param  string  $level 		返回的等级字段索引名称，默认为'level'
 	 * @param  array   &$res        返回的数据的变量，默认为空数组
 	 *
 	 * @param  integer $level       等级编号，默认从0开始

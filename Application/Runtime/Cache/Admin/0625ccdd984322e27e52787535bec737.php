@@ -137,8 +137,7 @@
 <div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
 <script>
-var form = document.getElementById('goodsAdd');
-form.onsubmit = function(evt){
+$('#goodsAdd').submit(function(evt){
     //收集表单域信息
     var data = new FormData(this);
     loadXMLDoc(data,"/Admin/Goods/goodsAdd",function(){
@@ -163,7 +162,7 @@ form.onsubmit = function(evt){
         }
     });
     evt.preventDefault();
-}
+});
 var xhr;
 function loadXMLDoc(data,url,cfunc){
     if(window.XMLHttpRequest){

@@ -50,7 +50,7 @@
             <tr>
                 <td class="label">排序</td>
                 <td>
-                    <input type="text" name="sort_order" maxlength="40" size="15" value="50" id="sort_num"/>
+                    <input type="text" name="sort_order" maxlength="40" size="15" value="" id="sort_num"/>
                 </td>
             </tr>
             <tr>

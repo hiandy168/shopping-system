@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
 <link href="__ADMIN__/css/main.css" rel="stylesheet" type="text/css" />
+<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
+<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
 </head>
 <body>
 <h1>
@@ -23,21 +25,22 @@
                 <th>导航栏</th>
                 <th>是否显示</th>
                 <th>排序</th>
+                <th>关键词</th>
                 <th>操作</th>
             </tr>
-            <foreach name="list" item="val">
-            <tr align="center" class="0">
-                <td align="left" class="first-cell" >
-                <{$val.lev|str_repeat='&nbsp;&nbsp;&nbsp;&nbsp;',###}>
-                <img src="./Images/menu_minus.gif" width="9" height="9" border="0" style="margin-left:0em" />
-                <span><a href="javascript:void(0)"><{$val.cat_name}></a></span>
+            <foreach name="cat_list" item="val">
+            <tr align="center" class="tron">
+                <td align="left" class="first-cell" >{$val.level|str_repeat='&nbsp;&nbsp;&nbsp;&nbsp;',###}
+                <img src="__ADMIN__/Images/menu_minus.gif" width="9" height="9" border="0" style="margin-left:0em" />
+                <span>{$val.cat_name}</span>
                 </td>
-                <td width="15%"><img src="./Images/<if condition='$val.is_nav eq 1'>yes.gif<else />no.gif</if>"  /></td>
-                <td width="15%"><img src="<if condition='$val.is_show eq 1'> ./Images/yes.gif <else /> ./Images/no.gif </if>" /></td>
-                <td width="15%" align="center"><span><{$val.sort_order}></span></td>
-                <td width="30%" align="center">
-                <a href="__GROUP__/Category/categoryEdit?cat_id=<{$val.cat_id}>">编辑</a> |
-                <a href="__GROUP__/Category/categoryDelete?cat_id=<{$val.cat_id}>" title="移除" onclick="">移除</a>
+                <td width="15%"><img src="__ADMIN__/Images/<if condition='$val.is_floor eq 是'>yes.gif<else />no.gif</if>"  /></td>
+                <td width="15%"><img src="<if condition='$val.is_show eq 是'> __ADMIN__/Images/yes.gif <else /> __ADMIN__/Images/no.gif </if>" /></td>
+                <td width="15%" align="center"><span>{$val.sort_num}</span></td>
+                <td width="20%" align="center">{$val.keywords}</td>
+                <td width="15%" align="center">
+                <a href="__CONTROLLER__/categoryEdit?id={$val.id}">编辑</a> |
+                <a href="javascript:delete_confirm({$val.id})" title="移除" onclick="">移除</a>
                 </td>
             </tr>
             </foreach>
@@ -47,4 +50,69 @@
 <div id="footer">
 版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
 </body>
+<script>
+//渲染鼠标选中的tr行背景颜色改变
+$(".tron").mouseover(function(){
+    $(this).find('td').css('backgroundColor','#ccc');
+});
+$(".tron").mouseout(function(){
+    $(this).find('td').css('backgroundColor','#fff');
+});
+/**
+ * 将商品移至回收站时，调用此函数
+ * @param  int delete_id 回收商品的ID
+ */
+function deletec(delete_id){
+    loadXMLDoc("__CONTROLLER__/categoryDelete/id/"+delete_id,function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('指定分类已被删除！',function(){
+                        window.location.href = "__CONTROLLER__/categoryList/from/categoryEdit";
+                        icon: 6;
+                    });
+                }else{
+                    layer.alert(value, {icon: 5});
+                }
+            });
+        }
+    });
+}
+function delete_confirm(confirm_id){
+    layer.msg('确定要删除此分类？', {
+      time: 5000 
+      ,btn: ['是的！', '算了..']
+      ,yes: function(index){
+        layer.close(index);
+        deletec(confirm_id);
+      }
+      ,no:function(index){
+        layer.close(index);
+      }
+    });
+}
+/**
+ * 创建ajax对象，并向服务器发起请求
+ * @param  string url    请求的链接
+ * @param  mixed  cfunc  回调函数
+ */
+function loadXMLDoc(url,cfunc){
+        if(window.XMLHttpRequest){
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xhr=new XMLHttpRequest();
+        }else{
+            // code for IE6, IE5
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.onreadystatechange=cfunc;
+        xhr.open("get",url,true);
+        xhr.send();
+}
+</script>
 </html>

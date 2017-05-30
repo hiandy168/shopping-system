@@ -135,6 +135,8 @@
         <li class="fix-spacel">&nbsp;</li>
         <li><a href="/Admin/Index/main" target="main-frame">起始页</a></li>
         <li><a href="/Admin/Goods/goodsList" target="main-frame">商品列表</a></li>
+        <li><a href="/Admin/Category/categoryList" target="main-frame">分类列表</a></li>
+        <li><a href="/Admin/Brand/brandList" target="main-frame">品牌列表</a></li>
         <li><a href="/Admin/Order/orderList" target="main-frame">订单列表</a></li>
         <li><a href="/Admin/Comment/commentList" target="main-frame">用户评论</a></li>
         <li><a href="/Admin/User/userList" target="main-frame">会员列表</a></li>

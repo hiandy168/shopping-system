@@ -18,9 +18,9 @@ class BrandModel extends Model{
 	protected $_validate = [
 		//为表单域定义具体验证规则
 		//array(字段名称/表单域name属性值,验证规则,错误提示[,验证条件,附加规则,验证时间])
-		['brand_name','require',' * 用户名不能为空',1],
-		['brand_name','',' * 该用户名已存在！',1,'unique',1],//新增验证用户名唯一
-		['brand_name','check_brand_name',' * 该用户名已存在！',1,'callback',2],//修改验证用户名唯一
+		['brand_name','require',' * 品牌名不能为空',1],
+		['brand_name','',' * 该品牌名已存在！',1,'unique',1],//新增验证品牌名唯一
+		['brand_name','check_brand_name',' * 该品牌名已存在！',1,'callback',2],//修改验证品牌名唯一
 		['site_url','@(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’]))@',' * 这不是正确的url地址！',2,'regex']
 	];
 	protected function _before_insert(&$data,$option){

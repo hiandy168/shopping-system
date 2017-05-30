@@ -71,7 +71,7 @@
                             <a href="javascript:searchc(<?php echo ($pages["next"]); ?>,'r')" id="next"">下一页</a>
                             <a href="javascript:searchc(<?php echo ($pages["pageNum"]); ?>,'r')" id="pageNum"">尾页</a>
                             当前为第<select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                                <?php $__FOR_START_26761__=0;$__FOR_END_26761__=$pages["pageNum"];for($i=$__FOR_START_26761__;$i < $__FOR_END_26761__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                                <?php $__FOR_START_5207__=0;$__FOR_END_5207__=$pages["pageNum"];for($i=$__FOR_START_5207__;$i < $__FOR_END_5207__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                             </select>页，可切换选择
                         </span>
                     </div>

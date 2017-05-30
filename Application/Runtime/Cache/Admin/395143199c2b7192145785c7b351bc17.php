@@ -49,7 +49,7 @@
             <tr>
                 <td class="label">排序</td>
                 <td>
-                    <input type="text" name="sort_order" maxlength="40" size="15" value="<?php echo ($brand_detail["sort_num"]); ?>" id="sort_num"/>
+                    <input type="text" name="sort_num" maxlength="40" size="15" value="<?php echo ($brand_detail["sort_num"]); ?>" id="sort_num"/>
                 </td>
             </tr>
             <tr>
