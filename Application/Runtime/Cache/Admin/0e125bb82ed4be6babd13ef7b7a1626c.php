@@ -28,6 +28,8 @@
         <p>
             <span class="tab-front" id="tab-first">基本信息</span>
             <span class="tab-back">其他信息</span>
+            <span class="tab-back">商品属性</span>
+            <span class="tab-back">商品相册</span>
         </p>
     </div>
     <div id="tabbody-div">
@@ -54,6 +56,27 @@
                             <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<?php echo ($val["id"]); ?>"><?php echo (str_repeat('&nbsp;&nbsp;',$val["level"])); ?>-<?php echo ($val["cat_name"]); ?></option><?php endforeach; endif; ?>
                         </select>
                         <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">扩展分类：</td>
+                    <td>
+                        <input type="button" id="btn_add_cat" value="添加一个" /><br/>
+                        <ul id="ext_cat">
+                            <li> 
+                                <select name="ext_cat_id[]" id="ext_cat_id">
+                                    <option value="0">请选择........</option>
+                                    <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<?php echo ($val["id"]); ?>"><?php echo (str_repeat('&nbsp;&nbsp;',$val["level"])); ?>-<?php echo ($val["cat_name"]); ?></option><?php endforeach; endif; ?>
+                                </select>
+                            </li> 
+                        <?php if(is_array($goods_detail_ext_cat_list)): $i = 0; $__LIST__ = $goods_detail_ext_cat_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><li value="<?php echo ($vol["cat_id"]); ?>"> 
+                                <select name="ext_cat_id[]" class="_ext_cat_id">
+                                    <option value="0">请选择........</option>
+                                    <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<?php echo ($val["id"]); ?>" ><?php echo (str_repeat('&nbsp;&nbsp;',$val["level"])); ?>-<?php echo ($val["cat_name"]); ?></option><?php endforeach; endif; ?>
+                                </select>
+                                <input type="button" value="删除" onclick="$(this).parent().remove();"/>
+                            </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </ul>
                     </td>
                 </tr>
                 <tr>
@@ -118,8 +141,7 @@
                 <tr>
                     <td class="label">会员价格：</td>
                     <td>
-                        <?php if(is_array($goods_detail_member_price_list)): $i = 0; $__LIST__ = $goods_detail_member_price_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><span style="width:50px"><?php echo ($vol["level_name"]); ?>：￥</span><input type="text" name="member_price[<?php echo ($vol["level_id"]); ?>]" value="<?php echo ($vol["price"]); ?>"><br/><?php endforeach; endif; else: echo "" ;endif; ?>
-                       <!-- 这里应联表查询，获取会员级别名称、会员级别ID，此商品不同级别价格 -->
+                        <?php if(is_array($goods_detail_member_price_list)): $i = 0; $__LIST__ = $goods_detail_member_price_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><span style="width:50px"><?php echo ($vol["level_name"]); ?>：￥</span><input type="text" name="member_price[<?php echo ($vol["id"]); ?>]" value="<?php echo ($vol["price"]); ?>"><br/><?php endforeach; endif; else: echo "" ;endif; ?>
                     </td>
                 </tr>
                 <tr>
@@ -129,10 +151,24 @@
                     </td>
                 </tr>
             </table>
+            <!-- 商品属性 -->
+            <table style="display:none;" width="90%" class="tab_table" align="center">
+                <tr><td></td></tr>
+            </table>
+            <!-- 商品相册 -->
+            <table style="display:none;" width="100%" class="tab_table" align="center">
+                <tr>
+                <td>
+                    <input id="btn_add_pic" type="button" value="添加一张" />
+                    <hr />
+                    <ul id="ul_pic_list"></ul>
+                </td>
+                </tr>
+            </table>
             <div class="button-div">
                 <input type="hidden" name="id" value="<?php echo ($goods_detail["id"]); ?>"/>
                 <input type="submit" value=" 确 定 " class="button" onmouseover="this.style.cursor='pointer'"/>
-                <input style="width:50px;" type="bubtton" value=" 返 回 " class="button" onclick="location='/Admin/Goods/goodsList/from/goodsEdit'" onmouseover="this.style.cursor='pointer'"/>
+                <input style="width:45px;height:16px" type="bubtton" value=" 返 回 " class="button" onclick="location='/Admin/Goods/goodsList/from/goodsEdit'" onmouseover="this.style.cursor='pointer'"/>
             </div>
         </form>
     </div>
@@ -165,6 +201,7 @@ form.onsubmit = function(evt){
         }
         if(xhr.readyState==4 && xhr.status==200){
             layer.closeAll('loading');
+            // console.log(xhr.responseText);
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
                     layer.alert('商品信息更新成功！',function(){
@@ -190,6 +227,7 @@ $('#tabbar-div p span').click(function(){
     var i = $(this).index();
     curChange(i,this);
 });
+//出现错误提示时，控制回到表格第一栏
 function curChange(i,w){
     //县隐藏所有的table
     $('.tab_table').hide();
@@ -218,6 +256,34 @@ window.onload=function(){
     }
     $('#brand_id').val("<?php echo ($goods_detail["brand_id"]); ?>");
     $('#cat_id').val("<?php echo ($goods_detail["cat_id"]); ?>");
+    //这里选择将select的value值暂放在父类元素ul上，然后再赋值
+    $('._ext_cat_id').each(function(){
+        $(this).val($(this).parent().val());
+    });
+    add_pic_ids();
+}
+$('#btn_add_cat').click(function(){add_cat_ids()});
+$("#btn_add_pic").click(function(){add_pic_ids()});
+// 添加一个扩展分类
+function add_cat_ids(){
+    //每按一次按钮，将第一个select标签复制一个放到最后
+    $('#ext_cat').append($('#ext_cat').find('li').eq(0).clone());
+    //定义一个input按钮用于删除添加的扩展分类
+    var input = $('<input type="button" value="删除"/>');
+    input.click(function(){
+        $(this).parent().remove()
+    });
+    $('#ext_cat').children().last().append(input);
+}
+// 添加一张相片
+function add_pic_ids(){
+    var file = '<li><input type="file" name="pic[]" /></li>';
+    $("#ul_pic_list").append(file);
+    var input = $('<input type="button" value="删除"/>');
+    input.click(function(){
+        $(this).parent().remove();
+    });
+    $('#ul_pic_list').children().last().append(input);
 }
 </script>
 </html>

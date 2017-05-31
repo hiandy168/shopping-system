@@ -90,7 +90,7 @@ class GoodsModel extends Model{
 			//将用户的输入永远转化为浮点型，非数字转化为0
 			//这里用框架没有很好的方法去验证，因为member_price是个数组
 			$_v = (float)$v;
-			//如果有价格则写入此价格，没价格或者价格格式不对，则不写入
+			//如果有价格则写入此价格
 			if($_v>0){
 				$mpModel->add([
 					'price'=>$v,
@@ -104,6 +104,56 @@ class GoodsModel extends Model{
 					'level_id'=>$k,
 					'goods_id'=>$data['id'],
 				]);
+			}
+		}
+		/************ 处理扩展分类 ***************/
+		$ecid = I('post.ext_cat_id');
+		if($ecid){
+			$gcModel = D('goods_cat');
+			foreach ($ecid as $k => $v){
+				if($v==0)
+					continue ;
+				$gcModel->add([
+					'cat_id' => $v,
+					'goods_id' => $data['id'],
+				]);
+			}
+		}
+		/************ 处理相册图片 *****************/
+		if(isset($_FILES['pic'])){
+			$gpModel = D('goods_pic');
+			$pics = array();
+			foreach ($_FILES['pic']['name'] as $k => $v){
+				$pics[] = array(
+					'name' => $v,
+					'type' => $_FILES['pic']['type'][$k],
+					'tmp_name' => $_FILES['pic']['tmp_name'][$k],
+					'error' => $_FILES['pic']['error'][$k],
+					'size' => $_FILES['pic']['size'][$k],
+				);
+			}
+			// 循环每个上传
+			foreach ($pics as $k => $v){
+				if($v['error'] == 0){
+					$res = $this->checkFile($v);
+					//如果原图上传失败则返回错误信息
+					if (!$res) {
+						continue;
+					}else{
+						//picUrl自定义函数上传缩略图
+						$resz = $this->picUrl($res);
+					}
+					$data['pic'] = $res;
+					$data = array_merge($data,$resz);
+					//将路径信息，存入ss_goods_pic表
+					$gpModel->add([
+							'pic' => $data['pic'],
+							'big_pic' => $data['big_pic'],
+							'mid_pic' => $data['mid_pic'],
+							'sm_pic' => $data['sm_pic'],
+							'goods_id' => $data['id'],
+					]);
+				}
 			}
 		}
 	}
@@ -146,11 +196,97 @@ class GoodsModel extends Model{
 		$data['updtime'] = date('Y-m-d H:i:s',time());
 		//调用自定义的防止XSS注入的函数过滤出HTML代码，此函数包含了htmlpurifier插件包
 		$data['goods_desc'] = removeXSS($_POST['goods_desc']);
+		//没有输入货号时，以当前时间戳作为其货号
 		$data['goods_sn'] = I('post.goods_sn')!=false?I('post.goods_sn'):time();
 	}
 	protected function _after_update($data,$option){
+		$id = $data['id'];  // 要修改的商品的ID
+		$this->error = $id;
 		$old_logo_url = session('old_logo_update');
 		$this->delete_old_logo($old_logo_url);
+		/*****************处理会员价格信息*****************/
+		//先获取表单中的会员价格信息
+		$mp = I('post.member_price');
+		$mpModel = M('member_price');
+		foreach ($mp as $k => $v) {
+			//将用户的输入永远转化为浮点型，非数字转化为0
+			//这里用框架没有很好的方法去验证，因为member_price是个数组
+			$_v = (float)$v;
+
+			if($_v>0){
+				//如果有价格则写入此价格
+				$save = ['level_id'=>$k,'goods_id'=>$id];
+				$save['price'] = $v;
+			}else{
+				//如果有会员价格没填，则默认为店铺价
+				$save = ['level_id'=>$k,'goods_id'=>$id];
+				$save['price'] = $data['shop_price'];
+			}
+			//因为每个商品的会员价格固定，因此可以选择更新覆盖
+			//拼装好一条一条记录信息后，根据表内是否存在，选择是更新还是添加，主要为以后临时level扩展用
+			if($mpModel->where('level_id = '.$k.' and goods_id = '.$id)->select()){
+				//如果此商品此leve的价格记录存在，则更新操作
+				$mpModel->where('level_id = '.$k.' and goods_id = '.$id)->save($save);
+			}else{
+				//否则添加操作
+				$mpModel->add($save);
+			}
+		}
+		/************ 处理扩展分类 ***************/
+		$ecid = I('post.ext_cat_id');
+		//如果有指定扩展分类，就处理
+		if($ecid){
+			$gcModel = D('goods_cat');
+			//因为每个商品对应的扩展分类数量不固定，因此先删除原分类数据
+			$gcModel->where(array(
+				'goods_id' => array('eq', $id),
+			))->delete();
+			foreach ($ecid as $k => $v){
+				if($v==0){
+					continue ;
+				}
+				$save = ['cat_id' => $v,'goods_id' => $id];
+				//否则添加操作
+				$gcModel->add($save);
+			}
+		}
+		/************ 处理相册图片 *****************/
+		if(isset($_FILES['pic'])){
+			$gpModel = D('goods_pic');
+			$pics = array();
+			foreach ($_FILES['pic']['name'] as $k => $v){
+				$pics[] = array(
+					'name' => $v,
+					'type' => $_FILES['pic']['type'][$k],
+					'tmp_name' => $_FILES['pic']['tmp_name'][$k],
+					'error' => $_FILES['pic']['error'][$k],
+					'size' => $_FILES['pic']['size'][$k],
+				);
+			}
+			// 循环每个上传
+			foreach ($pics as $k => $v){
+				if($v['error'] == 0){
+					$res = $this->checkFile($v);
+					//如果原图上传失败则返回错误信息
+					if (!$res) {
+						continue;
+					}else{
+						//picUrl自定义函数上传缩略图
+						$resz = $this->picUrl($res);
+					}
+					$data['pic'] = $res;
+					$data = array_merge($data,$resz);
+					//将路径信息，存入ss_goods_pic表
+					$gpModel->where('goods_id = '.$id)->save([
+							'pic' => $data['pic'],
+							'big_pic' => $data['big_pic'],
+							'mid_pic' => $data['mid_pic'],
+							'sm_pic' => $data['sm_pic'],
+							'goods_id' => $data['id'],
+					]);
+				}
+			}
+		}
 	}
 	///彻底删除商品信息前调用此函数
 	protected function _before_delete($option){
@@ -198,6 +334,23 @@ class GoodsModel extends Model{
 		//返回缩略图的路径
 		return $data;
 	}
+	private function picUrl($imgurl){
+		$dirname = dirname($imgurl);
+		$filename = basename($imgurl);
+		//加载框架图片处理类
+		$image = new \Think\Image();
+		//指定缩略图片保存路径
+		$data['sm_pic'] = $dirname.'/thumb_sm_'.$filename;
+		$data['mid_pic'] = $dirname.'/thumb_mid_'.$filename;
+		$data['big_pic'] = $dirname.'/thumb_big_'.$filename;
+		//thumb保存缩略图
+		$image->open($imgurl);
+		$image->thumb(50,50)->save($data['sm_pic']);
+		$image->thumb(350,350)->save($data['mid_pic']);
+		$image->thumb(650,650)->save($data['big_pic']);
+		//返回缩略图的路径
+		return $data;
+	}
 	/**
 	 * 调用自定义函数验证图片文件并上传原图
 	 * @param  [array] $uploadfile [上传的文件]
@@ -230,19 +383,30 @@ class GoodsModel extends Model{
 	 * @param  string  $order     $order查询条件
 	 * @return [type]             返回数据，包括页码和查询的数据
 	 */
-	public function getLimitData($tar_page=1,$rowsNum=5,$condition=[],$order='',$sql='unix_timestamp(addtime)>0'){
-		$condition['is_delete'] = '否';
-		//总记录行数
-		$totalRows = $this->where($sql)->where($condition)->order($order)->count();
+	public function getLimitData($tar_page=1,$rowsNum=5,$condition=[],$order=[]){ 
+		$condition['is_delete'] = '否';		//总记录行数
+		$join = 'left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id';
+		//两次查询的基本条件应一致
+		$totalRows = $this->alias('g')->join($join)->where($condition)->order($order)->count("DISTINCT g.id");
 		//获取分页类模型
 		$fenye = new \Think\Fenye();
 		//获取分页页码
 		$pages = $fenye->getPageNumber($totalRows,$tar_page,$rowsNum);
-		//分页查询
-		$goods_list = $this->where($sql)->where($condition)->order($order)->limit($pages['firstRows'],$pages['rowsNum'])->select();
+		//分页查询，GROUP_CONCAT函数将分组里的cat_name拼接起来
+		$goods_list = $this
+		->field("g.*,b.brand_name,c.cat_name,GROUP_CONCAT(cc.cat_name separator ' | ') as ext_cat_name")
+		->alias('g')->join($join)->where($condition)->order($order)
+		->limit($pages['firstRows'],$pages['rowsNum'])
+		->group('g.id')->select();
 		return [
 			'pages'      =>  $pages,
 			'goods_list' =>  $goods_list,
 		];
+	}
+	public function get_ext_cat_ids(){
+
 	}
 }

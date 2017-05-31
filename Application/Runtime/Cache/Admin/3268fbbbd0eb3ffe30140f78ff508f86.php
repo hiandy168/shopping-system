@@ -98,6 +98,9 @@
             <tr>
                 <th>编号</th>
                 <th>商品名称</th>
+                <th>品牌</th>
+                <th>分类</th>
+                <th>扩展分类</th>
                 <th>LOGO</th>>
                 <th>货号</th>
                 <th>添加时间</th>
@@ -113,6 +116,9 @@
             <?php if(is_array($goods_list)): $i = 0; $__LIST__ = $goods_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><tr class="tron">
                 <td><?php echo ($i); ?></td>
                 <td><?php echo ($vol["goods_name"]); ?></td>
+                <td><?php echo ($vol["brand_name"]); ?></td>
+                <td><?php echo ($vol["cat_name"]); ?></td>
+                <td><?php echo ($vol["ext_cat_name"]); ?></td>
                 <td><img src="/<?php echo ($vol["sm_logo"]); ?>"/></td>
                 <td><?php echo ($vol["goods_sn"]); ?></td>
                 <td><?php echo ($vol["addtime"]); ?></td>
@@ -142,7 +148,7 @@
                     <span id="pageNum1">当前共有<?php echo ($pages["pageNum"]); ?>页，当前为第</span>
 
                     <select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                        <?php $__FOR_START_10099__=0;$__FOR_END_10099__=$pages["pageNum"];for($i=$__FOR_START_10099__;$i < $__FOR_END_10099__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                        <?php $__FOR_START_2520__=0;$__FOR_END_2520__=$pages["pageNum"];for($i=$__FOR_START_2520__;$i < $__FOR_END_2520__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                     </select>页，可切换选择
                 </td>
             </tr>
@@ -211,6 +217,7 @@ function searchc(tar_page,poi){
         }
         if(xhr.readyState==4 && xhr.status==200){
             layer.closeAll();//关闭所有弹出层
+            // console.log(xhr.responseText);
             var obj = JSON.parse(xhr.responseText);
             resetpageUrl(obj.pages);
             resetpageNum(curt_page,obj.pages.pageNum);
@@ -235,6 +242,7 @@ function deletec(delete_id){
         }
         if(xhr.readyState==4 && xhr.status==200){
             layer.closeAll('loading');
+            console.log(xhr.responseText);
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
                     layer.alert('商品信息已移至回收站！',function(){
@@ -356,6 +364,18 @@ function resetdata(tag_id,data_list){
         var td2 = document.createElement("td");
         td2.innerHTML = data_list[k].goods_name;
         tr.appendChild(td2);
+
+        var td14 = document.createElement("td");
+        td14.innerHTML = data_list[k].brand_name;
+        tr.appendChild(td14);
+
+        var td15 = document.createElement("td");
+        td15.innerHTML = data_list[k].cat_name;
+        tr.appendChild(td15);
+
+        var td16 = document.createElement("td");
+        td16.innerHTML = data_list[k].ext_cat_name;
+        tr.appendChild(td16);
 
         var td3 = document.createElement("td");
         td3.appendChild(img1);

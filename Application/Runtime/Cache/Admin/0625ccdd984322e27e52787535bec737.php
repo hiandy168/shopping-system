@@ -29,6 +29,8 @@
         <p>
             <span class="tab-front" id="tab-first">基本信息</span>
             <span class="tab-back">其他信息</span>
+            <span class="tab-back">商品属性</span>
+            <span class="tab-back">商品相册</span>
         </p>
     </div>
     <div id="tabbody-div">
@@ -55,6 +57,20 @@
                             <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<?php echo ($val["id"]); ?>"><?php echo (str_repeat('&nbsp;&nbsp;',$val["level"])); ?>-<?php echo ($val["cat_name"]); ?></option><?php endforeach; endif; ?>
                         </select>
                         <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">扩展分类：</td>
+                    <td>
+                        <input type="button" id="btn_add_cat" value="添加一个" /><br/>
+                        <ul id="ext_cat">
+                            <li> 
+                                <select name="ext_cat_id[]" id="ext_cat_id">
+                                    <option value="0">请选择........</option>
+                                    <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<?php echo ($val["id"]); ?>"><?php echo (str_repeat('&nbsp;&nbsp;',$val["level"])); ?>-<?php echo ($val["cat_name"]); ?></option><?php endforeach; endif; ?>
+                                </select>
+                            </li> 
+                        </ul>
                     </td>
                 </tr>
                 <tr>
@@ -117,7 +133,7 @@
                 <tr>
                     <td class="label">会员价格：</td>
                     <td>
-                       <?php if(is_array($member_level_list)): $i = 0; $__LIST__ = $member_level_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><span style="width:50px"><?php echo ($vol["level_name"]); ?>：￥</span><input type="text" name="member_price[<?php echo ($vol["id"]); ?>]" value=""><br/><?php endforeach; endif; else: echo "" ;endif; ?>
+                       <?php if(is_array($member_level_list)): $i = 0; $__LIST__ = $member_level_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><span><?php echo ($vol["level_name"]); ?>：￥</span><input type="text" name="member_price[<?php echo ($vol["id"]); ?>]" value=""><br/><?php endforeach; endif; else: echo "" ;endif; ?>
                     </td>
                 </tr>
                 <tr>
@@ -125,6 +141,20 @@
                     <td>
                         <textarea id="goods_desc" name="goods_desc" cols="40" rows="3"></textarea>
                     </td>
+                </tr>
+            </table>
+            <!-- 商品属性 -->
+            <table style="display:none;" width="90%" class="tab_table" align="center">
+                <tr><td></td></tr>
+            </table>
+            <!-- 商品相册 -->
+            <table style="display:none;" width="100%" class="tab_table" align="center">
+                <tr>
+                <td>
+                    <input id="btn_add_pic" type="button" value="添加一张" />
+                    <hr />
+                    <ul id="ul_pic_list"></ul>
+                </td>
                 </tr>
             </table>
             <div class="button-div">
@@ -197,5 +227,26 @@ function curChange(i,w){
     //再将点击的那个按钮的样式改为tab-front
     $(w).removeClass('tab-back').addClass('tab-front');
 }
+// 添加一个扩展分类
+$('#btn_add_cat').click(function(){
+    //每按一次按钮，将第一个select标签复制一个放到最后
+    $('#ext_cat').append($('#ext_cat').find('li').eq(0).clone());
+    //定义一个input按钮用于删除添加的扩展分类
+    var input = $('<input type="button" value="删除"/>');
+    input.click(function(){
+        $(this).parent().remove()
+    });
+    $('#ext_cat').children().last().append(input);
+});
+// 添加一张相片
+$("#btn_add_pic").click(function(){
+    var file = '<li><input type="file" name="pic[]" /></li>';
+    $("#ul_pic_list").append(file);
+    var input = $('<input type="button" value="删除"/>');
+    input.click(function(){
+        $(this).parent().remove()
+    });
+    $('#ul_pic_list').children().last().append(input);
+});
 </script>
 </html>
