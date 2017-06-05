@@ -148,7 +148,7 @@
                     <span id="pageNum1">当前共有<?php echo ($pages["pageNum"]); ?>页，当前为第</span>
 
                     <select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                        <?php $__FOR_START_2520__=0;$__FOR_END_2520__=$pages["pageNum"];for($i=$__FOR_START_2520__;$i < $__FOR_END_2520__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                        <?php $__FOR_START_20406__=0;$__FOR_END_20406__=$pages["pageNum"];for($i=$__FOR_START_20406__;$i < $__FOR_END_20406__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                     </select>页，可切换选择
                 </td>
             </tr>

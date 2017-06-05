@@ -45,7 +45,7 @@
             <tr>
                 <td class="label">会员头像：</td>
                 <td>
-                    <input type="file" name="face" id="face" size="45" disabled="false"><br/>
+                    <input type="file" name="face" id="face" size="45"><br/>
                     <span class="notice-span" style="display:block"  id="warn_brandlogo">请上传图片，做为个人头像！</span>
                 </td>
             </tr>
