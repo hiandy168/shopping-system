@@ -32,6 +32,9 @@ class BrandController extends CommenController {
 				'pages'=>$res['pages'],
 				'brand_list'=>$res['brand_list'],
 				'search_condition'=>$search_condition,
+                '_page_title'=>"品牌列表页",
+                '_btn_name'=>"添加新品牌",
+                '_URL_'=>"brandAdd",
 			]);
 			$this->display();
 		}
@@ -53,6 +56,11 @@ class BrandController extends CommenController {
 			}
 			echo json_encode($sign);
 		}else{
+			$this->assign([
+				'_page_title'=>"添加品牌页",
+                '_btn_name'=>"品牌列表",
+                '_URL_'=>"brandList",
+			]);
 			$this->display();
 		}
 	}
@@ -78,6 +86,9 @@ class BrandController extends CommenController {
 			$brand_detail = $model->where("id = {$id}")->find();
 			$this->assign([
 				'brand_detail'=>$brand_detail,
+                '_page_title'=>"修改品牌页",
+                '_btn_name'=>"品牌列表",
+                '_URL_'=>"brandList",
 			]);
 			$this->display();
 		}

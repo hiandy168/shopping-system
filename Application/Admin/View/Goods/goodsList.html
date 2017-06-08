@@ -1,34 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ECSHOP 管理中心 - 商品列表 </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
-<link href="__ADMIN__/css/main.css" rel="stylesheet" type="text/css" />
-<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
-<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
-<!-- 时间插件 -->
-<link href="__PUBLIC__/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/datetimepicker/datepicker-zh_cn.js"></script>
-<link rel="stylesheet" media="all" type="text/css" href="__PUBLIC__/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
-<script type="text/javascript" src="__PUBLIC__/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Plugins/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
-<style>#tableList td{text-align:center;}
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button{
-        -webkit-appearance: none !important;
-        margin: 0; 
-    }
-</style>
-</head>
-<body>
-<h1>
-    <span class="action-span"><a href="__CONTROLLER__/goodsAdd.html">添加新商品</a></span>
-    <span class="action-span1"><a href="__MODULE__">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 商品列表 </span>
-    <div style="clear:both"></div>
-</h1>
+<layout name="Common/layout"/>
 <div class="form-div">
     <ol>
         <span>筛选：</span>
@@ -135,7 +105,7 @@
                 <td>{$vol.sort_num}</td>
                 <td>{$vol.goods_number}</td>
                 <td>
-                <a href="__CONTROLLER__/goodsView/id/{$vol.id}" title="查看"><img src="__ADMIN__/images/icon_view.gif" width="16" height="16" border="0" /></a>
+                <a href="__CONTROLLER__/goodsNum/id/{$vol.id}" title="库存"><img src="__ADMIN__/images/icon_view.gif" width="16" height="16" border="0" /></a>
                 <a href="__CONTROLLER__/goodsEdit/id/{$vol.id}" title="编辑"><img src="__ADMIN__/images/icon_edit.gif" width="16" height="16" border="0" /></a>
                 <a href="javascript:trash_confirm({$vol.id})" title="回收站" id="goodsToTrash"><img src="__ADMIN__/images/icon_trash.gif" width="16" height="16" border="0" /></a></td>
             </tr>
@@ -164,9 +134,13 @@
     <!-- 分页结束 -->
     </div>
 </form>
-<div id="footer">
-版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
-</body>
+<!-- 时间插件 -->
+<link href="__PUBLIC__/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="__PUBLIC__/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="__PUBLIC__/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Plugins/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
 <script>
 //前期为原生js代码
 var cat_search = document.getElementById('cat_search');
@@ -427,7 +401,7 @@ function resetdata(tag_id,data_list){
 
         var td12 = document.createElement("td");
             var a1 = document.createElement("a");
-            a1.title="查看";a1.href="__CONTROLLER__/goodsView/id/"+data_list[k].id;
+            a1.title="库存";a1.href="__CONTROLLER__/goodsNum/id/"+data_list[k].id;
             a1.appendChild(img6);
             td12.appendChild(a1);
 
@@ -467,4 +441,3 @@ function trash_confirm(confirm_id){
     });
 }
 </script>
-</html>

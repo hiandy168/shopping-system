@@ -1,27 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ECSHOP 管理中心 - 编辑商品 </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
-<link href="__ADMIN__/css/main.css" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
-<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Plugins/umeditor/third-party/jquery.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Plugins/umeditor/third-party/template.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/umeditor/umeditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Plugins/umeditor/umeditor.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Plugins/umeditor/lang/zh-cn/zh-cn.js"></script>
-</head>
-<body>
-<h1>
-    <span class="action-span"><a href="__CONTROLLER__/goodsList.html">商品列表</a>
-    </span>
-    <span class="action-span1"><a href="__MODULE__">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 编辑商品 </span>
-    <div style="clear:both"></div>
-</h1>
+<layout name="Common/layout"/>
 
 <div class="tab-div">
     <div id="tabbar-div">
@@ -78,7 +55,7 @@
                                 <select name="ext_cat_id[]" class="_ext_cat_id">
                                     <option value="0">请选择........</option>
                                     <foreach name="cat_list" item="val">
-<option value="{$val.id}" >{$val.level|str_repeat='&nbsp;&nbsp;',###}-{$val.cat_name}</option>
+                                        <option value="{$val.id}" >{$val.level|str_repeat='&nbsp;&nbsp;',###}-{$val.cat_name}</option>
                                     </foreach>
                                 </select>
                                 <input type="button" value="删除" onclick="$(this).parent().remove();"/>
@@ -152,7 +129,7 @@
                     <td class="label">会员价格：</td>
                     <td>
                         <volist name="goods_detail_member_price_list" id="vol">
-                            <span style="width:50px">{$vol.level_name}：￥</span><input type="text" name="member_price[{$vol.id}]" value="{$vol.price}"><br/>
+                            <span style="width:50px">{$vol.level_name}：￥</span><input type="text" name="member_price[{$vol.level_id}]" value="{$vol.price}"><br/>
                         </volist>
                     </td>
                 </tr>
@@ -165,10 +142,70 @@
             </table>
             <!-- 商品属性 -->
             <table style="display:none;" width="90%" class="tab_table" align="center">
-                <tr><td></td></tr>
+                <tr>
+                    <td>
+                        类型选择：<select name="type_id" id="type_id">
+                            <option value="0">请选择--</option>
+                            <volist name="type_list" id="vol">
+                                <option value="{$vol.id}">{$vol.type_name}</option>
+                            </volist>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><ul id="attr_list">
+                    <!-- 循环遍历商品属性信息 -->
+                        <volist name="gaData" id="vol">
+                            <if condition="in_array($vol['attr_id'],$attrid)">
+                                <php>$opt = '-';</php>
+                            <else/>
+                                <php>$opt = '+';$attrid[] = $vol['attr_id'];</php>
+                            </if>
+                            <li>
+                                <input type="hidden" name="goods_attr_id[]" value="{$vol.goods_attr_id}">
+                                <!-- 如果是可选，则前面加个[+] -->
+                                <if condition="$vol.attr_type eq '可选'">
+                                    <a onclick="addNewAttr(this);" href="#">[{$opt}]</a>
+                                </if>
+                                <!-- 输出属性名 -->
+                                {$vol.attr_name}
+                                <!-- 如果属性可选值不为空，则输出select下拉框 -->
+                                <if condition="$vol.attr_option_values neq ''">
+                                    <!-- 先将属性可选值字符串转化为数组 -->
+                                    <php>$attr = explode(',',$vol['attr_option_values']);</php>
+                                    <select name="attr_value[{$vol.id}][]" id="">
+                                        <option value="">请选择--</option>
+                                        <!-- 遍历此数组，并选中此属性值 -->
+                                        <foreach name="attr" item="val">
+                                                <if condition="$val eq $vol['attr_value']">
+                                                    <php>$select = 'selected="selected"';</php>
+                                                <else/>
+                                                    <php>$select = ''; </php>
+                                                </if>
+                                            <option {$select} value="{$val}">{$val}</option>
+                                        </foreach>
+                                    </select>
+                                <else/>
+                                    <input type="text" name="attr_value[{$vol.id}][]" value="{$vol.attr_value}"/>
+                                </if>
+                            </li>
+                        </volist>
+                    </ul></td>
+                </tr>
             </table>
             <!-- 商品相册 -->
             <table style="display:none;" width="100%" class="tab_table" align="center">
+                <tr>
+                    <td style="float:left;">已存在相册：</td>
+                    <volist name="goods_detail_goods_pic_list" id="vol">
+                        <td style="float:left;" >
+                            <img style="float:left;margin-bottom:2px" src="/{$vol.sm_pic}""/><br/>
+                            <input type="hidden" name="old_pic[{$vol.id}]" value="{$vol.id}"/>
+                            <input type="button" onclick="$(this).parent().remove();" value="删除"/>
+                        </td>
+                    </volist>
+                </tr>
+                <tr><td><hr /></td></tr>
                 <tr>
                 <td>
                     <input id="btn_add_pic" type="button" value="添加一张" />
@@ -180,13 +217,12 @@
             <div class="button-div">
                 <input type="hidden" name="id" value="{$goods_detail.id}"/>
                 <input type="submit" value=" 确 定 " class="button" onmouseover="this.style.cursor='pointer'"/>
-                <input style="width:45px;height:16px" type="bubtton" value=" 返 回 " class="button" onclick="location='__CONTROLLER__/goodsList/from/goodsEdit'" onmouseover="this.style.cursor='pointer'"/>
+                <input style="width:63px;height:20px" type="bubtton" value=" 返 回 " class="button" onclick="location='__CONTROLLER__/goodsList/from/goodsEdit'" onmouseover="this.style.cursor='pointer'"/>
             </div>
         </form>
     </div>
 </div>
-<div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
-</body>
+
 <script>
 var xhr;
 function loadXMLDoc(data,url,cfunc){
@@ -250,30 +286,6 @@ function curChange(i,w){
     //再将点击的那个按钮的样式改为tab-front
     $(w).removeClass('tab-back').addClass('tab-front');
 }
-//渲染默认被选择的单选框和复选框
-window.onload=function(){
-    if("{$goods_detail.is_on_sale}"=='是'){
-        $('#is_on_sale_1').attr('checked','true');
-    }else if("{$goods_detail.is_on_sale}"=='否'){
-        $('#is_on_sale_0').attr('checked','true');
-    }
-    if("{$goods_detail.is_best}"=='是'){
-        $('#is_best').attr('checked','true');
-    }
-    if("{$goods_detail.is_new}"=='是'){
-        $('#is_new').attr('checked','true');
-    }
-    if("{$goods_detail.is_hot}"=='是'){
-        $('#is_hot').attr('checked','true');
-    }
-    $('#brand_id').val("{$goods_detail.brand_id}");
-    $('#cat_id').val("{$goods_detail.cat_id}");
-    //这里选择将select的value值暂放在父类元素ul上，然后再赋值
-    $('._ext_cat_id').each(function(){
-        $(this).val($(this).parent().val());
-    });
-    add_pic_ids();
-}
 $('#btn_add_cat').click(function(){add_cat_ids()});
 $("#btn_add_pic").click(function(){add_pic_ids()});
 // 添加一个扩展分类
@@ -297,5 +309,121 @@ function add_pic_ids(){
     });
     $('#ul_pic_list').children().last().append(input);
 }
+// 选择类型获取属性的AJAX
+$("select[name=type_id]").change(function(){
+    // 获取当前选中的类型的id
+    var typeId = $(this).val();
+    // 如果选择了一个类型就执行AJAX取属性
+    if(typeId > 0)
+    {
+        // 根据类型ID执行AJAX取出这个类型下的属性，并获取返回的JSON数据
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('ajaxGetAttr', '', FALSE); ?>/type_id/"+typeId,
+            dataType : "json",
+            success : function(data)
+            {
+                /** 把服务器返回的属性循环拼成一个LI字符串，并显示在页面中 **/
+                var li = "";
+                // 循环每个属性
+                $(data).each(function(k,v){
+                    li += '<li>';
+                    
+                    // 如果这个属性类型是可选的就有一个+
+                    if(v.attr_type == '可选')
+                        li += '<a onclick="addNewAttr(this);" href="#">[+]</a>';
+                    // 属性名称
+                    li += v.attr_name + ' : ';  
+                    // 如果属性有可选值就做下拉框，否则做文本框
+                    if(v.attr_option_values == "")
+                        li += '<input type="text" name="attr_value['+v.id+'][]" />';
+                    else
+                    {
+                        li += '<select name="attr_value['+v.id+'][]"><option value="">请选择...</option>';
+                        // 把可选值根据,转化成数组
+                        var _attr = v.attr_option_values.split(',');
+                        // 循环每个值制作option
+                        for(var i=0; i<_attr.length; i++)
+                        {
+                            li += '<option value="'+_attr[i]+'">';
+                            li += _attr[i];
+                            li += '</option>';
+                        }
+                        li += '</select>';
+                    }
+                        
+                    li += '</li>'
+                });
+                // 把拼好的LI放到 页面中
+                $("#attr_list").html(li);
+            }
+        });
+    }
+    else
+        $("#attr_list").html("");  // 如果选的是请 选择就直接清空
+});
+
+// 点击属性的+号
+function addNewAttr(a){
+    // $(a)  --> 把a转换成jquery中的对象，然后才能调用jquery中的方法
+    // 先获取所在的li
+    var li = $(a).parent();
+    if($(a).text() == '[+]'){
+        var newLi = li.clone();
+        //去掉选中状态
+        newLi.find('option:selected').removeAttr('selected');
+        //清空隐藏域
+        newLi.find("input[name='goods_attr_id[]']").val('');
+        // +变-
+        newLi.find("a").text('[-]');
+        // 新的放在li后面
+        li.after(newLi);
+    }else{
+        // 先获取这个属性值的id
+        var gaid = li.find("input[name='goods_attr_id[]']").val();
+        // 如果没有ID就直接删除，如果有ID说明是旧的属性值需要AJAX删除
+        if(gaid == ''){
+            li.remove();
+        }else{
+            if(confirm('如果删除了这个属性，那么相关的库存量数据也会被一起删除，确定要删除吗？'))
+            {
+                $.ajax({
+                    type : "GET",
+                    url : "<?php echo U('ajaxDelAttr?goods_id='.$data['id'], '', FALSE); ?>/gaid/"+gaid,
+                    success : function(data)
+                    {
+                        // 再把页面中的记录删除
+                        li.remove();
+                        layer.msg('删除成功！');
+                    }
+                });
+            }
+        }
+    }
+}
+//渲染默认被选择的单选框和复选框
+window.onload=function(){
+    if("{$goods_detail.is_on_sale}"=='是'){
+        $('#is_on_sale_1').attr('checked','true');
+    }else if("{$goods_detail.is_on_sale}"=='否'){
+        $('#is_on_sale_0').attr('checked','true');
+    }
+    if("{$goods_detail.is_best}"=='是'){
+        $('#is_best').attr('checked','true');
+    }
+    if("{$goods_detail.is_new}"=='是'){
+        $('#is_new').attr('checked','true');
+    }
+    if("{$goods_detail.is_hot}"=='是'){
+        $('#is_hot').attr('checked','true');
+    }
+    $('#brand_id').val("{$goods_detail.brand_id}");
+    $('#cat_id').val("{$goods_detail.cat_id}");
+    //这里选择将select的value值暂放在父类元素ul上，然后再赋值
+    $('._ext_cat_id').each(function(){
+        $(this).val($(this).parent().val());
+    });
+    //展示指定商品的属性
+    $('#type_id').val("{$goods_detail.type_id}");
+}
 </script>
-</html>

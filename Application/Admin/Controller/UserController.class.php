@@ -32,6 +32,9 @@ class UserController extends CommenController {
 				'pages'=>$res['pages'],
 				'user_list'=>$res['user_list'],
 				'search_condition'=>$search_condition,
+	            '_page_title'=>"会员列表页",
+	            '_btn_name'=>"添加会员",
+	            '_URL_'=>"userAdd",
 			]);
 			$this->display();
 		}
@@ -53,6 +56,11 @@ class UserController extends CommenController {
 			}
 			echo json_encode($sign);
 		}else{
+			$this->assign([
+	            '_page_title'=>"添加会员页",
+	            '_btn_name'=>"会员列表",
+	            '_URL_'=>"userList",
+			]);
 			$this->display();
 		}
 	}
@@ -78,6 +86,9 @@ class UserController extends CommenController {
 			$user_detail = $model->where("id = {$id}")->find();
 			$this->assign([
 				'user_detail'=>$user_detail,
+	            '_page_title'=>"修改会员页",
+	            '_btn_name'=>"会员列表",
+	            '_URL_'=>"userList",
 			]);
 			$this->display();
 		}
@@ -92,4 +103,5 @@ class UserController extends CommenController {
 		}
 		echo json_encode($sign);
 	}
+
 }

@@ -1,23 +1,5 @@
-<!-- $Id: brand_info.htm 14216 2008-03-10 02:27:21Z testyang $ -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ECSHOP 管理中心 - 添加会员 </title>
-<meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
-<link href="__ADMIN__/css/main.css" rel="stylesheet" type="text/css" />
-<!-- 弹窗优化的js文件 -->
-<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
-<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
-</head>
-<body>
-<h1>
-    <span class="action-span"><a href="__CONTROLLER__/userList.html">会员列表</a></span>
-    <span class="action-span1"><a href="__MODULE__">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 添加会员 </span>
-    <div style="clear:both"></div>
-</h1>
+<layout name="Common/layout"/>
+
 <div class="main-div">
     <form method="post" action="" enctype="multipart/form-data" id="userAdd">
         <table cellspacing="1" cellpadding="3" width="100%">
@@ -31,14 +13,14 @@
             <tr>
                 <td class="label">会员密码：</td>
                 <td>
-                    <input type="text" name="password" value="" id="password"/>
+                    <input type="password" name="password" value="" id="password"/>
                     <span class="require-field">*</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">密码确认：</td>
                 <td>
-                    <input type="text" name="password_check" value=""  id="password_check"/>
+                    <input type="password" name="password_check" value=""  id="password_check"/>
                     <span class="require-field">*</span>
                 </td>
             </tr>
@@ -64,9 +46,7 @@
         </table>
     </form>
 </div>
-<div id="footer">
-版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
-</body>
+
 <script>
 $('#userAdd').submit(function(evt){
     //收集表单域信息
@@ -107,4 +87,3 @@ function loadXMLDoc(data,url,cfunc){
     xhr.send(data);
 }
 </script>
-</html>

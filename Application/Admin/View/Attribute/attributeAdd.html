@@ -1,0 +1,85 @@
+<layout name="Common/layout"/>
+<div class="main-div">
+    <form name="main_form" method="POST" enctype="multipart/form-data" id="attributeAdd">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">属性名称：</td>
+                <td>
+                    <input  type="text" name="attr_name" value="" id="attr_name"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">属性类型：</td>
+                <td>
+                	<input type="radio" name="attr_type" value="唯一" checked/>唯一 
+                	<input type="radio" name="attr_type" value="可选" />可选 
+                </td>
+            </tr>
+            <tr>
+                <td class="label">属性可选值：</td>
+                <td>
+                    <input  type="text" name="attr_option_values" value="" id="attr_option_values"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">所属类型Id：</td>
+                <td>
+                    <select name="type_id" id="type_id">
+                    <volist name="type_list" id="vol">
+                        <option value="{$vol.id}">{$vol.type_name}</option>
+                    </volist>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+$('#attributeAdd').submit(function(evt){
+    //收集表单域信息
+    var data = new FormData(this);
+    loadXMLDoc(data,"__ACTION__",function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('新属性添加成功！',function(){
+                        window.location.href = "__CONTROLLER__/attributeList/type_id/{$type_id}";
+                        icon: 6;
+                    });
+                }else if(key!=''){
+                    layer.tips(value, '#'+key, {tipsMore: true});
+                }
+            });
+        }
+    });
+    evt.preventDefault();
+});
+var xhr;
+function loadXMLDoc(data,url,cfunc){
+    if(window.XMLHttpRequest){
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr=new XMLHttpRequest();
+    }else{
+        // code for IE6, IE5
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.onreadystatechange=cfunc;
+    xhr.open("post",url,true);
+    xhr.send(data);
+}
+window.onload=function(){
+    $('#type_id').val({$type_id});
+}
+</script>

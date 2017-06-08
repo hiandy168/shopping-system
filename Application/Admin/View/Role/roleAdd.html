@@ -1,0 +1,105 @@
+<layout name="Common/layout"/>
+
+<div class="main-div">
+    <form method="post" action="" enctype="multipart/form-data" id="roleAdd">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">角色名：</td>
+                <td>
+                    <input type="text" name="role_name" maxlength="60" value="" id="role_name"/>
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">角色权限：</td>
+                <td>
+                    <span>勾选选择↓</span><br/>
+                        <volist name="pri_list" id="vol">
+                            -{$vol.level|str_repeat='——',###}-
+                            <input type="checkbox" level_id="{$vol.level}" name="pri_id[]" value="{$vol.id}">{$vol.pri_name}<br/>
+                        </volist>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><br />
+                    <input type="submit" class="button" value=" 确定 "  onmouseover="this.style.cursor='pointer'"/>
+                    <input type="reset" class="button" value=" 重置 "  onmouseover="this.style.cursor='pointer'"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+$('#roleAdd').submit(function(evt){
+    //收集表单域信息
+    var data = new FormData(this);
+    loadXMLDoc(data,"__ACTION__",function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            // console.log(xhr.responseText);
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('新角色添加成功！',function(){
+                        window.location.href = "__CONTROLLER__/roleList";
+                        icon: 6;
+                    });
+                }else if(key!=''){
+                    layer.tips(value, '#'+key, {tipsMore: true});
+                }
+            });
+        }
+    });
+    evt.preventDefault();
+});
+var xhr;
+function loadXMLDoc(data,url,cfunc){
+    if(window.XMLHttpRequest){
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr=new XMLHttpRequest();
+    }else{
+        // code for IE6, IE5
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.onreadystatechange=cfunc;
+    xhr.open("post",url,true);
+    xhr.send(data);
+}
+// 为所有的复选框绑定一个点击事件
+$(":checkbox").click(function(){
+    // 先获取点击的这个level_id
+    var tmp_level_id = level_id = $(this).attr("level_id");
+    // 判断是选中还是取消
+    if($(this).prop("checked")){
+        // 所有的子权限也选中
+        $(this).nextAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id") > level_id){
+                $(v).attr("checked", "checked");
+            }else{
+                return false;//遇到一个level不小的，说明子权限遍历完了
+            }
+        });
+        // 所有的上级权限也选中
+        $(this).prevAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id") < tmp_level_id){
+                $(v).attr("checked", "checked");
+                tmp_level_id--; // 再找更上一级的
+            }
+        });
+    }else{
+        // 所有的子权限也取消
+        $(this).nextAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id") > level_id){
+                $(v).removeAttr("checked");
+            }else{
+                return false;
+            }
+        });
+    }
+});
+</script>

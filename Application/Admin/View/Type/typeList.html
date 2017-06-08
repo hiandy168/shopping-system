@@ -1,0 +1,90 @@
+<layout name="Common/layout"/>
+
+<form method="post" action="" name="listForm">
+    <div class="list-div" id="listDiv">
+        <table width="100%" cellspacing="1" cellpadding="2" id="list-table">
+            <tr>
+                <th>类型名称</th>
+                <th>操作</th>
+            </tr>
+            <foreach name="type_list" item="val">
+            <tr align="center" class="tron">
+                <td align="center">
+                <span>{$val.type_name}</span>
+                </td>
+                <td width="15%" align="center">
+                	<a href="__MODULE__/Attribute/attributeList?type_id={$val.id}">属性列表</a> |
+                	<a href="__CONTROLLER__/typeEdit?id={$val.id}">编辑</a> |
+                	<a href="javascript:delete_confirm({$val.id})" title="移除" onclick="">移除</a>
+                </td>
+            </tr>
+            </foreach>
+        </table>
+    </div>
+</form>
+
+<script>
+//渲染鼠标选中的tr行背景颜色改变
+$(".tron").mouseover(function(){
+    $(this).find('td').css('backgroundColor','#ccc');
+});
+$(".tron").mouseout(function(){
+    $(this).find('td').css('backgroundColor','#fff');
+});
+/**
+ * 将商品移至回收站时，调用此函数
+ * @param  int delete_id 回收商品的ID
+ */
+function deletec(delete_id){
+    loadXMLDoc("__CONTROLLER__/typeDelete/id/"+delete_id,function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('指定类型已被删除！',function(){
+                        window.location.href = "__CONTROLLER__/typeList/from/typeEdit";
+                        icon: 6;
+                    });
+                }else{
+                    layer.alert(value, {icon: 5});
+                }
+            });
+        }
+    });
+}
+function delete_confirm(confirm_id){
+    layer.msg('确定要删除此类型？', {
+      time: 5000 
+      ,btn: ['是的！', '算了..']
+      ,yes: function(index){
+        layer.close(index);
+        deletec(confirm_id);
+      }
+      ,no:function(index){
+        layer.close(index);
+      }
+    });
+}
+/**
+ * 创建ajax对象，并向服务器发起请求
+ * @param  string url    请求的链接
+ * @param  mixed  cfunc  回调函数
+ */
+function loadXMLDoc(url,cfunc){
+        if(window.XMLHttpRequest){
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xhr=new XMLHttpRequest();
+        }else{
+            // code for IE6, IE5
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.onreadystatechange=cfunc;
+        xhr.open("get",url,true);
+        xhr.send();
+}
+</script>

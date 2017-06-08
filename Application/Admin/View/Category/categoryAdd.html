@@ -1,23 +1,4 @@
-<!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ECSHOP 管理中心 - 添加分类 </title>
-<meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
-<link href="__ADMIN__/css/main.css" rel="stylesheet" type="text/css" />
-<!-- 弹窗优化的js文件 -->
-<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
-<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
-</head>
-<body>
-<h1>
-    <span class="action-span"><a href="__CONTROLLER__/categoryList">商品分类</a></span>
-    <span class="action-span1"><a href="__MODULE__">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 添加分类 </span>
-    <div style="clear:both"></div>
-</h1>
+<layout name="Common/layout"/>
 <div class="main-div">
     <form action="" method="post" name="theForm" enctype="multipart/form-data" id="categoryAdd">
         <table width="100%" id="general-table">
@@ -72,9 +53,6 @@
         </div>
     </form>
 </div>
-<div id="footer">
-版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
-</body>>
 <script>
 $('#categoryAdd').submit(function(evt){
     //收集表单域信息
@@ -116,4 +94,3 @@ function loadXMLDoc(data,url,cfunc){
     xhr.send(data);
 }
 </script>
-</html>

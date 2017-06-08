@@ -1,28 +1,44 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>ECSHOP 管理中心 - 添加新商品 </title>
+<title>商城后台 管理中心 - <?php echo ($_page_title); ?> </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
 <link href="/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/Public/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<!-- layer -->
 <script src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
 <script src="/Public/Plugins/layer/layer.js"></script>
+<!-- 时间插件 -->
+<link href="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
 <!-- 文本编辑器的js文件 -->
+<link href="/Public/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="/Public/Plugins/umeditor/third-party/jquery.min.js"></script>
 <script type="text/javascript" src="/Public/Plugins/umeditor/third-party/template.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="/Public/Plugins/umeditor/umeditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/Public/Plugins/umeditor/umeditor.min.js"></script>
 <script type="text/javascript" src="/Public/Plugins/umeditor/lang/zh-cn/zh-cn.js"></script>
+<style>#tableList td{text-align:center;}
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none !important;
+        margin: 0; 
+    }
+</style>
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/Admin/Goods/goodsList.html">商品列表</a>
-    </span>
-    <span class="action-span1"><a href="/Admin">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 添加新商品 </span>
+    <span class="action-span"><a href="/Admin/Goods/<?php echo ($_URL_); ?>.html"><?php echo ($_btn_name); ?></a></span>
+    <span class="action-span1"><a href="/Admin">商城后台 管理中心</a></span>
+    <span id="search_id" class="action-span1"> - <?php echo ($_page_title); ?></span>
     <div style="clear:both"></div>
 </h1>
+
+
 
 <div class="tab-div">
     <div id="tabbar-div">
@@ -145,7 +161,17 @@
             </table>
             <!-- 商品属性 -->
             <table style="display:none;" width="90%" class="tab_table" align="center">
-                <tr><td></td></tr>
+                <tr>
+                    <td>
+                        类型选择：<select name="type_id" id="type_id">
+                            <option value="">请选择--</option>
+                            <?php if(is_array($type_list)): $i = 0; $__LIST__ = $type_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vol["id"]); ?>"><?php echo ($vol["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><ul id="attr_list"></ul></td>
+                </tr>
             </table>
             <!-- 商品相册 -->
             <table style="display:none;" width="100%" class="tab_table" align="center">
@@ -164,8 +190,6 @@
         </form>
     </div>
 </div>
-<div id="footer">版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
-</body>
 <script>
 $('#goodsAdd').submit(function(evt){
     //收集表单域信息
@@ -248,5 +272,80 @@ $("#btn_add_pic").click(function(){
     });
     $('#ul_pic_list').children().last().append(input);
 });
+// 选择类型获取属性的AJAX
+$("select[name=type_id]").change(function(){
+    // 获取当前选中的类型的id
+    var typeId = $(this).val();
+    // 如果选择了一个类型就执行AJAX取属性
+    if(typeId > 0)
+    {
+        // 根据类型ID执行AJAX取出这个类型下的属性，并获取返回的JSON数据
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('ajaxGetAttr', '', FALSE); ?>/type_id/"+typeId,
+            dataType : "json",
+            success : function(data)
+            {
+                /** 把服务器返回的属性循环拼成一个LI字符串，并显示在页面中 **/
+                var li = "";
+                // 循环每个属性
+                $(data).each(function(k,v){
+                    li += '<li>';
+                    
+                    // 如果这个属性类型是可选的就有一个+
+                    if(v.attr_type == '可选')
+                        li += '<a onclick="addNewAttr(this);" href="#">[+]</a>';
+                    // 属性名称
+                    li += v.attr_name + ' : ';  
+                    // 如果属性有可选值就做下拉框，否则做文本框
+                    if(v.attr_option_values == "")
+                        li += '<input type="text" name="attr_value['+v.id+'][]" />';
+                    else
+                    {
+                        li += '<select name="attr_value['+v.id+'][]"><option value="">请选择...</option>';
+                        // 把可选值根据,转化成数组
+                        var _attr = v.attr_option_values.split(',');
+                        // 循环每个值制作option
+                        for(var i=0; i<_attr.length; i++)
+                        {
+                            li += '<option value="'+_attr[i]+'">';
+                            li += _attr[i];
+                            li += '</option>';
+                        }
+                        li += '</select>';
+                    }
+                        
+                    li += '</li>'
+                });
+                // 把拼好的LI放到 页面中
+                $("#attr_list").html(li);
+            }
+        });
+    }
+    else
+        $("#attr_list").html("");  // 如果选的是请 选择就直接清空
+});
+
+// 点击属性的+号
+function addNewAttr(a)
+{
+    // $(a)  --> 把a转换成jquery中的对象，然后才能调用jquery中的方法
+    // 先获取所在的li
+    var li = $(a).parent();
+    if($(a).text() == '[+]')
+    {
+        var newLi = li.clone();
+        // +变-
+        newLi.find("a").text('[-]');
+        // 新的放在li后面
+        li.after(newLi);
+    }
+    else
+        li.remove();
+}
 </script>
+
+<div id="footer">
+版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
+</body>
 </html>

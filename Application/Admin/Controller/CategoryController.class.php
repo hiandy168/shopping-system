@@ -6,7 +6,12 @@ class CategoryController extends CommenController {
 		$catModel = D('category');
 		$res = $catModel->select();
 		$cat_list = $catModel->getLevel($res,0,'id','parent_id','level');
-		$this->assign('cat_list',$cat_list);
+		$this->assign([
+			'cat_list'=>$cat_list,
+            '_page_title'=>"分类列表页",
+            '_btn_name'=>"添加分类",
+            '_URL_'=>"categoryAdd",
+		]);
 		$this->display();
 	}
 	public function categoryAdd(){
@@ -28,7 +33,12 @@ class CategoryController extends CommenController {
 		}else{
 			$res = $model->where("is_show='是'")->select();
 			$cat_list = $model->getLevel($res,0,'id','parent_id','level');
-			$this->assign('cat_list',$cat_list);
+			$this->assign([
+				'cat_list'=>$cat_list,
+	            '_page_title'=>"添加分类页",
+	            '_btn_name'=>"分类列表",
+	            '_URL_'=>"categoryList",
+			]);
 			$this->display();
 		}
 	}
@@ -56,7 +66,10 @@ class CategoryController extends CommenController {
 			$category_detail = $model->where("id = {$id}")->find();
 			$this->assign([
 				'category_detail'=>$category_detail,
-				'cat_list'=>$cat_list
+				'cat_list'=>$cat_list,
+	            '_page_title'=>"修改分类页",
+	            '_btn_name'=>"分类列表",
+	            '_URL_'=>"categoryList",
 			]);
 			$this->display();
 		}
@@ -64,7 +77,6 @@ class CategoryController extends CommenController {
 	public function categoryDelete(){
 		$model = D('category');
 		$delete_id = I('get.id');
-		$sign = $delete_id;
 		if ($model->delete($delete_id)!==FALSE) {
 			$sign = 'success';
 		}else{

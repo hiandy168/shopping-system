@@ -1,0 +1,92 @@
+<layout name="Common/layout"/>
+
+<form method="post" action="" name="listForm">
+    <div class="list-div" id="listDiv">
+        <table cellpadding="3" cellspacing="1" id="tableList">
+            <tr id="table_first">
+                <th>序号</th>
+                <th>角色名称</th>
+                <th>操作</th>
+            </tr>
+            <volist name="Roledata" id="vol">
+                <tr class="tron">
+                    <td>{$i}</td>
+                    <td>{$vol.role_name}</td>
+                    <td>
+                    <if condition="$vol.id neq 0">
+                        <a href="__CONTROLLER__/roleEdit/id/{$vol.id}" title="编辑">编辑修改权限</a> |
+                        <a href="javascript:delete_confirm({$vol.id})" title="移除">移除</a>
+                    <else/>
+                        <p>无权操作</p>
+                    </if>
+                    </td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+</form>
+
+<script>
+function loadXMLDoc(url,cfunc){
+        if(window.XMLHttpRequest){
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xhr=new XMLHttpRequest();
+        }else{
+            // code for IE6, IE5
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.onreadystatechange=cfunc;
+        xhr.open("get",url,true);
+        xhr.send();
+}
+window.onload=function(){
+
+}
+//渲染鼠标选中的tr行背景颜色改变
+$(".tron").mouseover(function(){
+    $(this).find('td').css('backgroundColor','#ccc');
+});
+$(".tron").mouseout(function(){
+    $(this).find('td').css('backgroundColor','#fff');
+});
+/**
+ * 将角色移至回收站时，调用此函数
+ * @param  int delete_id 回收角色的ID
+ */
+function deletec(delete_id){
+    loadXMLDoc("__CONTROLLER__/roleDelete/id/"+delete_id,function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            // console.log(xhr.responseText);
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('该角色已被删除！',function(){
+                        window.location.href = "__CONTROLLER__/roleList/from/roleEdit";
+                        icon: 6;
+                    });
+                }else{
+                    layer.msg(value);
+                }
+            });
+        }
+    });
+}
+function delete_confirm(confirm_id){
+    layer.msg('确定要删除此角色？', {
+      time: 5000 
+      ,btn: ['是的！', '算了..']
+      ,yes: function(index){
+        layer.close(index);
+        deletec(confirm_id);
+      }
+      ,no:function(index){
+        layer.close(index);
+      }
+    });
+}
+</script>

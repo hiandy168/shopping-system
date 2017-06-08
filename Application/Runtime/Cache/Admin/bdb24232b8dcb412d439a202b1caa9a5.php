@@ -4,6 +4,8 @@
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
+<script src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
+<script src="/Public/Plugins/layer/layer.js"></script>
 <style type="text/css">
 #header-div {
   background:#278296;
@@ -126,7 +128,7 @@
         </ul>
         <div id="send_info">
             <a href="#" target="main-frame" class="fix-submenu">清除缓存</a>
-            <a href="/Admin/Manager/logout" target="_top" class="fix-submenu">退出</a>
+            <a href="/Admin/Login/logout" onclick="javascript:confirm('确定退出系统？')" target="_top" class="fix-submenu">退出</a>
         </div>
     </div>
 </div>
@@ -134,15 +136,13 @@
     <ul>
         <li class="fix-spacel">&nbsp;</li>
         <li><a href="/Admin/Index/main" target="main-frame">起始页</a></li>
-        <li><a href="/Admin/Goods/goodsList" target="main-frame">商品列表</a></li>
-        <li><a href="/Admin/Category/categoryList" target="main-frame">分类列表</a></li>
-        <li><a href="/Admin/Brand/brandList" target="main-frame">品牌列表</a></li>
-        <li><a href="/Admin/Order/orderList" target="main-frame">订单列表</a></li>
-        <li><a href="/Admin/Comment/commentList" target="main-frame">用户评论</a></li>
-        <li><a href="/Admin/User/userList" target="main-frame">会员列表</a></li>
+        <?php $priModel = D('privilege');$btns = $priModel->getBtns(); ?>
+          <?php if(is_array($btns)): $i = 0; $__LIST__ = $btns;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i; if(is_array($vol['children'])): $i = 0; $__LIST__ = $vol['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><a href="/<?php echo ($val["module_name"]); ?>/<?php echo ($val["controller_name"]); ?>/<?php echo ($val["action_name"]); ?>" target="main-frame"><?php echo ($val["pri_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
         <li class="fix-spacer">&nbsp;</li>
     </ul>
     <br class="clear" />
 </div>
 </body>
+<script>
+</script>
 </html>

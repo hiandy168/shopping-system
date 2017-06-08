@@ -123,35 +123,16 @@ body {
 <div id="main-div">
     <div id="menu-list">
         <ul id="menu-ul">
-            <li class="explode" key="02_cat_and_goods" name="menu">
-            商品管理
-                <ul>
-                    <li class="menu-item"><a href="__MODULE__/Goods/goodsList.html" target="main-frame">商品列表</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Goods/goodsAdd.html" target="main-frame">添加新商品</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Category/categoryList.html" target="main-frame">商品分类</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Brand/brandList.html" target="main-frame">商品品牌</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Goods/goodsTrash.html" target="main-frame">商品回收站</a></li>
-                </ul>
-            </li>
-
-            <li class="explode" key="04_order" name="menu" style="display:none">
-            订单管理
-                <ul>
-                    <li class="menu-item"><a href="__MODULE__/Order/orderList.html" target="main-frame">订单列表</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Order/orderQuery.html" target="main-frame">订单查询</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Order/orderAdd.html" target="main-frame">添加订单</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Order/delivery_list.html" target="main-frame">发货单列表</a></li>
-                    <li class="menu-item"><a href="__MODULE__/Order/back_list.html" target="main-frame">退货单列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-            会员管理
-                <ul>
-                    <li class="menu-item"><a href="__MODULE__/User/userList.html" target="main-frame">会员列表</a></li>
-                    <li class="menu-item"><a href="__MODULE__/User/userAdd.html" target="main-frame">添加会员</a></li>
-                    <li class="menu-item"><a href="__MODULE__/User/userMessage.html" target="main-frame">会员留言</a></li>
-                </ul>
-            </li>
+          <php>$priModel = D('privilege');$btns = $priModel->getBtns();if(count($btns)==0)$note="无权限者";else $note="";</php>{$note}
+          <volist name="btns" id="vol">
+              <li class="explode" key="02_cat_and_goods" name="menu">{$vol.pri_name}
+                  <ul>
+                    <volist name="vol['children']" id="val">
+                      <li class="menu-item"><a href="/{$val.module_name}/{$val.controller_name}/{$val.action_name}" target="main-frame">{$val.pri_name}</a></li>
+                    </volist>
+                  </ul>
+              </li>
+          </volist>
         </ul>
     </div>
     <div id="help-div" style="display:none">

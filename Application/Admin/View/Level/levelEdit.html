@@ -1,0 +1,77 @@
+<layout name="Common/layout"/>
+
+<div class="main-div">
+    <form method="post" action="" enctype="multipart/form-data" id="levelEdit">
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">会员级别名称：</td>
+                <td>
+                    <input type="text" name="level_name" maxlength="60" value="{$level_detail.level_name}" id="level_name"/>
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">积分上限：</td>
+                <td>
+                    <input type="text" name="jifen_top" value="{$level_detail.jifen_top}" id="jifen_top"/>
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">积分下限：</td>
+                <td>
+                    <input type="text" name="jifen_bottom" value="{$level_detail.jifen_bottom}"  id="jifen_bottom"/>
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><br />
+                <input type="hidden" name="id" value="{$level_detail.id}"/>
+                    <input type="submit" class="button" value=" 确定 "  onmouseover="this.style.cursor='pointer'"/>
+                    <input type="reset" class="button" value=" 重置 "  onmouseover="this.style.cursor='pointer'"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+$('#levelEdit').submit(function(evt){
+    //收集表单域信息
+    var data = new FormData(this);
+    loadXMLDoc(data,"__ACTION__",function(){
+        if(xhr.readyState!=4){
+            //layer加载层
+            layer.load(2);
+            // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+        }
+        if(xhr.readyState==4 && xhr.status==200){
+            layer.closeAll('loading');
+            var object=JSON.parse(xhr.responseText,function(key,value){
+                if (value=='success') {
+                    layer.alert('新级别修改成功！',function(){
+                        window.location.href = "__CONTROLLER__/levelList";
+                        icon: 6;
+                    });
+                }else if(key!=''){
+                    layer.tips(value, '#'+key, {tipsMore: true});
+                }
+            });
+        }
+    });
+    evt.preventDefault();
+});
+var xhr;
+function loadXMLDoc(data,url,cfunc){
+    if(window.XMLHttpRequest){
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr=new XMLHttpRequest();
+    }else{
+        // code for IE6, IE5
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.onreadystatechange=cfunc;
+    xhr.open("post",url,true);
+    xhr.send(data);
+}
+</script>

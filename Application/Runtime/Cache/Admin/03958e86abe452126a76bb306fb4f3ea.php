@@ -1,26 +1,44 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>ECSHOP 管理中心 - 商品品牌 </title>
-<meta name="robots" content="noindex, nofollow">
+<title>商城后台 管理中心 - <?php echo ($_page_title); ?> </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/Public/Admin/css/general.css" rel="stylesheet" type="text/css" />
 <link href="/Public/Admin/css/main.css" rel="stylesheet" type="text/css" />
+<!-- layer -->
 <script src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
 <script src="/Public/Plugins/layer/layer.js"></script>
-<style>
-    #tableList td{text-align:center;}
-    #logo{width:50px;height:50px;border:0;}
-    .tron{height:35px;}
+<!-- 时间插件 -->
+<link href="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+<!-- 文本编辑器的js文件 -->
+<link href="/Public/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/Public/Plugins/umeditor/third-party/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/Plugins/umeditor/third-party/template.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/umeditor/umeditor.min.js"></script>
+<script type="text/javascript" src="/Public/Plugins/umeditor/lang/zh-cn/zh-cn.js"></script>
+<style>#tableList td{text-align:center;}
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none !important;
+        margin: 0; 
+    }
 </style>
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/Admin/Brand/brandAdd.html">添加新品牌</a></span>
-    <span class="action-span1"><a href="/Admin">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 商品品牌 </span>
+    <span class="action-span"><a href="/Admin/Brand/<?php echo ($_URL_); ?>.html"><?php echo ($_btn_name); ?></a></span>
+    <span class="action-span1"><a href="/Admin">商城后台 管理中心</a></span>
+    <span id="search_id" class="action-span1"> - <?php echo ($_page_title); ?></span>
     <div style="clear:both"></div>
 </h1>
+
+
 <div class="form-div">
     <img src="/Public/Admin/images/icon_search.gif" width="26" height="22" border="0" alt="search" />
     <input type="text" name="brand_name" size="15" id="brand_name"/>
@@ -79,7 +97,7 @@
                             <a href="javascript:searchc(<?php echo ($pages["next"]); ?>,'r')" id="next"">下一页</a>
                             <a href="javascript:searchc(<?php echo ($pages["pageNum"]); ?>,'r')" id="pageNum"">尾页</a>
                             当前为第<select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                                <?php $__FOR_START_1458__=0;$__FOR_END_1458__=$pages["pageNum"];for($i=$__FOR_START_1458__;$i < $__FOR_END_1458__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                                <?php $__FOR_START_30416__=0;$__FOR_END_30416__=$pages["pageNum"];for($i=$__FOR_START_30416__;$i < $__FOR_END_30416__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                             </select>页，可切换选择
                         </span>
                     </div>
@@ -88,9 +106,6 @@
         </table>
     </div>
 </form>
-<div id="footer">
-版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
-</body>
 <script>
 var mark = '';
 $('#brand_name').change(function(){
@@ -242,7 +257,7 @@ function deletec(delete_id){
             layer.closeAll('loading');
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
-                    layer.alert('该用户已被删除！',function(){
+                    layer.alert('该品牌已被删除！',function(){
                         window.location.href = "/Admin/Brand/brandList/from/brandEdit";
                         icon: 6;
                     });
@@ -254,7 +269,7 @@ function deletec(delete_id){
     });
 }
 function delete_confirm(confirm_id){
-    layer.msg('确定要删除此用户？', {
+    layer.msg('确定要删除此品牌？', {
       time: 5000 
       ,btn: ['是的！', '算了..']
       ,yes: function(index){
@@ -267,4 +282,8 @@ function delete_confirm(confirm_id){
     });
 }
 </script>
+
+<div id="footer">
+版权所有 &copy; 2017-2017 ThinkPHP ZY 学习。</div>
+</body>
 </html>

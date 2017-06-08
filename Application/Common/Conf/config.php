@@ -13,7 +13,7 @@ return array(
 
 	//设置默认分组
 	// 'DEFAULT_MODULE' => 'Home',	//设置默认模块
-	'MODULE_ALLOW_LIST' => array('Home','Admin'),	//设置一个用于对比的分组列表，用户就可以不输入分组了
+	'MODULE_ALLOW_LIST' => array('Home','Admin','Gii'),	//设置一个用于对比的分组列表，用户就可以不输入分组了
 
 
 	 /* 数据库设置 */

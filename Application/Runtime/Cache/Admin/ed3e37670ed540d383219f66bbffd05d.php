@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="/Admin/User/goodsList.html">会员列表</a>
+    <span class="action-span"><a href="/Admin/User/userList.html">会员列表</a>
     </span>
     <span class="action-span1"><a href="/Admin">ECSHOP 管理中心</a></span>
     <span id="search_id" class="action-span1"> - 编辑会员 </span>
@@ -36,21 +36,21 @@
             <tr>
                 <td class="label">会员密码：</td>
                 <td>
-                    <input type="text" name="password" value="" id="password"/>
+                    <input type="password" name="password" value="" id="password"/>
                     <span class="require-field">*</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">密码确认：</td>
                 <td>
-                    <input type="text" name="password_check" value=""  id="password_check"/>
+                    <input type="password" name="password_check" value=""  id="password_check"/>
                     <span class="require-field">*</span>
                 </td>
             </tr>
             <tr>
                 <td class="label">会员头像：</td>
                 <td>
-                    <img src="/<?php echo ($user_detail["sm_face"]); ?>" alt="头像" /><br/>
+                    <span>当前头像：</span><img src="/<?php echo ($user_detail["sm_face"]); ?>" alt="头像" /><br/>
                     <input type="file" name="face" id="face" size="45"/><br/>
                     <span class="notice-span" style="display:block"  id="warn_brandlogo">请上传图片，做为个人头像！</span>
                 </td>
@@ -88,7 +88,7 @@ $('#userEdit').submit(function(evt){
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
                     layer.alert('用户信息更新成功！',function(){
-                        window.location.href = "/Admin/User/userList";
+                        window.location.href = "/Admin/User/userList/from/userEdit";
                         icon: 6;
                     });
                 }else if(key!=''){

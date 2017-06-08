@@ -123,35 +123,12 @@ body {
 <div id="main-div">
     <div id="menu-list">
         <ul id="menu-ul">
-            <li class="explode" key="02_cat_and_goods" name="menu">
-            商品管理
-                <ul>
-                    <li class="menu-item"><a href="/Admin/Goods/goodsList.html" target="main-frame">商品列表</a></li>
-                    <li class="menu-item"><a href="/Admin/Goods/goodsAdd.html" target="main-frame">添加新商品</a></li>
-                    <li class="menu-item"><a href="/Admin/Category/categoryList.html" target="main-frame">商品分类</a></li>
-                    <li class="menu-item"><a href="/Admin/Brand/brandList.html" target="main-frame">商品品牌</a></li>
-                    <li class="menu-item"><a href="/Admin/Goods/goodsTrash.html" target="main-frame">商品回收站</a></li>
-                </ul>
-            </li>
-
-            <li class="explode" key="04_order" name="menu" style="display:none">
-            订单管理
-                <ul>
-                    <li class="menu-item"><a href="/Admin/Order/orderList.html" target="main-frame">订单列表</a></li>
-                    <li class="menu-item"><a href="/Admin/Order/orderQuery.html" target="main-frame">订单查询</a></li>
-                    <li class="menu-item"><a href="/Admin/Order/orderAdd.html" target="main-frame">添加订单</a></li>
-                    <li class="menu-item"><a href="/Admin/Order/delivery_list.html" target="main-frame">发货单列表</a></li>
-                    <li class="menu-item"><a href="/Admin/Order/back_list.html" target="main-frame">退货单列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-            会员管理
-                <ul>
-                    <li class="menu-item"><a href="/Admin/User/userList.html" target="main-frame">会员列表</a></li>
-                    <li class="menu-item"><a href="/Admin/User/userAdd.html" target="main-frame">添加会员</a></li>
-                    <li class="menu-item"><a href="/Admin/User/userMessage.html" target="main-frame">会员留言</a></li>
-                </ul>
-            </li>
+          <?php $priModel = D('privilege');$btns = $priModel->getBtns();if(count($btns)==0)$note="无权限者";else $note=""; echo ($note); ?>
+          <?php if(is_array($btns)): $i = 0; $__LIST__ = $btns;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><li class="explode" key="02_cat_and_goods" name="menu"><?php echo ($vol["pri_name"]); ?>
+                  <ul>
+                    <?php if(is_array($vol['children'])): $i = 0; $__LIST__ = $vol['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li class="menu-item"><a href="/<?php echo ($val["module_name"]); ?>/<?php echo ($val["controller_name"]); ?>/<?php echo ($val["action_name"]); ?>" target="main-frame"><?php echo ($val["pri_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                  </ul>
+              </li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
     </div>
     <div id="help-div" style="display:none">

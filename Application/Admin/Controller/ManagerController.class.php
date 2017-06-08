@@ -1,71 +1,103 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class ManagerController extends Controller {
-    public function login(){
-    	if($_POST['act']=='signin'){
-    		$username = I('post.username');
-    		$password = md5(I('post.password'));
-    		$captcha = I('post.captcha');
-    		if($this->check_captcha($captcha)){
-    			$manager = D('Manager');
-	    		if ($manager->create($_POST)){
-	    			$res = $manager->where("username='{$username}' and password='{$password}'")->find();
-	    			if ($res){
-	    				setcookie("username",$username,time()+3600*24*30,__MODULE__);
-						$_SESSION['login_time'] = date('Y-m-d H:i:s',time());
-						$_SESSION['islogin']='ok';
-	    				$sign = "success";
-	    			}else{
-	    				$sign = ['username'=>' * 用户名或密码错误！'];
-	    			}
-	    		}else{
-	    			$sign = $manager->getError();
-	    		}
-    		}else{
-    			$sign = ['captcha'=>' * 验证码错误!'];
-    		}
-    		echo json_encode($sign);
-    	}else{
-    		$this->display();
-    	}
+class ManagerController extends CommenController {
+    public function ManagerList(){
+        $Model = D('Manager');
+        $Managerdata = $Model->alias('a')
+        ->field('a.*,GROUP_CONCAT(c.role_name) as manager_role')
+        ->join('left join ss_manager_role as b on a.id = b.manager_id')
+        ->join('left join ss_role as c on b.role_id = c.id')
+        ->group('a.id')->select();
+        $this->assign([
+            'Managerdata'=>$Managerdata,
+            '_page_title'=>"管理员列表页",
+            '_btn_name'=>"添加管理员",
+            '_URL_'=>"managerAdd",
+        ]);
+        $this->display();
     }
-    /**
-     * ajax调用此方法验证验证码
-     * @return string 返回验证提示信息
-     */
-    public function check(){
-    	$res = $this->check_captcha(addslashes(trim($_GET['captcha'])));
-    	if($res){
-    		echo json_encode(["<p style='color:green;margin:0px'> * 验证码正确!</p>"]);
-    	}else{
-    		echo json_encode(" * 验证码错误!");
-    	}
+    public function ManagerAdd(){
+        $model = D('Manager');
+        //判断是否提交了表单
+        if (IS_POST) {
+            //接收并验证表单
+            //使用I方法过滤表单数据，1指定为添加
+            if ($model->create(I('post.'),1)) {
+                if ($model->add()) {
+                    $sign = 'success';
+                }else{
+                    $sign = $model->error;
+                }
+            }else{
+                $sign = $model->getError();
+            }
+            // $sign = array_unique(I('post.role_id'));
+            echo json_encode($sign);
+        }else{
+            $roleModel = D('role');
+            $role_list = $roleModel->where('id > 0')->select();
+            $this->assign([
+                'role_list'=>$role_list,
+                '_page_title'=>"添加管理员页",
+                '_btn_name'=>"管理员列表",
+                '_URL_'=>"managerList",
+            ]);
+            $this->display();
+        }
     }
-    public function check_captcha($captcha){
-		$Verify = new \Think\Verify();
-		$Verify->reset = false;
-		//验证验证码
-		if($Verify->check($captcha)){
-			return true;
-		}else{
-			return false;
-		}
+    public function ManagerEdit(){
+        $model = D('manager');
+        //判断是否提交了表单
+        if (IS_POST) {
+            $id = I('post.id');
+            if($id==1){
+                $sign = "success";
+            }else{
+                //接收并验证表单,使用I方法过滤表单数据，2指定为更新
+                $data = $model->create(I('post.'),2);
+                if ($data) {
+                    if ($model->where('id = '.$id)->save($data)!==FALSE) {
+                        $sign = 'success';
+                    }else{
+                        $sign = $model->error;
+                    }
+                }else{
+                    $sign = $model->getError();
+                }
+            }
+            echo json_encode($sign);
+        }else{
+            $mrModel = D('manager_role');
+            $roleModel = D('role');
+            //要修改信息的管理员的ID
+            $id = I('get.id');
+            $manager_detail = $model->where("id = {$id}")->find();
+            $manager_detail_role_ids = $mrModel->where("manager_id = {$id} and role_id != 0")->select();
+            $role_list = $roleModel->where('id > 0')->select();
+            $this->assign([
+                'manager_detail'=>$manager_detail,
+                'manager_detail_role_ids'=>$manager_detail_role_ids,
+                'role_list'=>$role_list,
+                '_page_title'=>"修改管理员页",
+                '_btn_name'=>"管理员列表",
+                '_URL_'=>"managerList",
+            ]);
+            $this->display();
+        }
     }
-    public function Verify(){
-		$cfg = [
-			'imageH' => 40,// 验证码图片高度
-    		'imageW' => 140,// 验证码图片宽度
-    		'fontSize' => 18,// 验证码字体大小(px)
-    		'length' => 4,// 验证码位数
-    		'fontttf' => '4.ttf',// 验证码字体，不设置随机获取
-		];
-    	$Verify = new \Think\Verify($cfg);
-    	
-    	$Verify->entry();
-	}
-	public function logout(){
-		unset($_SESSION['islogin']);
-		header("Location:".__CONTROLLER__."/login");
-	}
+    public function ManagerDelete(){
+        $model = D('manager');
+        $id = I('get.id');
+        if($id==1){
+            $sign = '超级管理员root不能删除';
+        }else{
+            if ($model->delete($id)!==FALSE) {
+                $sign = 'success';
+            }else{
+                $sign = $model->getError();
+            }
+        }
+        echo json_encode($sign);
+    }
 }

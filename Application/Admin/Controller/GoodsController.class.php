@@ -55,10 +55,10 @@ class GoodsController extends CommenController {
 				$condition['shop_price'] = ['between',"{$low},{$up}"];
 			}elseif(I('get.price_low')!=''){
 				$low = I('get.price_low');
-				$condition['shop_price'] = ['EGT',I('get.price_low')];
+				$condition['shop_price'] = ['EGT',"{$low}"];
 			}elseif(I('get.price_up')!=''){
 				$up = I('get.price_up');
-				$condition['shop_price'] = ['ELT',I('get.price_up')];
+				$condition['shop_price'] = ['ELT',"{$up}"];
 			}
 			//价格排序方式
 			if (I('get.price_order')=='price_desc') {
@@ -105,7 +105,10 @@ class GoodsController extends CommenController {
 				'pages'		 =>	$res['pages'],
 				'cat_list'	 => $cat_list,
 				'brand_list' => $brand_list,
-				'search_condition'=>$search_condition
+				'search_condition'=>$search_condition,
+				'_page_title'=>"商品列表页",
+				'_btn_name'=>"添加商品",
+				'_URL_'=>"goodsAdd",
 			]);
 			$this->display();
 		}
@@ -142,10 +145,17 @@ class GoodsController extends CommenController {
 			$memberModel = D('member_level');
 			$member_level_list = $memberModel->select();
 
+			$typeModel = D('type');
+			$type_list = $typeModel->select();
+
 			$this->assign([
 				'brand_list'=> $brand_list,
 				'cat_list'	=> $cat_list,
-				'member_level_list'=>$member_level_list
+				'member_level_list'=>$member_level_list,
+				'type_list'=>$type_list,
+				'_page_title'=>"添加商品页",
+				'_btn_name'=>"商品列表",
+				'_URL_'=>"goodsList",
 			]);
 			$this->display();
 		}
@@ -170,6 +180,7 @@ class GoodsController extends CommenController {
 			}else{
 				$sign = $model->getError();
 			}
+			// $sign = I('post.member_price');
 			echo json_encode($sign);
 		}else{
 			//要修改信息的商品的ID
@@ -183,23 +194,48 @@ class GoodsController extends CommenController {
 			$brandModel = D('brand');
 			$brand_list = $brandModel->where("is_show='是'")->select();
 
-			$mpModel = D('member_price');
-			$goods_detail_member_price_list = $mpModel->field('l.*,r.level_name')->alias('l')->join('left join ss_member_level as r on l.level_id = r.id')->where($condition)->select();
-			if(empty($goods_detail_member_price_list)){
-				//这里是为了处理之前还没有添加会员价格表，因此有的商品没有记录，于是以此生成空白的输入框
-				$mlModel = D('member_level');
-				$goods_detail_member_price_list =$mlModel->field('l.level_name,l.id,r.*')->alias('l')->join('left join ss_member_price as r on l.id = r.level_id and goods_id = '.$id)->select(); 
-			}
+			//获取会员价格信息
+			//这里是为了处理之前还没有添加会员价格表，因此有的商品没有记录，于是以此生成空白的输入框
+			$mlModel = D('member_level');
+			$goods_detail_member_price_list =$mlModel->field('l.level_name,l.id,r.*')->alias('l')->join('left join ss_member_price as r on l.id = r.level_id and goods_id = '.$id)->select();
 
+			//获取相册信息
+			$gpModel = D('goods_pic');
+			$goods_detail_goods_pic_list = $gpModel->field('id,goods_id,sm_pic')->where($condition)->select();
+			
+
+			//获取扩展分类信息
 			$gcModel = D('goods_cat');
 			$goods_detail_ext_cat_list = $gcModel->where($condition)->select();
+
+			//获取商品属性信息
+			$typeModel = D('type');
+			$type_list = $typeModel->select();
+
+			//取出当前类型下的所有属性
+			$attrModel = D('attribute');
+			$attrData = $attrModel->alias('a')
+			->field('a.*,b.attr_value,b.attr_id,b.id as goods_attr_id')
+			//后面的b.goods_id = '.$id放在on会作为连接条件，为空的会保留，若放在where后面则会变成筛选条件
+			->join('left join ss_goods_attr as b on a.id = b.attr_id and b.goods_id = '.$id)
+			->where([
+				'a.type_id'=>['eq',$goods_detail['type_id']],
+			])
+			->order('attr_id asc')
+			->select();
 
 			$this->assign([
 				'brand_list'=> $brand_list,
 				'cat_list'	=> $cat_list,
 				'goods_detail'=>$goods_detail,
 				'goods_detail_member_price_list'=>$goods_detail_member_price_list,
-				'goods_detail_ext_cat_list'=>$goods_detail_ext_cat_list
+				'goods_detail_ext_cat_list'=>$goods_detail_ext_cat_list,
+				'goods_detail_goods_pic_list'=>$goods_detail_goods_pic_list,
+				'type_list'=>$type_list,
+				'gaData'=>$attrData,
+				'_page_title'=>"修改商品页",
+				'_btn_name'=>"商品列表",
+				'_URL_'=>"goodsList",
 			]);
 			$this->display();
 		}
@@ -228,6 +264,109 @@ class GoodsController extends CommenController {
 	 * @return [type] [description]
 	 */
 	public function goodsTrash(){
+		$this-assign([
+			'_page_title'=>"商品库存页",
+			'_btn_name'=>"商品列表",
+			'_URL_'=>"goodsList",
+		]);
 		$this->display();
+	}
+	//根据选中的type返回type对应的属性
+	public function ajaxGetAttr(){
+		$type_id = I('get.type_id');
+		$attrModel = D('attribute');
+		$attrData = $attrModel->where([
+			'type_id'=>['eq',$type_id],
+		])->select();
+		echo json_encode($attrData);
+	}
+	// 处理删除属性
+	public function ajaxDelAttr(){
+		$goodsId = I('get.goods_id');
+		$gaid = I('get.gaid');
+		$gaModel = D('goods_attr');
+		$gaModel->delete($gaid);
+		// 删除相关库存量数据
+		$gnModel = D('goods_number');
+		$gnModel->where(array(
+			'goods_id' => array('EXP' ,"=$goodsId or AND FIND_IN_SET($gaid, attr_list)"),
+		))->delete();
+	}
+	//查看库存量
+	public function goodsNum(){
+		// 接收商品ID
+		$id = I('get.id');
+		$gnModel = D('goods_number');
+		// 处理表单
+		if(IS_POST){
+			// 先删除原库存
+			$gnModel->where(array(
+				'goods_id' => array('eq', $id),
+			))->delete();
+			
+			$gaid = I('post.goods_attr_id');
+			$gn = I('post.goods_number');
+			// 先计算商品属性ID和库存量的比例
+			$gaidCount = count($gaid);
+			$gnCount = count($gn);
+			$rate = $gaidCount/$gnCount;
+			// 循环库存量
+			$_i = 0;  // 取第几个商品属性ID
+			//为避免有的添加失败，应使用事务
+			$gnModel->startTrans();
+			foreach ($gn as $k => $v){
+				$_goodsAttrId = array();  // 把下面取出来的ID放这里
+				// 后来从商品属性ID数组中取出 $rate 个，循环一次取一个
+				for($i=0; $i<$rate; $i++){
+					$_goodsAttrId[] = $gaid[$_i];
+					$_i++;
+				}
+				// 先升序排列
+				sort($_goodsAttrId, SORT_NUMERIC);  // 以数字的形式排序
+				// 把取出来的商品属性ID转化成字符串
+				$_goodsAttrId = (string)implode(',', $_goodsAttrId);
+				$res = $gnModel->add(array(
+					'goods_id' => $id,
+					'goods_attr_id' => $_goodsAttrId,
+					'goods_number' => $v,
+				));
+				if(!$res){break;}//如果添加失败，中断循环
+			}
+			if($res){$gnModel->commit();$sign = 'success';}else{$sign = $gnModel->getError;}
+			echo json_encode($sign);
+		}else{
+			// 根据商品ID取出这件商品所有可选属性的值
+			$gaModel = D('goods_attr');
+			$gaData = $gaModel->alias('a')
+			->field('a.*,b.attr_name')
+			->join('left join ss_attribute as b ON a.attr_id=b.id')
+			->where(array(
+				'a.goods_id' => array('eq', $id),
+				'b.attr_type' => array('eq', '可选'),
+			))
+			->order('attr_id asc')->select();
+			// 处理这个二维数组：转化成三维：把属性相同的放到一起
+			$_gaData = [];
+			foreach ($gaData as $k => $v){
+				$_gaData[$v['attr_name']][] = $v;
+			}
+			
+			// 先取出这件商品已经设置过的库存量
+			$gnData = $gnModel->where(array(
+				'goods_id' => $id,
+			))->select();
+			//var_dump($gnData);
+			
+			$this->assign(array(
+				'gaData' => $_gaData,//可选属性组
+				'gnData' => $gnData,//已经设置过的库存量
+				'goods_id' => $id,
+				'_page_title'=>"商品库存页",
+				'_btn_name'=>"商品列表",
+				'_URL_'=>"goodsList",
+			));
+	   		// 1.显示表单
+	   		$this->display();
+		}
 	}
 }

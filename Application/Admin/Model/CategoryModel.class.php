@@ -33,7 +33,6 @@ class CategoryModel extends Model{
 		$update_id = $data['id'];
 		$update_parent_id = $data['parent_id'];
 		$res_ids = $this->getLevelId($ids_data,$update_id,'id','parent_id');
-		$this->error = [$data];
 		if(in_array($update_parent_id,$res_ids)){
 			$this->error = '商品分类更新失败！！不可将当前分类或当前分类的子类作为其上级分类！';
 			return false;

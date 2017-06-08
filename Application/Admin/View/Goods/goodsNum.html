@@ -1,0 +1,165 @@
+<layout name="Common/layout"/>
+    <form method="post" action="" name="listForm" id="goodsNum">
+        <div class="list-div" id="listDiv">
+            <table cellpadding="3" cellspacing="1" id="tableList">
+                <tr>
+                    <volist name="gaData" id="vol">
+                        <th>{$key}</th>
+                    </volist>
+                    <th>库存量</th>
+                    <th>操作</th>
+                </tr>
+                <php>$gnnum = count($gnData);</php>
+                <if condition="$gnnum!=0">
+                    <volist name="gnData" id="sd" key="k">
+                        <tr class="tron">
+                            <volist name="gaData" id="val">
+                                <td>
+                                    <select name="goods_attr_id[]">
+                                        <option value="">请选择--</option>
+                                        <volist name="val" id="vul">
+                                        <php>$_attr = explode(',', $sd['goods_attr_id']);
+                                            if(in_array($vul['id'], $_attr))
+                                                $select = 'selected="selected"';
+                                            else 
+                                                $select = '';
+                                        </php>
+                                            <option {$select} value="{$vul.id}">{$vul['attr_value']}</option>
+                                        </volist>
+                                    </select>
+                                </td>
+                            </volist>
+                            <td><input type="text" name="goods_number[]" value="{$sd.goods_number}"/></td>
+                            <php>$mrk = $k==1?'+':'-';</php>
+                            <td><input onclick="addNewTr(this)" type="button" value="{$mrk}"/></td>
+                        </tr>
+                    </volist>
+                <else/>
+                    <tr class="tron">
+                        <volist name="gaData" id="val">
+                            <td>
+                                <select name="goods_attr_id[]">
+                                    <option value="">请选择--</option>
+                                    <volist name="val" id="vul">
+                                        <option value="{$vul.id}">{$vul['attr_value']}</option>
+                                    </volist>
+                                </select>
+                            </td>
+                        </volist>
+                        <td><input type="text" name="goods_number[]" value="{$sd.goods_number}"/></td>
+                        <td><input onclick="addNewTr(this)" type="button" value="+"/></td>
+                    </tr>
+                </if>
+                <tr id="submit">
+                    <php>$num = count($gaData)+2;</php>
+                    <td style="text-align: center" colspan="{$num}"><input type="submit" value="提交"/></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+<script>
+    var xhr;
+    function loadXMLDoc(data,url,cfunc){
+        if(window.XMLHttpRequest){
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xhr=new XMLHttpRequest();
+        }else{
+            // code for IE6, IE5
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.onreadystatechange=cfunc;
+        xhr.open("post",url,true);
+        xhr.send(data);
+    }
+    var form = document.getElementById('goodsNum');
+    form.onsubmit = function(evt){
+        //收集表单域信息
+        var data = new FormData(this);
+        loadXMLDoc(data,"__ACTION__/id/{$goods_id}",function(){
+            if(xhr.readyState!=4){
+                //layer加载层
+                layer.load(2);
+                // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+            }
+            if(xhr.readyState==4 && xhr.status==200){
+                layer.closeAll('loading');
+                var object=JSON.parse(xhr.responseText,function(key,value){
+                    console.log(key,value);
+                    if (value=='success') {
+                        layer.alert('商品库存信息更新成功！',function(){
+                            window.location.href = "__CONTROLLER__/goodsList/from/goodsEdit";
+                            icon: 6;
+                        });
+                    }else if(key!=''){
+                        layer.tips(value, '#'+key, {tipsMore: true});
+                    }
+                });
+            }
+        });
+        evt.preventDefault();
+    }
+    /**
+     * 页面加载完毕时，加载此函数
+     * 主要渲染之前标签的值
+     */
+    window.onload=function(){
+
+    }
+    //渲染鼠标选中的tr行背景颜色改变
+    $(".tron").mouseover(function(){
+        $(this).find('td').css('backgroundColor','#ccc');
+    });
+    $(".tron").mouseout(function(){
+        $(this).find('td').css('backgroundColor','#fff');
+    });
+    /**
+     * 将商品移至回收站时，调用此函数
+     * @param  int delete_id 回收商品的ID
+     */
+    function deletec(delete_id){
+        loadXMLDoc("id/"+delete_id,"__CONTROLLER__/goodsNumDelete/",function(){
+            if(xhr.readyState!=4){
+                //layer加载层
+                layer.load(2);
+                // layer.msg('请稍等！正在努力加载中！', {icon: 4});
+            }
+            if(xhr.readyState==4 && xhr.status==200){
+                layer.closeAll('loading');
+                var object=JSON.parse(xhr.responseText,function(key,value){
+                    if (value=='success') {
+                        layer.alert('该库存已被删除！',function(){
+                            window.location.href = "__CONTROLLER__/goodsNum/from/goodsNumEdit";
+                            icon: 6;
+                        });
+                    }else if(key!=''){
+                        layer.tips(value, '#'+key, {tipsMore: true});
+                    }
+                });
+            }
+        });
+    }
+    function delete_confirm(confirm_id){
+        layer.msg('确定要删除此库存？', {
+          time: 5000 
+          ,btn: ['是的！', '算了..']
+          ,yes: function(index){
+            layer.close(index);
+            deletec(confirm_id);
+          }
+          ,no:function(index){
+            layer.close(index);
+          }
+        });
+    }
+    function addNewTr(btn){
+        var tr = $(btn).parent().parent();
+        if($(btn).val() == "+"){
+            var newTr = tr.clone();
+            newTr.find(":button").val("-");
+            $("#submit").before(newTr);
+        }else{
+            tr.remove();
+        }
+    }
+</script>

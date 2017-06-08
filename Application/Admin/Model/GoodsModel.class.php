@@ -9,9 +9,9 @@ class GoodsModel extends Model{
 	// 是否批处理验证
     protected $patchValidate    =   true;
     //定义添加操作，允许接收的表单字段
-	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price';
+	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id';
     //定义更新操作，允许接收的表单字段
-	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price';
+	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id';
 
 	//自定义设置验证规则，$_validate属于父类Model
 	protected $_validate = [
@@ -83,6 +83,7 @@ class GoodsModel extends Model{
 	//商品信息添加成功之后，会自动调用此方法，其中$data['id']就是新商品的id
 	//要调用此方法，数据的主键ID不能是复合主键，Model父类中的add方法中有定义
 	protected function _after_insert($data,$option){
+		/*****************处理会员价格信息****************/
 		//先获取表单中的会员价格信息
 		$mp = I('post.member_price');
 		$mpModel = M('member_price');
@@ -110,6 +111,8 @@ class GoodsModel extends Model{
 		$ecid = I('post.ext_cat_id');
 		if($ecid){
 			$gcModel = D('goods_cat');
+			// 去重
+			$ecid = array_unique($ecid);
 			foreach ($ecid as $k => $v){
 				if($v==0)
 					continue ;
@@ -156,9 +159,25 @@ class GoodsModel extends Model{
 				}
 			}
 		}
+		/************处理商品属性***************/
+		$attrValue = I('post.attr_value');
+		//第一层循环拿到属性ID和属性值数组
+		$gaModel = D('goods_attr');
+		foreach ($attrValue as $k => $v) {
+			//去重
+			$v = array_unique($v);
+			// 第二层循环拿到具体的属性值
+			foreach ($v as $k1 => $v1) {
+				$gaModel->add([
+					'goods_id'=>$data['id'],
+					'attr_id'=>$k,
+					'attr_value'=>$v1,
+				]);
+			}
+		}
 	}
 	protected function _before_update(&$data,$option){
-		/*********在更新信息之前先处理图片*********/
+		/*********在更新信息之前先处理logo图片*********/
 		if($_FILES['logo']['error']===0){//error为0表示上传了文件
 			//如果上传了新文件，就删除旧文件，这里先存储路径信息
 			//可选择是否删除原来的logo图，一般删除，节省磁盘空间
@@ -201,9 +220,43 @@ class GoodsModel extends Model{
 	}
 	protected function _after_update($data,$option){
 		$id = $data['id'];  // 要修改的商品的ID
-		$this->error = $id;
+
+		/************ 修改商品属性 *****************/
+		//获取旧的属性id数组
+		$gaid = I('post.goods_attr_id');
+		//获取要更新的商品属性值
+		$attrValue = I('post.attr_value');
+		$gaModel = D('goods_attr');
+		$_i = 0;  // 循环次数
+		foreach ($attrValue as $k => $v){
+			foreach ($v as $k1 => $v1){
+				// 这个replace into可以实现同样的功能
+				// replace into ：如果记录存在就修改，记录不存在就添加。以主键字段来判断一条记录是否存在
+				//$gaModel->execute('REPLACE INTO p39_goods_attr VALUES("'.$gaid[$_i].'","'.$v1.'","'.$k.'","'.$id.'")');
+				// 找这个属性值是否有id
+				
+				if($gaid[$_i] == '')//每次循环判断对应的attr_id是否存在，以此决定是新增还是修改
+					$gaModel->add(array(
+						'goods_id' => $id,
+						'attr_id' => $k,
+						'attr_value' => $v1,
+					));
+				else 
+					$gaModel->where(array(
+						'id' => array('eq', $gaid[$_i]),
+					))->setField('attr_value', $v1);
+				
+				$_i++;
+			}
+		}
+		//删除表中id不在$gaid中的记录行
+		// $gaModel->where([
+		// 	'id'=>['not in',$gaid],
+		// ])->delete();
+		/************删除旧的会员logo图片*****************/
 		$old_logo_url = session('old_logo_update');
 		$this->delete_old_logo($old_logo_url);
+
 		/*****************处理会员价格信息*****************/
 		//先获取表单中的会员价格信息
 		$mp = I('post.member_price');
@@ -232,7 +285,8 @@ class GoodsModel extends Model{
 				$mpModel->add($save);
 			}
 		}
-		/************ 处理扩展分类 ***************/
+
+		/*****************处理扩展分类*********************/
 		$ecid = I('post.ext_cat_id');
 		//如果有指定扩展分类，就处理
 		if($ecid){
@@ -241,6 +295,8 @@ class GoodsModel extends Model{
 			$gcModel->where(array(
 				'goods_id' => array('eq', $id),
 			))->delete();
+			// 去重
+			$ecid = array_unique($ecid);
 			foreach ($ecid as $k => $v){
 				if($v==0){
 					continue ;
@@ -250,9 +306,22 @@ class GoodsModel extends Model{
 				$gcModel->add($save);
 			}
 		}
-		/************ 处理相册图片 *****************/
+
+		/******************处理相册图片********************/
+		$gpModel = D('goods_pic');
+		$old_pid_ids = I('post.old_pic');
+		$pic_condition = array('goods_id'=>array('eq',$id),
+								'id' => array('NOT IN', $old_pid_ids)
+						);
+		//拿出要删的pic的路径
+		$old_pic_url = $gpModel->field('pic,sm_pic,big_pic,mid_pic')
+						->where($pic_condition)->select();
+		//先删除要删的pic数据库记录
+		$gpModel->where($pic_condition)->delete();
+		//再删除要删的pic文件
+		$this->delete_old_logo($old_pic_url);
+		//因为每个商品对应的相册相片数量不固定，因此先删除原相册数据
 		if(isset($_FILES['pic'])){
-			$gpModel = D('goods_pic');
 			$pics = array();
 			foreach ($_FILES['pic']['name'] as $k => $v){
 				$pics[] = array(
@@ -277,7 +346,7 @@ class GoodsModel extends Model{
 					$data['pic'] = $res;
 					$data = array_merge($data,$resz);
 					//将路径信息，存入ss_goods_pic表
-					$gpModel->where('goods_id = '.$id)->save([
+					$gpModel->where('goods_id = '.$id)->add([
 							'pic' => $data['pic'],
 							'big_pic' => $data['big_pic'],
 							'mid_pic' => $data['mid_pic'],
@@ -287,6 +356,7 @@ class GoodsModel extends Model{
 				}
 			}
 		}
+
 	}
 	///彻底删除商品信息前调用此函数
 	protected function _before_delete($option){
@@ -307,7 +377,15 @@ class GoodsModel extends Model{
 	protected function delete_old_logo($old_logo_url){
 		$keys = array_keys($old_logo_url);
 		for ($i=0; $i < count($keys); $i++) {
-			unlink($old_logo_url["{$keys[$i]}"]);
+			//如果是二维数组，则遍历删除多张图片的多张size
+			if(is_array($old_logo_url[$i])){
+				foreach ($old_logo_url[$i] as $v) {
+					unlink($v);
+				}
+			//否则直接循环删除一张图片的多张size
+			}else{
+				unlink($old_logo_url["{$keys[$i]}"]);
+			}
 		}
 	}
 	/**
@@ -326,14 +404,14 @@ class GoodsModel extends Model{
 		$data['big_logo'] = $dirname.'/thumb_big_'.$filename;
 		$data['mbig_logo'] = $dirname.'/thumb_mbig_'.$filename;
 		//thumb保存缩略图
-		$image->open($imgurl);
-		$image->thumb(50,50)->save($data['sm_logo']);
-		$image->thumb(130,130)->save($data['mid_logo']);
-		$image->thumb(350,350)->save($data['big_logo']);
-		$image->thumb(700,700)->save($data['mbig_logo']);
+		$image->open($imgurl)->thumb(50,50)->save($data['sm_logo']);
+		$image->open($imgurl)->thumb(130,130)->save($data['mid_logo']);
+		$image->open($imgurl)->thumb(350,350)->save($data['big_logo']);
+		$image->open($imgurl)->thumb(700,700)->save($data['mbig_logo']);
 		//返回缩略图的路径
 		return $data;
 	}
+	//上传保存相册
 	private function picUrl($imgurl){
 		$dirname = dirname($imgurl);
 		$filename = basename($imgurl);
@@ -344,10 +422,9 @@ class GoodsModel extends Model{
 		$data['mid_pic'] = $dirname.'/thumb_mid_'.$filename;
 		$data['big_pic'] = $dirname.'/thumb_big_'.$filename;
 		//thumb保存缩略图
-		$image->open($imgurl);
-		$image->thumb(50,50)->save($data['sm_pic']);
-		$image->thumb(350,350)->save($data['mid_pic']);
-		$image->thumb(650,650)->save($data['big_pic']);
+		$image->open($imgurl)->thumb(50,50)->save($data['sm_pic']);
+		$image->open($imgurl)->thumb(350,350)->save($data['mid_pic']);
+		$image->open($imgurl)->thumb(650,650)->save($data['big_pic']);
 		//返回缩略图的路径
 		return $data;
 	}
@@ -405,8 +482,5 @@ class GoodsModel extends Model{
 			'pages'      =>  $pages,
 			'goods_list' =>  $goods_list,
 		];
-	}
-	public function get_ext_cat_ids(){
-
 	}
 }

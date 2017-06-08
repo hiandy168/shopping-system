@@ -4,6 +4,8 @@
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="__ADMIN__/css/general.css" rel="stylesheet" type="text/css" />
+<script src="__ADMIN__/js/jquery-3.2.1.min.js"></script>
+<script src="__PUBLIC__/Plugins/layer/layer.js"></script>
 <style type="text/css">
 #header-div {
   background:#278296;
@@ -126,7 +128,7 @@
         </ul>
         <div id="send_info">
             <a href="#" target="main-frame" class="fix-submenu">清除缓存</a>
-            <a href="__MODULE__/Manager/logout" target="_top" class="fix-submenu">退出</a>
+            <a href="__MODULE__/Login/logout" onclick="javascript:confirm('确定退出系统？')" target="_top" class="fix-submenu">退出</a>
         </div>
     </div>
 </div>
@@ -134,15 +136,17 @@
     <ul>
         <li class="fix-spacel">&nbsp;</li>
         <li><a href="__MODULE__/Index/main" target="main-frame">起始页</a></li>
-        <li><a href="__MODULE__/Goods/goodsList" target="main-frame">商品列表</a></li>
-        <li><a href="__MODULE__/Category/categoryList" target="main-frame">分类列表</a></li>
-        <li><a href="__MODULE__/Brand/brandList" target="main-frame">品牌列表</a></li>
-        <li><a href="__MODULE__/Order/orderList" target="main-frame">订单列表</a></li>
-        <li><a href="__MODULE__/Comment/commentList" target="main-frame">用户评论</a></li>
-        <li><a href="__MODULE__/User/userList" target="main-frame">会员列表</a></li>
+        <php>$priModel = D('privilege');$btns = $priModel->getBtns();</php>
+          <volist name="btns" id="vol">
+            <volist name="vol['children']" id="val">
+            <li><a href="/{$val.module_name}/{$val.controller_name}/{$val.action_name}" target="main-frame">{$val.pri_name}</a></li>
+            </volist>
+          </volist>
         <li class="fix-spacer">&nbsp;</li>
     </ul>
     <br class="clear" />
 </div>
 </body>
+<script>
+</script>
 </html>
