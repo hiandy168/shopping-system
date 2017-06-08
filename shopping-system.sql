@@ -30,7 +30,7 @@ CREATE TABLE `ss_attribute` (
   `type_id` mediumint(8) unsigned NOT NULL COMMENT '所属类型Id',
   PRIMARY KEY (`id`),
   KEY `type_id` (`type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='属性表';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='属性表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `ss_attribute` (
 
 LOCK TABLES `ss_attribute` WRITE;
 /*!40000 ALTER TABLE `ss_attribute` DISABLE KEYS */;
-INSERT INTO `ss_attribute` VALUES (1,'颜色','可选','白色,黑色,绿色,紫色,蓝色,金色,银色,粉色,富士白',1),(3,'出版社','唯一','人民大学出版社,清华大学出版社,工业大学出版社',3),(4,'出厂日期','唯一','',1),(5,'操作系统','可选','ios,android,windows',1),(6,'页数','唯一','',3),(7,'作者','唯一','',3),(8,'材质','唯一','',2),(9,'尺码','可选','M,XL,XXL,XXXL,XXXXL',2),(10,'屏幕尺寸','唯一','',1);
+INSERT INTO `ss_attribute` VALUES (1,'颜色','可选','白色,黑色,绿色,紫色,蓝色,金色,银色,粉色,富士白',1),(3,'出版社','可选','人民大学出版社,清华大学出版社,工业大学出版社',3),(4,'出厂日期','唯一','',1),(5,'操作系统','可选','ios,android,windows',1),(6,'页数','唯一','',3),(7,'作者','唯一','',3),(8,'材质','唯一','',2),(9,'尺码','可选','M,XL,XXL,XXXL,XXXXL',2),(10,'屏幕尺寸','唯一','',1),(11,'颜色','可选','白色,红色,绿色',2),(12,'分辨率','唯一','',1);
 /*!40000 ALTER TABLE `ss_attribute` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +120,7 @@ CREATE TABLE `ss_category` (
   `sort_num` mediumint(3) NOT NULL COMMENT '排序',
   `keywords` varchar(30) NOT NULL DEFAULT '' COMMENT '关键词',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='分类';
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='分类';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `ss_category` (
 
 LOCK TABLES `ss_category` WRITE;
 /*!40000 ALTER TABLE `ss_category` DISABLE KEYS */;
-INSERT INTO `ss_category` VALUES (1,'家用电器',0,'是','是',0,'大电器'),(2,'手机、数码、京东通信',0,'是','是',0,''),(3,'电脑、办公',0,'是','是',0,''),(4,'家居、家具、家装、厨具',0,'是','是',0,''),(5,'男装、女装、内衣、珠宝',0,'否','是',0,''),(6,'个护化妆',0,'是','否',0,''),(8,'运动户外',0,'是','否',0,''),(9,'汽车、汽车用品',0,'是','否',0,''),(10,'母婴、玩具乐器',0,'是','否',0,''),(11,'食品、酒类、生鲜、特产',0,'是','否',0,''),(12,'营养保健',0,'是','是',0,''),(13,'图书、音像、电子书',0,'是','否',0,''),(14,'彩票、旅行、充值、票务',0,'是','否',0,''),(16,'大家电',1,'是','是',1,'大家电'),(17,'生活电器',1,'是','是',0,''),(18,'厨房电器',1,'是','是',0,''),(19,'个护健康',1,'是','是',0,''),(20,'五金家装',1,'是','是',0,''),(21,'iphone',2,'是','是',0,''),(22,'冰箱',16,'是','是',100,'冰箱'),(25,'手机配件',2,'是','是',0,''),(26,'摄影摄像',2,'是','是',0,''),(27,'节能汽车',9,'是','是',0,''),(28,'T恤',5,'是','是',12,''),(29,'烟酒',11,'是','是',12,'礼品，烟酒');
+INSERT INTO `ss_category` VALUES (1,'家用电器',0,'是','是',0,'大电器'),(2,'手机、数码、京东通信',0,'是','是',0,''),(3,'电脑、办公',0,'是','是',0,''),(4,'家居、家具、家装、厨具',0,'是','是',0,''),(5,'男装、女装、内衣、珠宝',0,'否','是',0,''),(6,'个护化妆',0,'是','否',0,''),(8,'运动户外',0,'是','否',0,''),(9,'汽车、汽车用品',0,'是','否',0,''),(10,'母婴、玩具乐器',0,'是','否',0,''),(11,'食品、酒类、生鲜、特产',0,'是','否',0,''),(12,'营养保健',0,'是','是',0,''),(13,'图书、音像、电子书',0,'是','否',0,''),(14,'彩票、旅行、充值、票务',0,'是','否',0,''),(16,'大家电',1,'是','是',1,'大家电'),(17,'生活电器',1,'是','是',0,''),(18,'厨房电器',1,'是','是',0,''),(19,'个护健康',1,'是','是',0,''),(20,'五金家装',1,'是','是',0,''),(21,'iphone',2,'是','是',0,'苹果手机'),(22,'冰箱',16,'是','是',100,'冰箱'),(25,'手机配件',2,'是','是',0,''),(26,'摄影摄像',2,'是','是',0,''),(27,'节能汽车',9,'是','是',0,''),(28,'T恤',5,'是','是',12,''),(29,'烟酒',11,'是','是',12,'礼品，烟酒'),(30,'笔记本电脑',3,'是','是',0,'');
 /*!40000 ALTER TABLE `ss_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -242,7 +242,7 @@ CREATE TABLE `ss_goods` (
   KEY `sort_num` (`sort_num`) USING BTREE,
   KEY `is_delete` (`is_delete`) USING BTREE,
   KEY `goods_sn` (`goods_sn`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8 COMMENT='商品';
+) ENGINE=InnoDB AUTO_INCREMENT=126 DEFAULT CHARSET=utf8 COMMENT='商品';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -251,7 +251,7 @@ CREATE TABLE `ss_goods` (
 
 LOCK TABLES `ss_goods` WRITE;
 /*!40000 ALTER TABLE `ss_goods` DISABLE KEYS */;
-INSERT INTO `ss_goods` VALUES (2,'新的联想商品',123.00,5.00,'','是','否','2017-06-01 03:33:41','2015-10-15 14:48:03','Public/Uploads/Goods/2017-05-28/592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a6c2eae566.jpg',7,3,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',223,'1495952020',0),(3,'数码相机',111.00,112.00,'','是','否','2017-06-01 02:55:58','2015-10-15 16:05:05','Public/Uploads/Goods/2017-05-27/59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_59297cc9524ae.jpg',2,3,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'是',111,'1495951945sss',0),(4,'彩虹电视',0.00,50.00,'','是','否','2017-06-01 02:36:32','2015-10-16 14:56:41','Public/Uploads/Goods/2017-05-28/592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a6c39a2d31.jpg',7,16,1,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',120,'否',0,'1495952025',0),(6,'耳机',444.00,333.00,'','是','否','2017-06-01 02:36:38','2015-10-16 11:02:08','Public/Uploads/Goods/2017-05-27/592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_592988b123801.jpg',3,16,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','是','是',105,'是',333,'1495952032',0),(7,'商品属性测试',113.00,111.00,'','是','否','2017-06-01 02:36:42','2015-10-18 14:48:28','Public/Uploads/Goods/2017-05-28/592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a6c43458be.jpg',3,16,1,101.00,'2015-10-21 00:01:00','2015-10-23 00:00:00','否','否','否',110,'是',0,'1495952038',0),(45,'滑盖手机',0.00,1111.00,'','是','否','2017-06-01 02:43:58','2017-05-26 00:19:33','Public/Uploads/Goods/2017-05-28/592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59cacc83c.jpg',4,26,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495952045',0),(46,'翻盖大手机',0.00,1111.00,'','是','否','2017-06-01 03:03:16','2017-05-26 00:20:32','Public/Uploads/Goods/2017-05-28/592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59d2e8b36.jpg',2,26,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'1495952070',0),(47,'平板手机',0.00,2312.00,'','是','否','2017-06-01 03:03:34','2017-05-26 00:31:27','Public/Uploads/Goods/2017-05-28/5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929c3b5f0345.jpg',4,2,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495952079',0),(49,'翻盖手机',121.00,1213.00,'','是','否','2017-05-31 14:44:49','2017-05-26 02:21:05','Public/Uploads/Goods/2017-05-28/5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929c392b84b1.jpg',3,2,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',88,'0001495736465',0),(57,'诺基亚手机',0.00,2222.00,'','是','否','2017-05-31 14:45:01','2017-05-26 22:54:41','Public/Uploads/Goods/2017-05-28/592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59dc264dc.jpg',5,26,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','是','否',100,'否',0,'0001495810481',0),(58,'智能手机',0.00,22221.00,'','是','否','2017-05-31 14:38:26','2017-05-26 22:55:55','Public/Uploads/Goods/2017-05-28/592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59f2a006c.jpg',5,16,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','是','是',100,'否',0,'0001495810555',0),(59,'小灵通',0.00,121122.00,'','是','否','2017-06-01 03:05:27','2017-05-26 22:56:30','Public/Uploads/Goods/2017-05-28/5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929a8eed7075.jpg',6,22,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',0,'0000000000010',0),(60,'12212121',0.00,121.00,'','否','否','2017-05-28 13:02:53','2017-05-27 17:12:03','Public/Uploads/Goods/2017-05-28/592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59fdc620b.jpg',2,23,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'0001495876323',0),(61,'ffffff',22222.00,222.00,'<p>2222</p>','是','否','2017-05-31 12:55:56','2017-05-27 17:17:31','Public/Uploads/Goods/2017-05-31/592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_sm_592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_mid_592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_big_592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_mbig_592e4cdc59e6d.jpg',5,14,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','是',100,'否',444,'0001495876651',0),(62,'2222222222',1111.00,2222.00,'','是','否','2017-05-28 19:54:36','2017-05-27 17:17:56','Public/Uploads/Goods/2017-05-28/592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592aba7cc0db0.jpg',4,19,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',77,'0001495876676',0),(63,'jjjjjjjjjjjjjj',2222.00,22222.00,'<p>2222</p>','是','否','2017-05-28 19:55:34','2017-05-27 17:19:26','Public/Uploads/Goods/2017-05-27/592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_592952c63f263.jpg',6,9,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',111,'0001495876766',0),(64,'手机',1199.00,999.00,'','是','否','2017-05-28 02:18:52','2017-05-27 21:58:11','Public/Uploads/Goods/2017-05-28/5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929c30cbc3b9.jpg',3,2,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',123,'0001495893491',0),(65,'少时诵诗书',0.00,2222.00,'','是','否','2017-05-28 01:03:42','2017-05-27 22:25:23','Public/Uploads/Goods/2017-05-27/59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_59298c5325410.jpg',4,1,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',33,'0001495895123',0),(68,'轮椅',2222.00,1111.00,'','是','否','2017-06-01 01:58:23','2017-05-28 13:55:50','Public/Uploads/Goods/2017-05-28/592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a7f238e03d.jpg',3,4,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',2,'0001495950950',0),(69,'宝马',543210.00,456789.00,'','是','否','0000-00-00 00:00:00','2017-05-28 14:03:26','','','','','',2,9,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',12,'1495951406',0),(70,'奔驰',21312312.00,45134513.00,'','是','否','0000-00-00 00:00:00','2017-05-28 14:04:16','','','','','',0,9,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'asaf124513624',0),(71,'弧度电视机',0.00,222222.00,'','是','否','2017-05-28 15:55:40','2017-05-28 14:11:21','Public/Uploads/Goods/2017-05-28/592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a827c7223f.jpg',0,16,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'ssssssss',0),(73,'眼霜',145.00,123.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:24:50','','','','','',0,6,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',123,'1495977890',0),(74,'兰蔻',456.00,345.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:45:01','','','','','',0,6,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',123,'1495979101',0),(75,'眉笔',789.00,231.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:48:02','','','','','',0,6,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',0,'1495979282',0),(76,'酷睿冰雪精灵',0.00,5678.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:50:46','','','','','',0,3,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'1495979446',0),(77,'酷睿冰雪精灵1',0.00,5678.00,'','是','否','2017-06-01 03:20:02','2017-05-28 21:51:44','','','','','',0,3,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'1495979504',0),(78,'水水水水',0.00,12.00,'','是','否','2017-06-01 03:13:43','2017-05-28 22:01:00','','','','','',0,1,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495980060',0),(82,'点点滴滴',0.00,123.00,'','是','否','2017-06-01 03:30:53','2017-05-28 22:03:43','','','','','',0,26,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','是',100,'否',0,'1495980223',0),(88,'Safari',0.00,1212.00,'','是','否','0000-00-00 00:00:00','2017-05-28 22:24:26','','','','','',0,18,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495981466',0),(100,'凤凰军事',0.00,141.00,'','是','否','0000-00-00 00:00:00','2017-05-31 17:09:54','','','','','',0,17,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1496221794',0),(105,'测试商品',4321.00,3456.00,'','是','否','2017-05-31 17:20:22','2017-05-31 17:18:47','Public/Uploads/Goods/2017-05-31/592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_sm_592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_mid_592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_big_592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_mbig_592e8ab5ac925.png',0,4,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',0,'1496222401',0);
+INSERT INTO `ss_goods` VALUES (2,'新的联想商品',123.00,5.00,'','是','否','2017-06-08 13:09:48','2015-10-15 14:48:03','Public/Uploads/Goods/2017-05-28/592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a6c2eae566.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a6c2eae566.jpg',7,3,1,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',223,'1495952020',0),(3,'数码相机',111.00,112.00,'','是','否','2017-06-07 19:58:16','2015-10-15 16:05:05','Public/Uploads/Goods/2017-05-27/59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_59297cc9524ae.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_59297cc9524ae.jpg',2,3,2,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'是',111,'1495951945sss',0),(4,'彩虹电视',0.00,50.00,'','是','否','2017-06-01 02:36:32','2015-10-16 14:56:41','Public/Uploads/Goods/2017-05-28/592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a6c39a2d31.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a6c39a2d31.jpg',7,16,1,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',120,'否',0,'1495952025',0),(6,'耳机',444.00,333.00,'','是','否','2017-06-07 16:07:51','2015-10-16 11:02:08','Public/Uploads/Goods/2017-05-27/592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_592988b123801.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_592988b123801.jpg',3,16,1,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','是','是',105,'是',333,'1495952032',0),(7,'商品属性测试',113.00,111.00,'','是','否','2017-06-06 12:38:03','2015-10-18 14:48:28','Public/Uploads/Goods/2017-05-28/592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a6c43458be.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a6c43458be.jpg',3,16,1,101.00,'2015-10-21 00:01:00','2015-10-23 00:00:00','否','否','否',110,'是',0,'1495952038',0),(45,'滑盖手机',0.00,1111.00,'','是','否','2017-06-07 19:27:00','2017-05-26 00:19:33','Public/Uploads/Goods/2017-05-28/592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59cacc83c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59cacc83c.jpg',4,26,1,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495952045',0),(46,'翻盖大手机',0.00,1111.00,'','是','否','2017-06-01 03:03:16','2017-05-26 00:20:32','Public/Uploads/Goods/2017-05-28/592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59d2e8b36.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59d2e8b36.jpg',2,26,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'1495952070',0),(47,'平板手机',0.00,2312.00,'','是','否','2017-06-01 03:03:34','2017-05-26 00:31:27','Public/Uploads/Goods/2017-05-28/5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929c3b5f0345.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929c3b5f0345.jpg',4,2,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495952079',0),(49,'翻盖手机',121.00,1213.00,'','是','否','2017-05-31 14:44:49','2017-05-26 02:21:05','Public/Uploads/Goods/2017-05-28/5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929c392b84b1.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929c392b84b1.jpg',3,2,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',88,'0001495736465',0),(57,'诺基亚手机',0.00,2222.00,'','是','否','2017-05-31 14:45:01','2017-05-26 22:54:41','Public/Uploads/Goods/2017-05-28/592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59dc264dc.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59dc264dc.jpg',5,26,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','是','否',100,'否',0,'0001495810481',0),(58,'智能手机',0.00,22221.00,'','是','否','2017-05-31 14:38:26','2017-05-26 22:55:55','Public/Uploads/Goods/2017-05-28/592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59f2a006c.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59f2a006c.jpg',5,16,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','是','是',100,'否',0,'0001495810555',0),(59,'小灵通',0.00,121122.00,'','是','否','2017-06-01 03:05:27','2017-05-26 22:56:30','Public/Uploads/Goods/2017-05-28/5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929a8eed7075.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929a8eed7075.jpg',6,22,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',0,'0000000000010',0),(60,'12212121',0.00,121.00,'','否','否','2017-05-28 13:02:53','2017-05-27 17:12:03','Public/Uploads/Goods/2017-05-28/592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a59fdc620b.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a59fdc620b.jpg',2,23,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'0001495876323',0),(61,'ffffff',22222.00,222.00,'<p>2222</p>','是','否','2017-05-31 12:55:56','2017-05-27 17:17:31','Public/Uploads/Goods/2017-05-31/592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_sm_592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_mid_592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_big_592e4cdc59e6d.jpg','Public/Uploads/Goods/2017-05-31/thumb_mbig_592e4cdc59e6d.jpg',5,14,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','是',100,'否',444,'0001495876651',0),(62,'2222222222',1111.00,2222.00,'','是','否','2017-05-28 19:54:36','2017-05-27 17:17:56','Public/Uploads/Goods/2017-05-28/592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592aba7cc0db0.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592aba7cc0db0.jpg',4,19,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',77,'0001495876676',0),(63,'jjjjjjjjjjjjjj',2222.00,22222.00,'<p>2222</p>','是','否','2017-05-28 19:55:34','2017-05-27 17:19:26','Public/Uploads/Goods/2017-05-27/592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_592952c63f263.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_592952c63f263.jpg',6,9,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',111,'0001495876766',0),(64,'手机',1199.00,999.00,'','是','否','2017-05-28 02:18:52','2017-05-27 21:58:11','Public/Uploads/Goods/2017-05-28/5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_5929c30cbc3b9.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_5929c30cbc3b9.jpg',3,2,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',123,'0001495893491',0),(65,'少时诵诗书',0.00,2222.00,'','是','否','2017-05-28 01:03:42','2017-05-27 22:25:23','Public/Uploads/Goods/2017-05-27/59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_sm_59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_mid_59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_big_59298c5325410.jpg','Public/Uploads/Goods/2017-05-27/thumb_mbig_59298c5325410.jpg',4,1,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',33,'0001495895123',0),(68,'轮椅',2222.00,1111.00,'','是','否','2017-06-01 01:58:23','2017-05-28 13:55:50','Public/Uploads/Goods/2017-05-28/592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a7f238e03d.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a7f238e03d.jpg',3,4,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',2,'0001495950950',0),(69,'宝马',543210.00,456789.00,'','是','否','0000-00-00 00:00:00','2017-05-28 14:03:26','','','','','',2,9,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',12,'1495951406',0),(70,'奔驰',21312312.00,45134513.00,'','是','否','0000-00-00 00:00:00','2017-05-28 14:04:16','','','','','',0,9,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'asaf124513624',0),(71,'弧度电视机',0.00,222222.00,'','是','否','2017-05-28 15:55:40','2017-05-28 14:11:21','Public/Uploads/Goods/2017-05-28/592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_sm_592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_mid_592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_big_592a827c7223f.jpg','Public/Uploads/Goods/2017-05-28/thumb_mbig_592a827c7223f.jpg',0,16,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'ssssssss',0),(73,'眼霜',145.00,123.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:24:50','','','','','',0,6,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',123,'1495977890',0),(74,'兰蔻',456.00,345.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:45:01','','','','','',0,6,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',123,'1495979101',0),(75,'眉笔',789.00,231.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:48:02','','','','','',0,6,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','是','是',100,'否',0,'1495979282',0),(76,'酷睿冰雪精灵',0.00,5678.00,'','是','否','0000-00-00 00:00:00','2017-05-28 21:50:46','','','','','',0,3,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'1495979446',0),(77,'酷睿冰雪精灵1',0.00,5678.00,'','是','否','2017-06-01 03:20:02','2017-05-28 21:51:44','','','','','',0,3,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','是',100,'否',0,'1495979504',0),(78,'水水水水',0.00,12.00,'','是','否','2017-06-01 03:13:43','2017-05-28 22:01:00','','','','','',0,1,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495980060',0),(82,'点点滴滴',0.00,123.00,'','是','否','2017-06-01 03:30:53','2017-05-28 22:03:43','','','','','',0,26,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','是',100,'否',0,'1495980223',0),(88,'Safari',0.00,1212.00,'','是','否','0000-00-00 00:00:00','2017-05-28 22:24:26','','','','','',0,18,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1495981466',0),(100,'凤凰军事',0.00,141.00,'','是','否','0000-00-00 00:00:00','2017-05-31 17:09:54','','','','','',0,17,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1496221794',0),(105,'测试商品',4321.00,3456.00,'','是','否','2017-05-31 17:20:22','2017-05-31 17:18:47','Public/Uploads/Goods/2017-05-31/592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_sm_592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_mid_592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_big_592e8ab5ac925.png','Public/Uploads/Goods/2017-05-31/thumb_mbig_592e8ab5ac925.png',0,4,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','是','否','否',100,'否',0,'1496222401',0),(106,'测试商品1',1235.00,1234.00,'','是','否','2017-06-06 12:34:23','2017-06-06 11:06:00','','','','','',0,10,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1496718360',0),(107,'测试商品2',0.00,2312.00,'','是','否','2017-06-06 12:32:23','2017-06-06 11:15:41','','','','','',0,8,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1496718941',0),(108,'FXJXFHGKJ',0.00,2552.00,'','是','否','2017-06-06 13:40:02','2017-06-06 12:39:21','','','','','',0,20,0,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1496723961',0),(125,'测试商品3',0.00,14123.00,'','是','否','2017-06-07 15:10:03','2017-06-06 23:39:02','','','','','',0,19,1,0.00,'0000-00-00 00:00:00','0000-00-00 00:00:00','否','否','否',100,'否',0,'1496763542',0);
 /*!40000 ALTER TABLE `ss_goods` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -270,7 +270,7 @@ CREATE TABLE `ss_goods_attr` (
   PRIMARY KEY (`id`),
   KEY `goods_id` (`goods_id`),
   KEY `attr_id` (`attr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='商品属性';
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8 COMMENT='商品属性';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -279,7 +279,7 @@ CREATE TABLE `ss_goods_attr` (
 
 LOCK TABLES `ss_goods_attr` WRITE;
 /*!40000 ALTER TABLE `ss_goods_attr` DISABLE KEYS */;
-INSERT INTO `ss_goods_attr` VALUES (1,'白色',1,7),(2,'黑色',1,7),(3,'绿色',1,7),(4,'2015-10-01',4,7),(5,'ios',5,7),(6,'android',5,7),(7,'14寸',10,7),(8,'黑色',1,10),(9,'',4,10),(10,'android',5,10),(11,'',10,10),(12,'银色',1,6),(13,'粉色',1,6),(14,'2014-10-1',4,6),(15,'ios',5,6),(16,'android',5,6),(17,'6.6寸',10,6),(18,'白色',1,11),(19,'2014-10-1',4,11),(20,'ios',5,11),(21,'12寸',10,11);
+INSERT INTO `ss_goods_attr` VALUES (32,'2017/6/4',4,2),(33,'windows',5,2),(34,'16',10,2),(35,'4800*3200',12,2),(37,'白色',1,6),(38,'黑色',1,6),(39,'2017/6/4',4,6),(40,'ios',5,6),(41,'5',10,6),(42,'4800*3200',12,6),(45,'黑色',1,2),(46,'白色',1,45),(47,'1123',4,45),(48,'android',5,45),(49,'5',10,45),(50,'4800*3200',12,45),(51,'',8,3),(52,'XXL',9,3),(53,'红色',11,3),(54,'XL',9,3),(55,'白色',11,3),(56,'绿色',11,3);
 /*!40000 ALTER TABLE `ss_goods_attr` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -328,7 +328,7 @@ CREATE TABLE `ss_goods_number` (
 
 LOCK TABLES `ss_goods_number` WRITE;
 /*!40000 ALTER TABLE `ss_goods_number` DISABLE KEYS */;
-INSERT INTO `ss_goods_number` VALUES (7,0,'1,5'),(7,3109,'2,5'),(7,439,'3,5'),(7,665,'1,6'),(7,415,'2,6'),(7,119,'3,6'),(3,95,''),(4,0,'');
+INSERT INTO `ss_goods_number` VALUES (7,0,'1,5'),(7,3109,'2,5'),(7,439,'3,5'),(7,665,'1,6'),(7,415,'2,6'),(7,119,'3,6'),(6,123,'37,40'),(6,1223,'38,40'),(45,159,'46,48');
 /*!40000 ALTER TABLE `ss_goods_number` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -348,7 +348,7 @@ CREATE TABLE `ss_goods_pic` (
   `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
   PRIMARY KEY (`id`),
   KEY `goods_id` (`goods_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='商品相册';
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='商品相册';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -357,7 +357,7 @@ CREATE TABLE `ss_goods_pic` (
 
 LOCK TABLES `ss_goods_pic` WRITE;
 /*!40000 ALTER TABLE `ss_goods_pic` DISABLE KEYS */;
-INSERT INTO `ss_goods_pic` VALUES (15,'Public/Uploads/Goods/2017-05-31/592e8a7809aee.jpg','Public/Uploads/Goods/2017-05-31/thumb_sm_592e8a7809aee.jpg','Public/Uploads/Goods/2017-05-31/thumb_mid_592e8a7809aee.jpg','Public/Uploads/Goods/2017-05-31/thumb_big_592e8a7809aee.jpg',105);
+INSERT INTO `ss_goods_pic` VALUES (29,'Public/Uploads/Goods/2017-06-06/5936421682968.jpg','Public/Uploads/Goods/2017-06-06/thumb_sm_5936421682968.jpg','Public/Uploads/Goods/2017-06-06/thumb_mid_5936421682968.jpg','Public/Uploads/Goods/2017-06-06/thumb_big_5936421682968.jpg',2);
 /*!40000 ALTER TABLE `ss_goods_pic` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -373,7 +373,7 @@ CREATE TABLE `ss_manager` (
   `username` varchar(30) NOT NULL COMMENT '用户名',
   `password` char(32) NOT NULL COMMENT '密码',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='管理员';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='管理员';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -382,7 +382,7 @@ CREATE TABLE `ss_manager` (
 
 LOCK TABLES `ss_manager` WRITE;
 /*!40000 ALTER TABLE `ss_manager` DISABLE KEYS */;
-INSERT INTO `ss_manager` VALUES (1,'root','63a9f0ea7bb98050796b649e85481845'),(2,'admin','21232f297a57a5a743894a0e4a801fc3'),(3,'xiaoming','97304531204ef7431330c20427d95481');
+INSERT INTO `ss_manager` VALUES (1,'root','63a9f0ea7bb98050796b649e85481845'),(2,'admin','21232f297a57a5a743894a0e4a801fc3'),(3,'xiaoming','97304531204ef7431330c20427d95481'),(10,'zadmin','3a20eb1aba49463ac3f76e1e9fea3957');
 /*!40000 ALTER TABLE `ss_manager` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -407,7 +407,7 @@ CREATE TABLE `ss_manager_role` (
 
 LOCK TABLES `ss_manager_role` WRITE;
 /*!40000 ALTER TABLE `ss_manager_role` DISABLE KEYS */;
-INSERT INTO `ss_manager_role` VALUES (3,1),(4,2);
+INSERT INTO `ss_manager_role` VALUES (1,0),(3,1),(2,20);
 /*!40000 ALTER TABLE `ss_manager_role` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -452,7 +452,7 @@ CREATE TABLE `ss_member_level` (
   `jifen_bottom` mediumint(8) unsigned NOT NULL COMMENT '积分下限',
   `jifen_top` mediumint(8) unsigned NOT NULL COMMENT '积分上限',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='会员级别';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='会员级别';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -461,7 +461,7 @@ CREATE TABLE `ss_member_level` (
 
 LOCK TABLES `ss_member_level` WRITE;
 /*!40000 ALTER TABLE `ss_member_level` DISABLE KEYS */;
-INSERT INTO `ss_member_level` VALUES (1,'注册会员',0,5000),(2,'初级会员',5001,10000),(3,'高级会员',10001,20000),(4,'VIP',20001,16777215);
+INSERT INTO `ss_member_level` VALUES (1,'注册会员',1,5000),(2,'初级会员',5001,10000),(3,'高级会员',10001,20000),(4,'VIP',20001,50000),(5,'SVIP',50001,100000);
 /*!40000 ALTER TABLE `ss_member_level` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -486,7 +486,7 @@ CREATE TABLE `ss_member_price` (
 
 LOCK TABLES `ss_member_price` WRITE;
 /*!40000 ALTER TABLE `ss_member_price` DISABLE KEYS */;
-INSERT INTO `ss_member_price` VALUES (2,0,444.00),(2,1,222.00),(2,2,333.00),(2,3,123.00),(2,4,123.00),(3,1,112.00),(3,2,112.00),(3,3,112.00),(3,4,112.00),(4,1,50.00),(4,2,50.00),(4,3,50.00),(4,4,50.00),(6,1,333.00),(6,2,333.00),(6,3,333.00),(6,4,333.00),(7,1,120.00),(7,2,105.00),(7,3,95.00),(7,4,90.00),(45,1,1111.00),(45,2,1111.00),(45,3,1111.00),(45,4,1111.00),(46,1,1111.00),(46,2,1111.00),(46,3,1111.00),(46,4,1111.00),(47,1,2312.00),(47,2,2312.00),(47,3,2312.00),(47,4,2312.00),(59,1,121122.00),(59,2,121122.00),(59,3,121122.00),(59,4,121122.00),(77,0,5678.00),(77,1,5678.00),(77,2,5678.00),(77,3,5678.00),(77,4,5678.00),(78,1,12.00),(78,2,12.00),(78,3,12.00),(78,4,12.00),(82,0,123.00),(82,1,123.00),(82,2,123.00),(82,3,123.00),(82,4,123.00),(85,1,13.00),(85,2,13.00),(85,3,13.00),(85,4,13.00),(86,1,13.00),(86,2,13.00),(86,3,13.00),(86,4,13.00),(87,1,13.00),(87,2,13.00),(87,3,13.00),(87,4,13.00),(88,1,1000.00),(88,2,800.00),(88,3,600.00),(88,4,500.00),(89,1,123.00),(89,2,123.00),(89,3,123.00),(89,4,123.00),(100,1,141.00),(100,2,141.00),(100,3,141.00),(100,4,141.00),(105,1,3456.00),(105,2,3456.00),(105,3,3456.00),(105,4,3456.00);
+INSERT INTO `ss_member_price` VALUES (2,1,123.00),(2,2,123.00),(2,3,123.00),(2,4,123.00),(2,5,5.00),(3,1,112.00),(3,2,112.00),(3,3,112.00),(3,4,112.00),(4,1,50.00),(4,2,50.00),(4,3,50.00),(4,4,50.00),(6,1,333.00),(6,2,333.00),(6,3,333.00),(6,4,333.00),(7,1,105.00),(7,2,95.00),(7,3,90.00),(7,4,90.00),(45,1,1111.00),(45,2,1111.00),(45,3,1111.00),(45,4,1111.00),(46,1,1111.00),(46,2,1111.00),(46,3,1111.00),(46,4,1111.00),(47,1,2312.00),(47,2,2312.00),(47,3,2312.00),(47,4,2312.00),(59,1,121122.00),(59,2,121122.00),(59,3,121122.00),(59,4,121122.00),(77,1,5678.00),(77,2,5678.00),(77,3,5678.00),(77,4,5678.00),(78,1,12.00),(78,2,12.00),(78,3,12.00),(78,4,12.00),(82,1,123.00),(82,2,123.00),(82,3,123.00),(82,4,123.00),(85,1,13.00),(85,2,13.00),(85,3,13.00),(85,4,13.00),(86,1,13.00),(86,2,13.00),(86,3,13.00),(86,4,13.00),(87,1,13.00),(87,2,13.00),(87,3,13.00),(87,4,13.00),(88,1,1000.00),(88,2,800.00),(88,3,600.00),(88,4,500.00),(89,1,123.00),(89,2,123.00),(89,3,123.00),(89,4,123.00),(100,1,141.00),(100,2,141.00),(100,3,141.00),(100,4,141.00),(105,1,3456.00),(105,2,3456.00),(105,3,3456.00),(105,4,3456.00),(106,1,1234.00),(106,2,1234.00),(106,3,1234.00),(106,4,1234.00),(107,1,2312.00),(107,2,2312.00),(107,3,2312.00),(107,4,2312.00),(108,1,2552.00),(108,2,2552.00),(108,3,2552.00),(108,4,2552.00),(125,1,14123.00),(125,2,14123.00),(125,3,14123.00),(125,4,14123.00);
 /*!40000 ALTER TABLE `ss_member_price` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -573,7 +573,7 @@ CREATE TABLE `ss_privilege` (
   `action_name` varchar(30) NOT NULL DEFAULT '' COMMENT '方法名称',
   `parent_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '上级权限Id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COMMENT='权限';
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COMMENT='权限';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -582,7 +582,7 @@ CREATE TABLE `ss_privilege` (
 
 LOCK TABLES `ss_privilege` WRITE;
 /*!40000 ALTER TABLE `ss_privilege` DISABLE KEYS */;
-INSERT INTO `ss_privilege` VALUES (1,'商品模块','','','',0),(2,'商品列表','Admin','Goods','lst',1),(3,'添加商品','Admin','Goods','add',2),(4,'修改商品','Admin','Goods','edit',2),(5,'删除商品','Admin','Goods','delete',2),(6,'分类列表','Admin','Category','lst',1),(7,'添加分类','Admin','Category','add',6),(8,'修改分类','Admin','Category','edit',6),(9,'删除分类','Admin','Category','delete',6),(10,'RBAC','','','',0),(11,'权限列表','Admin','Privilege','lst',10),(12,'添加权限','Privilege','Admin','add',11),(13,'修改权限','Admin','Privilege','edit',11),(14,'删除权限','Admin','Privilege','delete',11),(15,'角色列表','Admin','Role','lst',10),(16,'添加角色','Admin','Role','add',15),(17,'修改角色','Admin','Role','edit',15),(18,'删除角色','Admin','Role','delete',15),(19,'管理员列表','Admin','Admin','lst',10),(20,'添加管理员','Admin','Admin','add',19),(21,'修改管理员','Admin','Admin','edit',19),(22,'删除管理员','Admin','Admin','delete',19),(23,'类型列表','Admin','Type','lst',1),(24,'添加类型','Admin','Type','add',23),(25,'修改类型','Admin','Type','edit',23),(26,'删除类型','Admin','Type','delete',23),(27,'属性列表','Admin','Attribute','lst',23),(28,'添加属性','Admin','Attribute','add',27),(29,'修改属性','Admin','Attribute','edit',27),(30,'删除属性','Admin','Attribute','delete',27),(31,'ajax删除商品属性','Admin','Goods','ajaxDelGoodsAttr',4),(32,'ajax删除商品相册图片','Admin','Goods','ajaxDelImage',4),(33,'会员管理','','','',0),(34,'会员级别列表','Admin','MemberLevel','lst',33),(35,'添加会员级别','Admin','MemberLevel','add',34),(36,'修改会员级别','Admin','MemberLevel','edit',34),(37,'删除会员级别','Admin','MemberLevel','delete',34),(38,'品牌列表','Admin','Brand','lst',1);
+INSERT INTO `ss_privilege` VALUES (1,'商品模块','','','',0),(2,'商品列表','Admin','Goods','goodsList',1),(3,'添加商品','Admin','Goods','goodsAdd',2),(4,'修改商品','Admin','Goods','goodsEdit',2),(5,'删除商品','Admin','Goods','goodsToTrash',2),(6,'分类列表','Admin','Category','categoryList',1),(7,'添加分类','Admin','Category','categoryAdd',6),(8,'修改分类','Admin','Category','categoryEdit',6),(9,'删除分类','Admin','Category','categoryDelete',6),(10,'RBAC','','','',0),(11,'权限列表','Admin','Privilege','privilegeList',10),(12,'添加权限','Admin','Privilege','privilegeAdd',11),(13,'修改权限','Admin','Privilege','privilegeEdit',11),(14,'删除权限','Admin','Privilege','privilegeDelete',11),(15,'角色列表','Admin','Role','roleList',10),(16,'添加角色','Admin','Role','roleAdd',15),(17,'修改角色','Admin','Role','roleEdit',15),(18,'删除角色','Admin','Role','roleDelete',15),(19,'管理员列表','Admin','Manager','managerList',10),(20,'添加管理员','Admin','Manager','managerAdd',19),(21,'修改管理员','Admin','Manager','managerEdit',19),(22,'删除管理员','Admin','Manager','managerDelete',19),(23,'类型列表','Admin','Type','typeList',1),(24,'添加类型','Admin','Type','typeAdd',23),(25,'修改类型','Admin','Type','typeEdit',23),(26,'删除类型','Admin','Type','typeDelete',23),(27,'属性列表','Admin','Attribute','attributeList',23),(28,'添加属性','Admin','Attribute','attributeAdd',27),(29,'修改属性','Admin','Attribute','attributeEdit',27),(30,'删除属性','Admin','Attribute','attributeDelete',27),(31,'ajax删除商品属性','Admin','Goods','ajaxDelAttr',4),(33,'会员管理','','','',0),(34,'会员级别列表','Admin','Level','levelList',33),(35,'添加会员级别','Admin','Level','levelAdd',34),(36,'修改会员级别','Admin','Level','levelEdit',34),(37,'删除会员级别','Admin','Level','levelDelete',34),(38,'品牌列表','Admin','Brand','brandList',1),(39,'品牌增加','Admin','Brand','brandAdd',38),(40,'品牌修改','Admin','Brand','brandEdit',38),(41,'品牌删除','Admin','Brand','brandDelete',38),(42,'会员列表','Admin','User','userList',33),(43,'会员添加','Admin','User','userAdd',42),(44,'会员修改','Admin','User','userEdit',42),(45,'会员删除','Admin','User','userDelete',42);
 /*!40000 ALTER TABLE `ss_privilege` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -597,7 +597,7 @@ CREATE TABLE `ss_role` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `role_name` varchar(30) NOT NULL COMMENT '角色名称',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='角色';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='角色';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -606,7 +606,7 @@ CREATE TABLE `ss_role` (
 
 LOCK TABLES `ss_role` WRITE;
 /*!40000 ALTER TABLE `ss_role` DISABLE KEYS */;
-INSERT INTO `ss_role` VALUES (1,'商品模块管理员'),(2,'RBAC管理员');
+INSERT INTO `ss_role` VALUES (0,'超级管理员'),(1,'商品模块管理员'),(2,'RBAC管理员'),(20,'会员模块管理员');
 /*!40000 ALTER TABLE `ss_role` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -618,8 +618,8 @@ DROP TABLE IF EXISTS `ss_role_pri`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ss_role_pri` (
-  `pri_id` mediumint(8) unsigned NOT NULL COMMENT '权限id',
   `role_id` mediumint(8) unsigned NOT NULL COMMENT '角色id',
+  `pri_id` mediumint(8) unsigned NOT NULL COMMENT '权限id',
   KEY `pri_id` (`pri_id`),
   KEY `role_id` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色权限';
@@ -631,7 +631,7 @@ CREATE TABLE `ss_role_pri` (
 
 LOCK TABLES `ss_role_pri` WRITE;
 /*!40000 ALTER TABLE `ss_role_pri` DISABLE KEYS */;
-INSERT INTO `ss_role_pri` VALUES (10,2),(11,2),(12,2),(13,2),(14,2),(15,2),(16,2),(17,2),(18,2),(19,2),(20,2),(21,2),(22,2),(1,1),(2,1),(3,1),(4,1),(31,1),(32,1),(5,1),(6,1),(7,1),(8,1),(9,1),(23,1),(24,1),(25,1),(26,1),(27,1),(28,1),(29,1),(30,1),(38,1),(10,1),(11,1),(12,1),(13,1),(14,1),(15,1),(16,1),(17,1),(18,1),(19,1),(20,1),(21,1),(22,1);
+INSERT INTO `ss_role_pri` VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,23),(1,24),(1,25),(1,26),(1,27),(1,28),(1,29),(1,30),(1,31),(1,38),(1,39),(1,40),(1,41),(2,10),(2,11),(2,12),(2,13),(2,14),(2,15),(2,16),(2,17),(2,18),(2,19),(2,20),(2,21),(2,22),(20,33),(20,34),(20,35),(20,36),(20,37),(20,42),(20,43),(20,44),(20,45);
 /*!40000 ALTER TABLE `ss_role_pri` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -655,7 +655,7 @@ CREATE TABLE `ss_type` (
 
 LOCK TABLES `ss_type` WRITE;
 /*!40000 ALTER TABLE `ss_type` DISABLE KEYS */;
-INSERT INTO `ss_type` VALUES (1,'手机'),(2,'服装'),(3,'书');
+INSERT INTO `ss_type` VALUES (1,'手机'),(2,'服装'),(3,'书籍');
 /*!40000 ALTER TABLE `ss_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -695,4 +695,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-02  9:06:18
+-- Dump completed on 2017-06-09  0:15:21
