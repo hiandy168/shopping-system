@@ -8,13 +8,7 @@
 <!-- layer -->
 <script src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
 <script src="/Public/Plugins/layer/layer.js"></script>
-<!-- 时间插件 -->
-<link href="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/datepicker-zh_cn.js"></script>
-<link rel="stylesheet" media="all" type="text/css" href="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
-<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
-<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+
 <!-- 文本编辑器的js文件 -->
 <link href="/Public/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="/Public/Plugins/umeditor/third-party/jquery.min.js"></script>
@@ -131,6 +125,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="label">是否促销：</td>
+                    <td>
+                        促销价：￥<input type="text" name="promote_price" id="promote_price" size="8"/>元<br/>
+                        开始时间：<input type="text" name="promote_start_date" id="promote_start_date"/><br/>
+                        结束时间：<input type="text" name="promote_end_date" id="promote_end_date"/>
+                    </td>
+                </tr>
+                <tr>
                     <td class="label">加入推荐：</td>
                     <td>
                         <input type="checkbox" name="is_best" value="1" /> 精品 
@@ -145,6 +147,7 @@
                     </td>
                 </tr>
             </table>
+            <!-- 其他信息 -->
             <table width="90%" align="center" class="tab_table" style="display:none;">
                 <tr>
                     <td class="label">会员价格：</td>
@@ -190,6 +193,13 @@
         </form>
     </div>
 </div>
+<!-- 时间插件 -->
+<link href="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
 <script>
 $('#goodsAdd').submit(function(evt){
     //收集表单域信息
@@ -230,10 +240,15 @@ function loadXMLDoc(data,url,cfunc){
     xhr.open("post",url,true);
     xhr.send(data);
 }
+//优化文本编辑框
 UM.getEditor('goods_desc',{
     initialFrameWidth:'80%', //初始化编辑器宽度
     initialFrameHeight:150  //初始化编辑器高度
 });
+// 使用插件优化时间输入框
+$.timepicker.setDefaults($.timepicker.regional['zh-CN']);
+$('#promote_start_date').datetimepicker();
+$('#promote_end_date').datetimepicker();
 /*****************切换table的代码******************/
 $('#tabbar-div p span').click(function(){
     //电机的是第几个按钮

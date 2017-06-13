@@ -90,31 +90,33 @@
 		<!-- 导航条部分 start -->
 		<div class="nav w1210 bc mt10">
 			<!--  商品分类部分 start-->
-			<div class="category fl <?php if($_show_nav == 0) echo 'cat1'; ?>">
-				<div class="cat_hd <?php if($_show_nav == 0) echo 'off'; ?>">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，并将cat_bd设置为不显示(加上类none即可)，鼠标滑过时展开菜单则将off类换成on类 -->
+			<php>$show_nav=$_show_nav==0?['cat1','off','none']:['','',''];</php>
+			<div class="category fl {$show_nav.0}">
+<!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，并将cat_bd设置为不显示(加上类none即可)，鼠标滑过时展开菜单则将off类换成on类 -->
+				<div class="cat_hd {$show_nav.1}">
 					<h2>全部商品分类</h2>
 					<em></em>
 				</div>
 				
-				<div class="cat_bd <?php if($_show_nav == 0) echo 'none'; ?>"> 
+				<div class="cat_bd {$show_nav.2}"> 
 					<!-- 循环输出三层分类数据 -->
-					<?php foreach ($catData as $k => $v): ?>
-					<div class="cat <?php if($k==0) echo 'item1'; ?>">
-						<h3><a href=""><?php echo $v['cat_name'];?></a> <b></b></h3>
-						<div class="cat_detail none">
-							<?php foreach ($v['children'] as $k1 => $v1): ?>
-							<dl <?php if($k1==0) echo 'class="dl_1st"'; ?>>
-								<dt><a href=""><?php echo $v1['cat_name'];?></a></dt>
-								<dd>
-									<?php foreach ($v1['children'] as $k2 => $v2): ?>
-									<a href=""><?php echo $v2['cat_name'];?></a>
-									<?php endforeach; ?>					
-								</dd>
-							</dl>
-							<?php endforeach; ?>
+					<volist name="cat_list" id="vol" key="k">
+						<div class="cat <if condition='$k==1'>item1</if>">
+							<h3><a href="">{$vol.cat_name}</a> <b></b></h3>
+							<div class="cat_detail none">
+								<volist name="vol['children']" id="val" key="m">
+								<dl <if condition='$k==1'>dl_1st</if> >
+									<dt><a href="">{$val.cat_name}</a></dt>
+									<dd>
+										<volist name="val['children']" id="vnl">
+											<a href="">{$vnl.cat_name}</a>
+										</volist>					
+									</dd>
+								</dl>
+								</volist>
+							</div>
 						</div>
-					</div>
-					<?php endforeach; ?>
+					</volist>
 				</div>
 
 			</div>

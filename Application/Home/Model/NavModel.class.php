@@ -4,7 +4,6 @@ namespace Home\Model;
 //第二步：引入父类的控制器
 use Think\Model;
 //第三步：定义模型并且继承父类
-class IndexModel extends NavModel{
-	public $error;
+class NavModel extends Model{
 
 }

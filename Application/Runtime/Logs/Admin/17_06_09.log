@@ -1,0 +1,1874 @@
+[ 2017-06-09T16:33:46+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+
+[ 2017-06-09T16:33:46+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+NOTIC: [8] Undefined index: act E:\www\shopping-system\Application\Admin\Controller\LoginController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2017-06-09T16:33:46+08:00 ] 127.0.0.1 /Admin/Login/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001817s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001124s ]
+
+[ 2017-06-09T16:33:51+08:00 ] 127.0.0.1 /Admin/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2017-06-09T16:33:58+08:00 ] 127.0.0.1 /Admin/Login/check/captcha/jnlj
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001161s ]
+
+[ 2017-06-09T16:34:06+08:00 ] 127.0.0.1 /Admin/Login/Verify/0.07724478484726349
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2017-06-09T16:34:12+08:00 ] 127.0.0.1 /Admin/Login/check/captcha/gtpq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000918s ]
+
+[ 2017-06-09T16:34:13+08:00 ] 127.0.0.1 /Admin/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+NOTIC: [2048] Declaration of Admin\Model\ManagerModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\ManagerModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_manager` [ RunTime:0.0272s ]
+SQL: SELECT * FROM `ss_manager` WHERE ( username='root' and password='63a9f0ea7bb98050796b649e85481845' ) LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2017-06-09T16:34:13+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+
+[ 2017-06-09T16:34:13+08:00 ] 127.0.0.1 /Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000291s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000841s ]
+
+[ 2017-06-09T16:34:13+08:00 ] 127.0.0.1 /Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001771s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0137s ]
+SQL: SELECT count(*) as c FROM `ss_goods` LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_new = "是" ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_hot = "是" ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_best = "是" ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\www\shopping-system\Application\Admin\Controller\IndexController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000728s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001983s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001353s ]
+
+[ 2017-06-09T16:34:13+08:00 ] 127.0.0.1 /Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001494s ]
+
+[ 2017-06-09T16:34:19+08:00 ] 127.0.0.1 /Admin/Goods/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0034s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 486 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0007s ]
+SQL: SELECT COUNT(DISTINCT g.id) AS tp_count FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' LIMIT 1   [ RunTime:0.0183s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT g.*,b.brand_name,c.cat_name,GROUP_CONCAT(cc.cat_name separator ' | ') as ext_cat_name FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' GROUP BY g.id LIMIT 0,5   [ RunTime:0.0037s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `ss_brand` WHERE ( is_show='是' )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [2] Illegal string offset 'cat_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 294 行.
+NOTIC: [2] Illegal string offset 'brand_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 295 行.
+NOTIC: [2] Illegal string offset 'intro_type' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 296 行.
+NOTIC: [2] Illegal string offset 'is_on_sale' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 297 行.
+NOTIC: [2] Illegal string offset 'price_low' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 298 行.
+NOTIC: [2] Illegal string offset 'price_up' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 299 行.
+NOTIC: [2] Illegal string offset 'time_start' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 300 行.
+NOTIC: [2] Illegal string offset 'time_end' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 301 行.
+NOTIC: [2] Illegal string offset 'price_order' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 302 行.
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001034s ]
+
+[ 2017-06-09T16:34:59+08:00 ] 127.0.0.1 /Admin/Level/levelList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `ss_member_level` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `ss_member_level`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011306s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2017-06-09T16:35:00+08:00 ] 127.0.0.1 /Admin/User/userList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0034s ]
+NOTIC: [2048] Declaration of Admin\Model\UserModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\UserModel.class.php 第 168 行.
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_member` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\UserModel.class.php on line 117 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\UserModel.class.php on line 117 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\UserModel.class.php on line 117 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT * FROM `ss_member` LIMIT 0,5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\fd8db13da1500736658b617f5c41c7cb.php 第 166 行.
+NOTIC: [2] Illegal string offset 'username' E:\www\shopping-system\Application\Runtime\Cache\Admin\fd8db13da1500736658b617f5c41c7cb.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2017-06-09T16:35:56+08:00 ] 127.0.0.1 /Admin/Brand/brandList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001863s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0051s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_brand` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php on line 111 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php on line 111 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php on line 111 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT * FROM `ss_brand` LIMIT 0,5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 172 行.
+NOTIC: [2] Illegal string offset 'brand_name' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 173 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001478s ]
+
+[ 2017-06-09T16:48:30+08:00 ] 127.0.0.1 /Admin/Category/categoryList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001254s ]
+
+[ 2017-06-09T16:48:31+08:00 ] 127.0.0.1 /Admin/Category/categoryList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2017-06-09T16:48:34+08:00 ] 127.0.0.1 /Admin/Brand/brandList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0041s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_brand` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php on line 111 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php on line 111 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php on line 111 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT * FROM `ss_brand` LIMIT 0,5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 67 行.
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 172 行.
+NOTIC: [2] Illegal string offset 'brand_name' E:\www\shopping-system\Application\Runtime\Cache\Admin\03958e86abe452126a76bb306fb4f3ea.php 第 173 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001432s ]
+
+[ 2017-06-09T16:48:35+08:00 ] 127.0.0.1 /Admin/Type/typeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000422s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2017-06-09T16:48:38+08:00 ] 127.0.0.1 /Admin/Type/typeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001226s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001592s ]
+
+[ 2017-06-09T16:48:39+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `ss_attribute` WHERE `type_id` = '1'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001328s ]
+
+[ 2017-06-09T16:48:44+08:00 ] 127.0.0.1 /Admin/Attribute/attributeEdit/id/1/type_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `ss_attribute` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined variable: data E:\www\shopping-system\Application\Runtime\Cache\Admin\5b1f2d00aab6ac2092a0422f947ec282.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001255s ]
+
+[ 2017-06-09T16:48:46+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ss_attribute`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2017-06-09T16:48:51+08:00 ] 127.0.0.1 /Admin/Attribute/attributeAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000849s ]
+
+[ 2017-06-09T16:48:53+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001046s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `ss_attribute`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001687s ]
+
+[ 2017-06-09T16:48:56+08:00 ] 127.0.0.1 /Admin/Type/typeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001143s ]
+
+[ 2017-06-09T16:48:58+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `ss_attribute` WHERE `type_id` = '1'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014207s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001578s ]
+
+[ 2017-06-09T16:49:00+08:00 ] 127.0.0.1 /Admin/Attribute/attributeAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001188s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001272s ]
+
+[ 2017-06-09T16:49:01+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ss_attribute`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001304s ]
+
+[ 2017-06-09T16:49:02+08:00 ] 127.0.0.1 /Admin/Attribute/attributeAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001192s ]
+
+[ 2017-06-09T16:49:03+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001123s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `ss_attribute`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001277s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001387s ]
+
+[ 2017-06-09T16:49:04+08:00 ] 127.0.0.1 /Admin/Attribute/attributeAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2017-06-09T16:49:05+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `ss_attribute`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001497s ]
+
+[ 2017-06-09T16:49:08+08:00 ] 127.0.0.1 /Admin/Type/typeList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011321s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000968s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2017-06-09T16:49:10+08:00 ] 127.0.0.1 /Admin/Attribute/attributeList?type_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_attribute` WHERE `type_id` = '1'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000324s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012420s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001175s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001266s ]
+
+[ 2017-06-09T16:49:18+08:00 ] 127.0.0.1 /Admin/Attribute/attributeAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2017-06-09T16:49:45+08:00 ] 127.0.0.1 /Admin/Goods/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0045s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 486 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0011s ]
+SQL: SELECT COUNT(DISTINCT g.id) AS tp_count FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT g.*,b.brand_name,c.cat_name,GROUP_CONCAT(cc.cat_name separator ' | ') as ext_cat_name FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' GROUP BY g.id LIMIT 0,5   [ RunTime:0.0011s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `ss_brand` WHERE ( is_show='是' )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000389s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000471s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [2] Illegal string offset 'cat_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 294 行.
+NOTIC: [2] Illegal string offset 'brand_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 295 行.
+NOTIC: [2] Illegal string offset 'intro_type' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 296 行.
+NOTIC: [2] Illegal string offset 'is_on_sale' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 297 行.
+NOTIC: [2] Illegal string offset 'price_low' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 298 行.
+NOTIC: [2] Illegal string offset 'price_up' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 299 行.
+NOTIC: [2] Illegal string offset 'time_start' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 300 行.
+NOTIC: [2] Illegal string offset 'time_end' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 301 行.
+NOTIC: [2] Illegal string offset 'price_order' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 302 行.
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2017-06-09T16:49:48+08:00 ] 127.0.0.1 /Admin/Goods/goodsAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0006s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `ss_brand` WHERE ( is_show='是' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ss_member_level` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ss_member_level`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019495s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001263s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001370s ]
+
+[ 2017-06-09T16:49:49+08:00 ] 127.0.0.1 /Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0042s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 486 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0006s ]
+SQL: SELECT COUNT(DISTINCT g.id) AS tp_count FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT g.*,b.brand_name,c.cat_name,GROUP_CONCAT(cc.cat_name separator ' | ') as ext_cat_name FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' GROUP BY g.id LIMIT 0,5   [ RunTime:0.0014s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ss_brand` WHERE ( is_show='是' )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000404s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [2] Illegal string offset 'cat_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 294 行.
+NOTIC: [2] Illegal string offset 'brand_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 295 行.
+NOTIC: [2] Illegal string offset 'intro_type' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 296 行.
+NOTIC: [2] Illegal string offset 'is_on_sale' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 297 行.
+NOTIC: [2] Illegal string offset 'price_low' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 298 行.
+NOTIC: [2] Illegal string offset 'price_up' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 299 行.
+NOTIC: [2] Illegal string offset 'time_start' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 300 行.
+NOTIC: [2] Illegal string offset 'time_end' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 301 行.
+NOTIC: [2] Illegal string offset 'price_order' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 302 行.
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001717s ]
+
+[ 2017-06-09T16:49:56+08:00 ] 127.0.0.1 /Admin/Goods/goodsEdit/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0037s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 486 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `ss_goods` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `ss_brand` WHERE ( is_show='是' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ss_member_level` [ RunTime:0.0039s ]
+SQL: SELECT l.level_name,l.id,r.* FROM ss_member_level l left join ss_member_price as r on l.id = r.level_id and goods_id = 2   [ RunTime:0.0265s ]
+SQL: SHOW COLUMNS FROM `ss_goods_pic` [ RunTime:0.0096s ]
+SQL: SELECT `id`,`goods_id`,`sm_pic` FROM `ss_goods_pic` WHERE `goods_id` = 2  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ss_goods_cat` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_goods_cat` WHERE `goods_id` = 2  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ss_type` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `ss_type`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ss_attribute` [ RunTime:0.0048s ]
+SQL: SELECT a.*,b.attr_value,b.attr_id,b.id as goods_attr_id FROM ss_attribute a left join ss_goods_attr as b on a.id = b.attr_id and b.goods_id = 2  WHERE a.type_id = '1' ORDER BY attr_id asc  [ RunTime:0.0056s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8] Undefined variable: attrid E:\www\shopping-system\Application\Runtime\Cache\Admin\0e125bb82ed4be6babd13ef7b7a1626c.php 第 178 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\www\shopping-system\Application\Runtime\Cache\Admin\0e125bb82ed4be6babd13ef7b7a1626c.php 第 178 行.
+NOTIC: [8] Undefined variable: data E:\www\shopping-system\Application\Runtime\Cache\Admin\0e125bb82ed4be6babd13ef7b7a1626c.php 第 398 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001264s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001380s ]
+
+[ 2017-06-09T16:50:02+08:00 ] 127.0.0.1 /Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0044s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 486 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0006s ]
+SQL: SELECT COUNT(DISTINCT g.id) AS tp_count FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT g.*,b.brand_name,c.cat_name,GROUP_CONCAT(cc.cat_name separator ' | ') as ext_cat_name FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' GROUP BY g.id LIMIT 0,5   [ RunTime:0.0012s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_brand` WHERE ( is_show='是' )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000472s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [2] Illegal string offset 'cat_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 294 行.
+NOTIC: [2] Illegal string offset 'brand_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 295 行.
+NOTIC: [2] Illegal string offset 'intro_type' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 296 行.
+NOTIC: [2] Illegal string offset 'is_on_sale' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 297 行.
+NOTIC: [2] Illegal string offset 'price_low' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 298 行.
+NOTIC: [2] Illegal string offset 'price_up' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 299 行.
+NOTIC: [2] Illegal string offset 'time_start' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 300 行.
+NOTIC: [2] Illegal string offset 'time_end' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 301 行.
+NOTIC: [2] Illegal string offset 'price_order' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 302 行.
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2017-06-09T16:50:45+08:00 ] 127.0.0.1 /Admin/Level/levelList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `ss_member_level` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `ss_member_level`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2017-06-09T16:50:50+08:00 ] 127.0.0.1 /Admin/User/userList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0034s ]
+NOTIC: [2048] Declaration of Admin\Model\UserModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\UserModel.class.php 第 168 行.
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_member` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\UserModel.class.php on line 117 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\UserModel.class.php on line 117 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\UserModel.class.php on line 117 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT * FROM `ss_member` LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\fd8db13da1500736658b617f5c41c7cb.php 第 166 行.
+NOTIC: [2] Illegal string offset 'username' E:\www\shopping-system\Application\Runtime\Cache\Admin\fd8db13da1500736658b617f5c41c7cb.php 第 167 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001267s ]
+
+[ 2017-06-09T16:50:53+08:00 ] 127.0.0.1 /Admin/Level/levelList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `ss_member_level` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `ss_member_level`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011034s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001278s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2017-06-09T16:51:00+08:00 ] 127.0.0.1 /Admin/Category/categoryList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 53 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\c632d2e49df9ad5c68635901312e5643.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001234s ]
+
+[ 2017-06-09T16:51:01+08:00 ] 127.0.0.1 /Admin/Goods/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0041s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 486 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0008s ]
+SQL: SELECT COUNT(DISTINCT g.id) AS tp_count FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [4096] Argument 1 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, string given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 2 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+NOTIC: [4096] Argument 3 passed to Think\Fenye::getPageNumber() must be an instance of Think\int, integer given, called in E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php on line 474 and defined E:\www\shopping-system\ThinkPHP\Library\Think\Fenye.class.php 第 13 行.
+SQL: SELECT g.*,b.brand_name,c.cat_name,GROUP_CONCAT(cc.cat_name separator ' | ') as ext_cat_name FROM ss_goods g left join ss_brand as b on g.brand_id = b.id 
+			left join ss_category as c on g.cat_id = c.id 
+			left join ss_goods_cat as gc on g.id = gc.goods_id 
+			left join ss_category as cc on gc.cat_id = cc.id  WHERE `is_delete` = '否' GROUP BY g.id LIMIT 0,5   [ RunTime:0.0011s ]
+NOTIC: [2048] Declaration of Admin\Model\BrandModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\BrandModel.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `ss_brand` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `ss_brand` WHERE ( is_show='是' )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000478s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000672s ]
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 130 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 131 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 132 行.
+NOTIC: [8] Use of undefined constant 是 - assumed '是' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 133 行.
+NOTIC: [2] Illegal string offset 'cat_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 294 行.
+NOTIC: [2] Illegal string offset 'brand_id' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 295 行.
+NOTIC: [2] Illegal string offset 'intro_type' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 296 行.
+NOTIC: [2] Illegal string offset 'is_on_sale' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 297 行.
+NOTIC: [2] Illegal string offset 'price_low' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 298 行.
+NOTIC: [2] Illegal string offset 'price_up' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 299 行.
+NOTIC: [2] Illegal string offset 'time_start' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 300 行.
+NOTIC: [2] Illegal string offset 'time_end' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 301 行.
+NOTIC: [2] Illegal string offset 'price_order' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 302 行.
+NOTIC: [2] Illegal string offset 'tar_page' E:\www\shopping-system\Application\Runtime\Cache\Admin\3268fbbbd0eb3ffe30140f78ff508f86.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001649s ]
+
+[ 2017-06-09T17:08:44+08:00 ] ::1 /shopping-system/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000901s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+
+[ 2017-06-09T17:08:44+08:00 ] ::1 /shopping-system/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+NOTIC: [8] Undefined index: act E:\www\shopping-system\Application\Admin\Controller\LoginController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002898s ]
+
+[ 2017-06-09T17:08:44+08:00 ] ::1 /shopping-system/Admin/Login/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001436s ]
+
+[ 2017-06-09T17:08:57+08:00 ] ::1 /shopping-system/Admin/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+NOTIC: [2048] Declaration of Admin\Model\ManagerModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\ManagerModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_manager` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_manager` WHERE ( username='root' and password='63a9f0ea7bb98050796b649e85481845' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000939s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001011s ]
+
+[ 2017-06-09T17:08:57+08:00 ] ::1 /shopping-system/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008145s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001135s ]
+
+[ 2017-06-09T17:08:57+08:00 ] ::1 /shopping-system/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2017-06-09T17:08:57+08:00 ] ::1 /shopping-system/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000480s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000645s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0011s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045774s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000694s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001495s ]
+
+[ 2017-06-09T17:08:58+08:00 ] ::1 /shopping-system/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0064s ]
+SQL: SELECT count(*) as c FROM `ss_goods` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_new = "是" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_hot = "是" ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_best = "是" ) LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\www\shopping-system\Application\Admin\Controller\IndexController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001166s ]
+
+[ 2017-06-09T17:10:53+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001325s ]
+
+[ 2017-06-09T17:10:53+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+NOTIC: [8] Undefined index: act E:\www\shopping-system\Application\Admin\Controller\LoginController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2017-06-09T17:10:53+08:00 ] 127.0.0.1 /Admin/Login/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002430s ]
+
+[ 2017-06-09T17:11:06+08:00 ] 127.0.0.1 /Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+
+[ 2017-06-09T17:11:06+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001380s ]
+NOTIC: [8] Undefined index: act E:\www\shopping-system\Application\Admin\Controller\LoginController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000311s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000915s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2017-06-09T17:11:07+08:00 ] 127.0.0.1 /Admin/Login/Verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001222s ]
+
+[ 2017-06-09T17:11:55+08:00 ] ::1 /shopping-system/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001823s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001510s ]
+
+[ 2017-06-09T17:11:55+08:00 ] ::1 /shopping-system/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000297s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000407s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001236s ]
+
+[ 2017-06-09T17:11:55+08:00 ] ::1 /shopping-system/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2017-06-09T17:11:55+08:00 ] ::1 /shopping-system/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001292s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0065s ]
+SQL: SELECT count(*) as c FROM `ss_goods` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_new = "是" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_hot = "是" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_best = "是" ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\www\shopping-system\Application\Admin\Controller\IndexController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001220s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001307s ]
+
+[ 2017-06-09T20:53:11+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001522s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001496s ]
+
+[ 2017-06-09T20:53:11+08:00 ] 127.0.0.1 /Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2017-06-09T20:53:11+08:00 ] 127.0.0.1 /Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001378s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+NOTIC: [2048] Declaration of Admin\Model\PrivilegeModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\PrivilegeModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `ss_privilege` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ss_privilege`  [ RunTime:0.0015s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001912s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001276s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001394s ]
+
+[ 2017-06-09T20:53:11+08:00 ] 127.0.0.1 /Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001270s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_delete() should be compatible with Think\Model::_after_delete($data, $options) E:\www\shopping-system\Application\Admin\Model\GoodsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0071s ]
+SQL: SELECT count(*) as c FROM `ss_goods` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_new = "是" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_hot = "是" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT count(*) as c FROM `ss_goods` WHERE ( is_best = "是" ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\www\shopping-system\Application\Admin\Controller\IndexController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001238s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001315s ]
+

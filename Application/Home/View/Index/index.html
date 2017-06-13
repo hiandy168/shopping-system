@@ -5,7 +5,7 @@
 <script type="text/javascript" src="__HOME__/js/index.js"></script>
 
 <!-- 引入导航条文件  -->
-<include file="Common/nav" />
+<include file="Common/nav" /> 
 
 <!-- 综合区域 start 包括幻灯展示，商城快报 -->
 	<div class="colligate w1210 bc mt10">
@@ -152,15 +152,15 @@
 				<!-- 疯狂抢购 start-->
 				<div class="crazy">
 					<ul>
-						<?php foreach ($goods1 as $k => $v): ?>
+						<volist name="promote_goods_list" id="vol">
 						<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['promote_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/{$vol.mid_logo}"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>">{$vol.goods_name}</a></dd>
+								<dd><span>售价：</span><strong> ￥{$vol.promote_price}元</strong></dd>
 							</dl>
 						</li>
-						<?php endforeach; ?>
+						</volist>
 					</ul>	
 				</div>
 				<!-- 疯狂抢购 end-->
@@ -168,15 +168,15 @@
 				<!-- 热卖商品 start -->
 				<div class="hot none">
 					<ul>
-						<?php foreach ($goods3 as $k => $v): ?>
+						<volist name="hot_goods_list" id="vol">
 						<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/{$vol.mid_logo}"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>">{$vol.goods_name}</a></dd>
+								<dd><span>售价：</span><strong> ￥{$vol.shop_price}元</strong></dd>
 							</dl>
 						</li>
-						<?php endforeach; ?>
+						</volist>
 					</ul>
 				</div>
 				<!-- 热卖商品 end -->
@@ -184,15 +184,15 @@
 				<!-- 精品商品 atart -->
 				<div class="recommend none">
 					<ul>
-						<?php foreach ($goods4 as $k => $v): ?>
+						<volist name="best_goods_list" id="vol">
 						<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/{$vol.mid_logo}"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>">{$vol.goods_name}</a></dd>
+								<dd><span>售价：</span><strong> ￥{$vol.shop_price}元</strong></dd>
 							</dl>
 						</li>
-						<?php endforeach; ?>
+						</volist>
 					</ul>
 				</div>
 				<!-- 推荐商品 end -->
@@ -200,15 +200,15 @@
 				<!-- 新品上架 start-->
 				<div class="new none">
 					<ul>
-						<?php foreach ($goods2 as $k => $v): ?>
+						<volist name="new_goods_list" id="vol">
 						<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/{$vol.mid_logo}"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>">{$vol.goods_name}</a></dd>
+								<dd><span>售价：</span><strong> ￥{$vol.shop_price}元</strong></dd>
 							</dl>
 						</li>
-						<?php endforeach; ?>
+						</volist>
 					</ul>
 				</div>
 				<!-- 新品上架 end-->

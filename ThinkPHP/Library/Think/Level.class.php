@@ -20,7 +20,7 @@ class Level{
 	 *
 	 * @return array                返回引用参数$res
 	 */
-	public function classify($data,$id=0,$field_id='id',$field_pid='pid',$field_level='level',&$res=[],$level = 0){
+	public function classify($data,$id=0,$field_id='id',$field_pid='parent_id',$field_level='level',&$res=[],$level = 0){
 		$num = count($data);
 		for ($i=0; $i < $num; $i++) {
 			if (isset($data[$i]["{$field_pid}"])&&$data[$i]["{$field_pid}"] == $id) {

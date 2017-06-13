@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>仿京东商城</title>
+	<title><?php echo ($_page_title); ?></title>
 	<link rel="stylesheet" href="/Public/Home/css/base.css" type="text/css">
 	<link rel="stylesheet" href="/Public/Home/css/global.css" type="text/css">
 	<link rel="stylesheet" href="/Public/Home/css/header.css" type="text/css">
@@ -13,6 +13,9 @@
 	<script type="text/javascript" src="/Public/Home/js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="/Public/Home/js/header.js"></script>
 	<script type="text/javascript" src="/Public/Home/js/index.js"></script>
+
+	<meta name="keywords" content="<?php echo ($_page_keywords); ?>"/>
+	<meta name="description" content="<?php echo ($_page_description); ?>"/>
 </head>
 <body>
 	<!-- 顶部导航 start -->
@@ -136,31 +139,27 @@
 		<!-- 导航条部分 start -->
 		<div class="nav w1210 bc mt10">
 			<!--  商品分类部分 start-->
-			<div class="category fl <?php if($_show_nav == 0) echo 'cat1'; ?>">
-				<div class="cat_hd <?php if($_show_nav == 0) echo 'off'; ?>">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，并将cat_bd设置为不显示(加上类none即可)，鼠标滑过时展开菜单则将off类换成on类 -->
+			<?php $show_nav=$_show_nav==0?['cat1','off','none']:['','','']; ?>
+			<div class="category fl <?php echo ($show_nav["0"]); ?>">
+<!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，并将cat_bd设置为不显示(加上类none即可)，鼠标滑过时展开菜单则将off类换成on类 -->
+				<div class="cat_hd <?php echo ($show_nav["1"]); ?>">
 					<h2>全部商品分类</h2>
 					<em></em>
 				</div>
 				
-				<div class="cat_bd <?php if($_show_nav == 0) echo 'none'; ?>"> 
+				<div class="cat_bd <?php echo ($show_nav["2"]); ?>"> 
 					<!-- 循环输出三层分类数据 -->
-					<?php foreach ($catData as $k => $v): ?>
-					<div class="cat <?php if($k==0) echo 'item1'; ?>">
-						<h3><a href=""><?php echo $v['cat_name'];?></a> <b></b></h3>
-						<div class="cat_detail none">
-							<?php foreach ($v['children'] as $k1 => $v1): ?>
-							<dl <?php if($k1==0) echo 'class="dl_1st"'; ?>>
-								<dt><a href=""><?php echo $v1['cat_name'];?></a></dt>
-								<dd>
-									<?php foreach ($v1['children'] as $k2 => $v2): ?>
-									<a href=""><?php echo $v2['cat_name'];?></a>
-									<?php endforeach; ?>					
-								</dd>
-							</dl>
-							<?php endforeach; ?>
-						</div>
-					</div>
-					<?php endforeach; ?>
+					<?php if(is_array($cat_list)): $k = 0; $__LIST__ = $cat_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($k % 2 );++$k;?><div class="cat <?php if($k==1): ?>item1<?php endif; ?>">
+							<h3><a href=""><?php echo ($vol["cat_name"]); ?></a> <b></b></h3>
+							<div class="cat_detail none">
+								<?php if(is_array($vol['children'])): $m = 0; $__LIST__ = $vol['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($m % 2 );++$m;?><dl <?php if($k==1): ?>dl_1st<?php endif; ?> >
+									<dt><a href=""><?php echo ($val["cat_name"]); ?></a></dt>
+									<dd>
+										<?php if(is_array($val['children'])): $i = 0; $__LIST__ = $val['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vnl): $mod = ($i % 2 );++$i;?><a href=""><?php echo ($vnl["cat_name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>					
+									</dd>
+								</dl><?php endforeach; endif; else: echo "" ;endif; ?>
+							</div>
+						</div><?php endforeach; endif; else: echo "" ;endif; ?>
 				</div>
 
 			</div>
@@ -183,7 +182,7 @@
 	</div>
 	<!-- 头部 end-->
 
-	<div style="clear:both;"></div>
+	<div style="clear:both;"></div> 
 
 <!-- 综合区域 start 包括幻灯展示，商城快报 -->
 	<div class="colligate w1210 bc mt10">
@@ -330,15 +329,13 @@
 				<!-- 疯狂抢购 start-->
 				<div class="crazy">
 					<ul>
-						<?php foreach ($goods1 as $k => $v): ?>
-						<li>
+						<?php if(is_array($promote_goods_list)): $i = 0; $__LIST__ = $promote_goods_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['promote_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/<?php echo ($vol["mid_logo"]); ?>"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo ($vol["goods_name"]); ?></a></dd>
+								<dd><span>售价：</span><strong> ￥<?php echo ($vol["promote_price"]); ?>元</strong></dd>
 							</dl>
-						</li>
-						<?php endforeach; ?>
+						</li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>	
 				</div>
 				<!-- 疯狂抢购 end-->
@@ -346,15 +343,13 @@
 				<!-- 热卖商品 start -->
 				<div class="hot none">
 					<ul>
-						<?php foreach ($goods3 as $k => $v): ?>
-						<li>
+						<?php if(is_array($hot_goods_list)): $i = 0; $__LIST__ = $hot_goods_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/<?php echo ($vol["mid_logo"]); ?>"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo ($vol["goods_name"]); ?></a></dd>
+								<dd><span>售价：</span><strong> ￥<?php echo ($vol["shop_price"]); ?>元</strong></dd>
 							</dl>
-						</li>
-						<?php endforeach; ?>
+						</li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 				</div>
 				<!-- 热卖商品 end -->
@@ -362,15 +357,13 @@
 				<!-- 精品商品 atart -->
 				<div class="recommend none">
 					<ul>
-						<?php foreach ($goods4 as $k => $v): ?>
-						<li>
+						<?php if(is_array($best_goods_list)): $i = 0; $__LIST__ = $best_goods_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/<?php echo ($vol["mid_logo"]); ?>"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo ($vol["goods_name"]); ?></a></dd>
+								<dd><span>售价：</span><strong> ￥<?php echo ($vol["shop_price"]); ?>元</strong></dd>
 							</dl>
-						</li>
-						<?php endforeach; ?>
+						</li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 				</div>
 				<!-- 推荐商品 end -->
@@ -378,15 +371,13 @@
 				<!-- 新品上架 start-->
 				<div class="new none">
 					<ul>
-						<?php foreach ($goods2 as $k => $v): ?>
-						<li>
+						<?php if(is_array($new_goods_list)): $i = 0; $__LIST__ = $new_goods_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php showImage($v['mid_logo']); ?></a></dt>
-								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo $v['goods_name']; ?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price']; ?>元</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id']); ?>"><img src="/<?php echo ($vol["mid_logo"]); ?>"></a></dt>
+								<dd><a href="<?php echo U('goods?id='.$v['id']); ?>"><?php echo ($vol["goods_name"]); ?></a></dd>
+								<dd><span>售价：</span><strong> ￥<?php echo ($vol["shop_price"]); ?>元</strong></dd>
 							</dl>
-						</li>
-						<?php endforeach; ?>
+						</li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 				</div>
 				<!-- 新品上架 end-->

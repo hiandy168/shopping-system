@@ -1,0 +1,1484 @@
+[ 2017-06-13T21:59:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001545s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: goods1 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 332 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 332 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 364 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 364 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 380 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 380 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 452 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 452 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002566s ]
+
+[ 2017-06-13T21:59:12+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000941s ]
+
+[ 2017-06-13T22:47:38+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:47:38' AND `promote_end_date` >= '2017-06-13 22:47:38' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000327s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000433s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: goods1 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 332 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 332 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 364 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 364 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 380 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 380 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 452 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 452 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001105s ]
+
+[ 2017-06-13T22:48:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:48:11' AND `promote_end_date` >= '2017-06-13 22:48:11' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+
+[ 2017-06-13T22:48:19+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:48:19' AND `promote_end_date` >= '2017-06-13 22:48:19' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+
+[ 2017-06-13T22:48:27+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:48:27' AND `promote_end_date` >= '2017-06-13 22:48:27' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 336 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022559s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001240s ]
+
+[ 2017-06-13T22:49:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:49:01' AND `promote_end_date` >= '2017-06-13 22:49:01' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000361s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2017-06-13T22:49:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:49:29' AND `promote_end_date` >= '2017-06-13 22:49:29' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2017-06-13T22:49:29+08:00 ] 127.0.0.1 /%7BPublic/Uploads/Goods/2017-05-28/thumb_mid_592a6c2eae566.jpg%7D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+ERR: 无法加载控制器:{Public
+
+[ 2017-06-13T22:49:41+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:49:41' AND `promote_end_date` >= '2017-06-13 22:49:41' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0136s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000284s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029919s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001884s ]
+
+[ 2017-06-13T22:49:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001715s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:49:52' AND `promote_end_date` >= '2017-06-13 22:49:52' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004910s ]
+
+[ 2017-06-13T22:50:32+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:50:32' AND `promote_end_date` >= '2017-06-13 22:50:32' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: goods3 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 346 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 378 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 450 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001713s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001678s ]
+
+[ 2017-06-13T22:56:42+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001253s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:56:42' AND `promote_end_date` >= '2017-06-13 22:56:42' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000348s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000445s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined index: promote_price E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 350 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined index: promote_price E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 350 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined index: promote_price E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 350 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined index: promote_price E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 350 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined index: promote_price E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 350 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 360 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 360 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 448 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001232s ]
+
+[ 2017-06-13T22:56:51+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000103s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:56:51' AND `promote_end_date` >= '2017-06-13 22:56:51' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000340s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000432s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: goods4 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 360 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 360 行.
+NOTIC: [8] Undefined variable: goods2 E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 448 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002610s ]
+
+[ 2017-06-13T22:58:32+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:58:32' AND `promote_end_date` >= '2017-06-13 22:58:32' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001308s ]
+
+[ 2017-06-13T22:59:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:59:04' AND `promote_end_date` >= '2017-06-13 22:59:04' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0005s ]
+
+[ 2017-06-13T22:59:12+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001392s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:59:12' AND `promote_end_date` >= '2017-06-13 22:59:12' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` LIMIT 5   [ RunTime:0.0003s ]
+
+[ 2017-06-13T22:59:37+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 22:59:37' AND `promote_end_date` >= '2017-06-13 22:59:37' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0009s ]
+
+[ 2017-06-13T23:00:17+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:00:17' AND `promote_end_date` >= '2017-06-13 23:00:17' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0006s ]
+
+[ 2017-06-13T23:00:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:00:40' AND `promote_end_date` >= '2017-06-13 23:00:40' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+
+[ 2017-06-13T23:01:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000934s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:01:11' AND `promote_end_date` >= '2017-06-13 23:01:11' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0007s ]
+
+[ 2017-06-13T23:01:30+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:01:30' AND `promote_end_date` >= '2017-06-13 23:01:30' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' LIMIT 5   [ RunTime:0.0007s ]
+
+[ 2017-06-13T23:01:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:01:40' AND `promote_end_date` >= '2017-06-13 23:01:40' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' LIMIT 5   [ RunTime:0.0004s ]
+
+[ 2017-06-13T23:01:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:01:47' AND `promote_end_date` >= '2017-06-13 23:01:47' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' LIMIT 5   [ RunTime:0.0009s ]
+
+[ 2017-06-13T23:01:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:01:52' AND `promote_end_date` >= '2017-06-13 23:01:52' AND `is_on_sale` = '是' LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028593s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001493s ]
+
+[ 2017-06-13T23:08:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:08:48' AND `promote_end_date` >= '2017-06-13 23:08:48' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0009s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031305s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001193s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001311s ]
+
+[ 2017-06-13T23:08:48+08:00 ] 127.0.0.1 /Public/Uploads/Goods/2017-05-31/thumb_mid_592e4cdc59e6d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000995s ]
+
+[ 2017-06-13T23:08:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:08:48' AND `promote_end_date` >= '2017-06-13 23:08:48' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000358s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000461s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001833s ]
+
+[ 2017-06-13T23:09:20+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:09:20' AND `promote_end_date` >= '2017-06-13 23:09:20' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000280s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033615s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002686s ]
+
+[ 2017-06-13T23:09:28+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001315s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:09:28' AND `promote_end_date` >= '2017-06-13 23:09:28' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001750s ]
+
+[ 2017-06-13T23:09:37+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001610s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0018s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:09:37' AND `promote_end_date` >= '2017-06-13 23:09:37' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0055s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0015s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000378s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000496s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005781s ]
+
+[ 2017-06-13T23:09:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000909s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:09:40' AND `promote_end_date` >= '2017-06-13 23:09:40' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000364s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003760s ]
+
+[ 2017-06-13T23:09:40+08:00 ] 127.0.0.1 /Public/Uploads/Goods/2017-05-31/thumb_mid_592e4cdc59e6d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000774s ]
+
+[ 2017-06-13T23:11:05+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000911s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `ss_category`  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-06-13 23:11:05' AND `promote_end_date` >= '2017-06-13 23:11:05' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000344s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 334 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 335 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: floorData E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 444 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029119s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002736s ]
+
+[ 2017-06-13T23:11:05+08:00 ] 127.0.0.1 /Public/Uploads/Goods/2017-05-31/thumb_mid_592e4cdc59e6d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+

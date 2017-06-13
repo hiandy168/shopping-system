@@ -8,13 +8,7 @@
 <!-- layer -->
 <script src="/Public/Admin/js/jquery-3.2.1.min.js"></script>
 <script src="/Public/Plugins/layer/layer.js"></script>
-<!-- 时间插件 -->
-<link href="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="/Public/Plugins/datetimepicker/datepicker-zh_cn.js"></script>
-<link rel="stylesheet" media="all" type="text/css" href="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
-<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
-<script type="text/javascript" src="/Public/Plugins/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+
 <!-- 文本编辑器的js文件 -->
 <link href="/Public/Plugins/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="/Public/Plugins/umeditor/third-party/jquery.min.js"></script>
@@ -158,7 +152,7 @@
                     <span id="pageNum1">当前共有<?php echo ($pages["pageNum"]); ?>页，当前为第</span>
 
                     <select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                        <?php $__FOR_START_30355__=0;$__FOR_END_30355__=$pages["pageNum"];for($i=$__FOR_START_30355__;$i < $__FOR_END_30355__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                        <?php $__FOR_START_8762__=0;$__FOR_END_8762__=$pages["pageNum"];for($i=$__FOR_START_8762__;$i < $__FOR_END_8762__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                     </select>页，可切换选择
                 </td>
             </tr>

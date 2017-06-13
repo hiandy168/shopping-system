@@ -9,9 +9,9 @@ class GoodsModel extends Model{
 	// 是否批处理验证
     protected $patchValidate    =   true;
     //定义添加操作，允许接收的表单字段
-	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id';
+	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id,promote_price,promote_start_date,promote_end_date';
     //定义更新操作，允许接收的表单字段
-	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id';
+	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id,promote_price,promote_start_date,promote_end_date';
 
 	//自定义设置验证规则，$_validate属于父类Model
 	protected $_validate = [
@@ -28,10 +28,12 @@ class GoodsModel extends Model{
 		['goods_sn','0,13',' * 货号格式或长度不合适！',0,'length'],
 		//验证店铺价格必须存在，条件1必须验证
 		['shop_price','require',' * 您是要送给别人么！',1],
-		//验证店铺价格应是货币格式
+		//验证店铺价格应是货币格式，1设定为必须验证
 		['shop_price','currency',' * 您知道这并不是一个价格！',1],
 		//验证市场价格应是货币格式
 		['market_price','currency',' * 您知道这并不是一个价格！',2],
+		//验证促销价格应是货币格式
+		['promote_price','currency',' * 您知道这并不是一个价格！',2],
 		//验证库存数量应是数字
 		['goods_number','number',' * 商品数量应该是个数字',2],
 		//验证分类选择不能是0
