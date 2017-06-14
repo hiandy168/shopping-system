@@ -58,5 +58,28 @@ class CategoryModel extends Model{
 			return $catData;  // 有缓存直接返回缓存数据
 		}
 	}
-
+	public function getFloorData(){
+		$res = $this->where([
+			'parent_id'=>['eq',0],
+			'is_floor'=>['eq','是'],
+			'is_show'=>['eq','是'],
+		])
+		->select();
+		foreach ($res as $k => $v) {
+			$res[$k]['subCat'] = $this->where([
+				'parent_id'=>['eq',$v['id']],
+				'is_floor'=>['eq','否'],
+				'is_show'=>['eq','是'],
+			])->select();
+			$res[$k]['recSubCat'] = $this->where([
+				'parent_id'=>['eq',$v['id']],
+				'is_floor'=>['eq','是'],
+				'is_show'=>['eq','是'],
+			])->select();
+			foreach ($res[$k]['recSubCat'] as $k0 => $v0) {
+				# code...
+			}
+		}
+		return $res;
+	}
 }

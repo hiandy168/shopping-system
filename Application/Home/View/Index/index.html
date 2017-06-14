@@ -272,19 +272,19 @@
 	
 	<div style="clear:both;"></div>
 
-	<?php foreach ($floorData as $k => $v): ?>
+	<volist name="floorData" id="vol">
 	<!--1F 电脑办公 start -->
 	<div class="floor1 floor w1210 bc mt10">
 		<!-- 1F 左侧 start -->
 		<div class="floor_left fl">
 			<!-- 商品分类信息 start-->
 			<div class="cate fl">
-				<h2><?php echo $v['cat_name']; ?></h2>
+				<h2>{$vol.cat_name}</h2>
 				<div class="cate_wrap">
 					<ul>
-						<?php foreach ($v['subCat'] as $k1 => $v1): ?>
-						<li><a href=""><b>.</b><?php echo $v1['cat_name']; ?></a></li>
-						<?php endforeach; ?>
+						<volist name="vol['subCat']" id="val">
+						<li><a href=""><b>.</b>{$val.cat_name}</a></li>
+						</volist>
 					</ul>
 					<p><a href=""><img src="__HOME__/images/notebook.jpg" alt="" /></a></p>
 				</div>
@@ -296,27 +296,29 @@
 			<!-- 商品列表信息 start-->
 			<div class="goodslist fl">
 				<h2>
-					<?php foreach ($v['recSubCat'] as $k1 => $v1): ?>
-					<span <?php if($k1==0) echo 'class="on"'; ?>><?php echo $v1['cat_name']; ?></span>
-					<?php endforeach; ?>
+					<volist name="vol['recSubCat']" id="val">
+					<php>if($i==1)$class='class="on"';else $class='';</php>
+					<span {$class}>{$val.cat_name}</span>
+					</volist>
 				</h2>
 				<div class="goodslist_wrap">
 					<!-- 有几个按钮就循环几个放商品的DIV,默认只显示第一个 -->
-					<?php foreach ($v['recSubCat'] as $k1 => $v1): ?>
-					<div <?php if($k1 > 0) echo 'class="none"'; ?>>
+					<volist name="vol['recSubCat']" id="val">
+					<php>if($i>1)$class='class="none"';else $class='';</php>
+					<div {$class}>
 						<ul>
-							<?php foreach ($v1['goods'] as $k2 => $v2): ?>
+							<volist name="val['goods']" id="vnl">
 							<li>
 								<dl>
-									<dt><a href="<?php echo U('goods?id='.$v2['id']); ?>"><?php showImage($v2['mid_logo']); ?></a></dt>
-									<dd><a href="<?php echo U('goods?id='.$v2['id']); ?>"><?php echo $v2['goods_name']; ?></a></dd>
-									<dd><span>售价：</span> <strong>￥<?php echo $v2['shop_price']; ?>元</strong></dd>
+									<dt><a href="<?php echo U('goods?id='.$v2['id']); ?>"><img src="{$vnl.mid_logo}"></a></dt>
+									<dd><a href="<?php echo U('goods?id='.$v2['id']); ?>">{$vnl.goods_name}</a></dd>
+									<dd><span>售价：</span> <strong>￥{$vnl.shop_price}元</strong></dd>
 								</dl>
 							</li>
-							<?php endforeach; ?>
+							</volist>
 						</ul>
 					</div>
-					<?php endforeach; ?>
+					</volist>
 				</div>
 			</div>
 			<!-- 商品列表信息 end-->
@@ -363,7 +365,7 @@
 
 	</div>
 	<!--1F 电脑办公 start -->
-	<?php endforeach; ?>
+	</volist>
 
 <!-- 引入帮助文件  -->
 <include file="Common/help" />

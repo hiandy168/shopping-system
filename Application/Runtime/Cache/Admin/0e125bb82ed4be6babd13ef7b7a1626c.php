@@ -134,6 +134,13 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="label">是否推荐到楼层：</td>
+                    <td>
+                        <input type="radio" name="is_floor" value="是" id="is_floor_1"/> 是
+                        <input type="radio" name="is_floor" value="否" id="is_floor_0"/> 否
+                    </td>
+                </tr>
+                <tr>
                     <td class="label">是否促销：</td>
                     <td>
                         促销价：￥<input type="text" name="promote_price" id="promote_price" value="<?php echo ($goods_detail["promote_price"]); ?>" size="8"/>元<br/>
@@ -432,6 +439,11 @@ window.onload=function(){
         $('#is_on_sale_1').attr('checked','true');
     }else if("<?php echo ($goods_detail["is_on_sale"]); ?>"=='否'){
         $('#is_on_sale_0').attr('checked','true');
+    }
+    if("<?php echo ($goods_detail["is_floor"]); ?>"=='是'){
+        $('#is_floor_1').attr('checked','true');
+    }else if("<?php echo ($goods_detail["is_floor"]); ?>"=='否'){
+        $('#is_floor_0').attr('checked','true');
     }
     if("<?php echo ($goods_detail["is_best"]); ?>"=='是'){
         $('#is_best').attr('checked','true');

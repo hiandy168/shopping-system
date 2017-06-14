@@ -125,6 +125,13 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="label">是否推荐到楼层：</td>
+                    <td>
+                        <input type="radio" name="is_floor" value="是"/> 是
+                        <input type="radio" name="is_floor" value="否" checked="true"/> 否
+                    </td>
+                </tr>
+                <tr>
                     <td class="label">是否促销：</td>
                     <td>
                         促销价：￥<input type="text" name="promote_price" id="promote_price" size="8"/>元<br/>

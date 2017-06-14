@@ -6,8 +6,10 @@ class IndexController extends Controller {
     	//获取首页三级分类数据
 		$catModel = D('Category');
         $goodsModel = D('Goods');
-		$res = $catModel->select();//获取所有分类数据
-		$cat_list = $catModel->getNavData($res);
+		$res = $catModel->where(['is_show'=>['eq','是']])->select();//获取所有分类数据
+		$cat_list = $catModel->getNavData($res);//将分类数据二次分类处理
+
+        $floorData = $catModel->getFloorData();
 
         //疯狂选购的商品列表,或者应该以订单数为标准
         $promote_goods_list = $goodsModel->getPromoteGoods(5);
@@ -23,6 +25,7 @@ class IndexController extends Controller {
     		'_page_keywords'=>'商城首页',
     		'_page_description'=>'商城首页',
             'cat_list'=>$cat_list,
+            'floorData'=>$floorData,
             'promote_goods_list'=>$promote_goods_list,
             'hot_goods_list'=>$hot_goods_list,
             'best_goods_list'=>$best_goods_list,

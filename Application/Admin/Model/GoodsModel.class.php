@@ -9,9 +9,9 @@ class GoodsModel extends Model{
 	// 是否批处理验证
     protected $patchValidate    =   true;
     //定义添加操作，允许接收的表单字段
-	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id,promote_price,promote_start_date,promote_end_date';
+	protected $insertFields = 'goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id,promote_price,promote_start_date,promote_end_date,is_floor';
     //定义更新操作，允许接收的表单字段
-	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id,promote_price,promote_start_date,promote_end_date';
+	protected $updateFields = 'id,goods_name,goods_sn,cat_id,brand_id,market_price,shop_price,is_on_sale,goods_desc,is_best,is_new,is_hot,sort_order,keywords,goods_img,goods_number,sort_num,member_price,type_id,promote_price,promote_start_date,promote_end_date,is_floor';
 
 	//自定义设置验证规则，$_validate属于父类Model
 	protected $_validate = [

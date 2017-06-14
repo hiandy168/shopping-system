@@ -441,19 +441,16 @@
 	
 	<div style="clear:both;"></div>
 
-	<?php foreach ($floorData as $k => $v): ?>
-	<!--1F 电脑办公 start -->
+	<?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><!--1F 电脑办公 start -->
 	<div class="floor1 floor w1210 bc mt10">
 		<!-- 1F 左侧 start -->
 		<div class="floor_left fl">
 			<!-- 商品分类信息 start-->
 			<div class="cate fl">
-				<h2><?php echo $v['cat_name']; ?></h2>
+				<h2><?php echo ($vol["cat_name"]); ?></h2>
 				<div class="cate_wrap">
 					<ul>
-						<?php foreach ($v['subCat'] as $k1 => $v1): ?>
-						<li><a href=""><b>.</b><?php echo $v1['cat_name']; ?></a></li>
-						<?php endforeach; ?>
+						<?php if(is_array($vol['subCat'])): $i = 0; $__LIST__ = $vol['subCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><a href=""><b>.</b><?php echo ($val["cat_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 					<p><a href=""><img src="/Public/Home/images/notebook.jpg" alt="" /></a></p>
 				</div>
@@ -465,27 +462,23 @@
 			<!-- 商品列表信息 start-->
 			<div class="goodslist fl">
 				<h2>
-					<?php foreach ($v['recSubCat'] as $k1 => $v1): ?>
-					<span <?php if($k1==0) echo 'class="on"'; ?>><?php echo $v1['cat_name']; ?></span>
-					<?php endforeach; ?>
+					<?php if(is_array($vol['recSubCat'])): $i = 0; $__LIST__ = $vol['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($i==1)$class='class="on"';else $class=''; ?>
+					<span <?php echo ($class); ?>><?php echo ($val["cat_name"]); ?></span><?php endforeach; endif; else: echo "" ;endif; ?>
 				</h2>
 				<div class="goodslist_wrap">
 					<!-- 有几个按钮就循环几个放商品的DIV,默认只显示第一个 -->
-					<?php foreach ($v['recSubCat'] as $k1 => $v1): ?>
-					<div <?php if($k1 > 0) echo 'class="none"'; ?>>
+					<?php if(is_array($vol['recSubCat'])): $i = 0; $__LIST__ = $vol['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($i>1)$class='class="none"';else $class=''; ?>
+					<div <?php echo ($class); ?>>
 						<ul>
-							<?php foreach ($v1['goods'] as $k2 => $v2): ?>
-							<li>
+							<?php if(is_array($val['goods'])): $i = 0; $__LIST__ = $val['goods'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vnl): $mod = ($i % 2 );++$i;?><li>
 								<dl>
-									<dt><a href="<?php echo U('goods?id='.$v2['id']); ?>"><?php showImage($v2['mid_logo']); ?></a></dt>
-									<dd><a href="<?php echo U('goods?id='.$v2['id']); ?>"><?php echo $v2['goods_name']; ?></a></dd>
-									<dd><span>售价：</span> <strong>￥<?php echo $v2['shop_price']; ?>元</strong></dd>
+									<dt><a href="<?php echo U('goods?id='.$v2['id']); ?>"><img src="<?php echo ($vnl["mid_logo"]); ?>"></a></dt>
+									<dd><a href="<?php echo U('goods?id='.$v2['id']); ?>"><?php echo ($vnl["goods_name"]); ?></a></dd>
+									<dd><span>售价：</span> <strong>￥<?php echo ($vnl["shop_price"]); ?>元</strong></dd>
 								</dl>
-							</li>
-							<?php endforeach; ?>
+							</li><?php endforeach; endif; else: echo "" ;endif; ?>
 						</ul>
-					</div>
-					<?php endforeach; ?>
+					</div><?php endforeach; endif; else: echo "" ;endif; ?>
 				</div>
 			</div>
 			<!-- 商品列表信息 end-->
@@ -531,8 +524,7 @@
 		<!-- 右侧 end -->
 
 	</div>
-	<!--1F 电脑办公 start -->
-	<?php endforeach; ?>
+	<!--1F 电脑办公 start --><?php endforeach; endif; else: echo "" ;endif; ?>
 
 <!-- 引入帮助文件  -->
 	<div style="clear:both;"></div>
