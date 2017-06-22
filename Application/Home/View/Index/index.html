@@ -273,9 +273,9 @@
 	<div style="clear:both;"></div>
 
 	<volist name="floorData" id="vol">
-	<!--1F 电脑办公 start -->
-	<div class="floor1 floor w1210 bc mt10">
-		<!-- 1F 左侧 start -->
+	<!--{$i}F 一级分类 start -->
+	<div class="floor{$i} floor w1210 bc mt10">
+		<!-- {$i}F 左侧 start -->
 		<div class="floor_left fl">
 			<!-- 商品分类信息 start-->
 			<div class="cate fl">
@@ -288,8 +288,6 @@
 					</ul>
 					<p><a href=""><img src="__HOME__/images/notebook.jpg" alt="" /></a></p>
 				</div>
-				
-
 			</div>
 			<!-- 商品分类信息 end-->
 
@@ -307,12 +305,12 @@
 					<php>if($i>1)$class='class="none"';else $class='';</php>
 					<div {$class}>
 						<ul>
-							<volist name="val['goods']" id="vnl">
+							<volist name="val['goodslist']" id="vnl">
 							<li>
 								<dl>
 									<dt><a href="<?php echo U('goods?id='.$v2['id']); ?>"><img src="{$vnl.mid_logo}"></a></dt>
 									<dd><a href="<?php echo U('goods?id='.$v2['id']); ?>">{$vnl.goods_name}</a></dd>
-									<dd><span>售价：</span> <strong>￥{$vnl.shop_price}元</strong></dd>
+									<dd><span>售价：</span> <strong>￥{$vnl.promote_price}元</strong></dd>
 								</dl>
 							</li>
 							</volist>
@@ -323,7 +321,7 @@
 			</div>
 			<!-- 商品列表信息 end-->
 		</div>
-		<!-- 1F 左侧 end -->
+		<!-- {$i}F 左侧 end -->
 		
 		<!-- 右侧 start -->
 		<div class="sidebar fl ml10">
@@ -364,7 +362,7 @@
 		<!-- 右侧 end -->
 
 	</div>
-	<!--1F 电脑办公 start -->
+	<!--{$i}F 电脑办公 end -->
 	</volist>
 
 <!-- 引入帮助文件  -->

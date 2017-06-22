@@ -59,6 +59,7 @@ class CategoryModel extends Model{
 		}
 	}
 	public function getFloorData(){
+		//获取要显示到楼层的一级主分类
 		$res = $this->where([
 			'parent_id'=>['eq',0],
 			'is_floor'=>['eq','是'],
@@ -66,18 +67,22 @@ class CategoryModel extends Model{
 		])
 		->select();
 		foreach ($res as $k => $v) {
+			//获取不要显示到楼层的分类数据
 			$res[$k]['subCat'] = $this->where([
 				'parent_id'=>['eq',$v['id']],
 				'is_floor'=>['eq','否'],
 				'is_show'=>['eq','是'],
 			])->select();
+			//获取要显示到楼层的分类数据
 			$res[$k]['recSubCat'] = $this->where([
 				'parent_id'=>['eq',$v['id']],
 				'is_floor'=>['eq','是'],
 				'is_show'=>['eq','是'],
 			])->select();
 			foreach ($res[$k]['recSubCat'] as $k0 => $v0) {
-				# code...
+				//为每个显示到楼层的二级分类选取推荐商品
+				$goodsModel = D('Goods');
+        		$res[$k]['recSubCat'][$k0]['goodslist'] = $goodsModel->getPromoteGoods(5,$res[$k]['recSubCat'][$k0]['id']);
 			}
 		}
 		return $res;

@@ -19,14 +19,11 @@ $(function(){
 		$(".guide_wrap div").hide().eq($(this).index()).show();
 
 	});
-
 	//各楼层区域切换
 	$(".goodslist h2 span").mouseover(function(){
 		$(this).addClass("on").siblings().removeClass("on");
 		$(".goodslist_wrap div").hide().eq($(this).index()).show();
-
 	});
-
 	//首页幻灯片效果
 	var len = $(".slide_items li").size(); //获取图片的数目
 	var init = 1; //设置图片切换初始值，从第二张开始

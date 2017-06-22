@@ -441,9 +441,9 @@
 	
 	<div style="clear:both;"></div>
 
-	<?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><!--1F 电脑办公 start -->
-	<div class="floor1 floor w1210 bc mt10">
-		<!-- 1F 左侧 start -->
+	<?php if(is_array($floorData)): $i = 0; $__LIST__ = $floorData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><!--<?php echo ($i); ?>F 一级分类 start -->
+	<div class="floor<?php echo ($i); ?> floor w1210 bc mt10">
+		<!-- <?php echo ($i); ?>F 左侧 start -->
 		<div class="floor_left fl">
 			<!-- 商品分类信息 start-->
 			<div class="cate fl">
@@ -454,8 +454,6 @@
 					</ul>
 					<p><a href=""><img src="/Public/Home/images/notebook.jpg" alt="" /></a></p>
 				</div>
-				
-
 			</div>
 			<!-- 商品分类信息 end-->
 
@@ -470,11 +468,11 @@
 					<?php if(is_array($vol['recSubCat'])): $i = 0; $__LIST__ = $vol['recSubCat'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($i>1)$class='class="none"';else $class=''; ?>
 					<div <?php echo ($class); ?>>
 						<ul>
-							<?php if(is_array($val['goods'])): $i = 0; $__LIST__ = $val['goods'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vnl): $mod = ($i % 2 );++$i;?><li>
+							<?php if(is_array($val['goodslist'])): $i = 0; $__LIST__ = $val['goodslist'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vnl): $mod = ($i % 2 );++$i;?><li>
 								<dl>
 									<dt><a href="<?php echo U('goods?id='.$v2['id']); ?>"><img src="<?php echo ($vnl["mid_logo"]); ?>"></a></dt>
 									<dd><a href="<?php echo U('goods?id='.$v2['id']); ?>"><?php echo ($vnl["goods_name"]); ?></a></dd>
-									<dd><span>售价：</span> <strong>￥<?php echo ($vnl["shop_price"]); ?>元</strong></dd>
+									<dd><span>售价：</span> <strong>￥<?php echo ($vnl["promote_price"]); ?>元</strong></dd>
 								</dl>
 							</li><?php endforeach; endif; else: echo "" ;endif; ?>
 						</ul>
@@ -483,7 +481,7 @@
 			</div>
 			<!-- 商品列表信息 end-->
 		</div>
-		<!-- 1F 左侧 end -->
+		<!-- <?php echo ($i); ?>F 左侧 end -->
 		
 		<!-- 右侧 start -->
 		<div class="sidebar fl ml10">
@@ -524,7 +522,7 @@
 		<!-- 右侧 end -->
 
 	</div>
-	<!--1F 电脑办公 start --><?php endforeach; endif; else: echo "" ;endif; ?>
+	<!--<?php echo ($i); ?>F 电脑办公 end --><?php endforeach; endif; else: echo "" ;endif; ?>
 
 <!-- 引入帮助文件  -->
 	<div style="clear:both;"></div>

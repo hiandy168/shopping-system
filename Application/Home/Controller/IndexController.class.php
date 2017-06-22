@@ -10,7 +10,7 @@ class IndexController extends Controller {
 		$cat_list = $catModel->getNavData($res);//将分类数据二次分类处理
 
         $floorData = $catModel->getFloorData();
-
+        
         //疯狂选购的商品列表,或者应该以订单数为标准
         $promote_goods_list = $goodsModel->getPromoteGoods(5);
         //热卖商品的列表

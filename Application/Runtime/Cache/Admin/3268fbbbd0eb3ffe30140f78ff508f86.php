@@ -152,7 +152,7 @@
                     <span id="pageNum1">当前共有<?php echo ($pages["pageNum"]); ?>页，当前为第</span>
 
                     <select name="cur_page" id="curt_page" onchange="javascript:searchc(this.value,'a')">
-                        <?php $__FOR_START_21896__=0;$__FOR_END_21896__=$pages["pageNum"];for($i=$__FOR_START_21896__;$i < $__FOR_END_21896__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
+                        <?php $__FOR_START_21246__=0;$__FOR_END_21246__=$pages["pageNum"];for($i=$__FOR_START_21246__;$i < $__FOR_END_21246__;$i+=1){ ?><option value="<?php echo ($i+1); ?>"><?php echo ($i+1); ?></option><?php } ?>
                     </select>页，可切换选择
                 </td>
             </tr>
@@ -225,7 +225,7 @@ function searchc(tar_page,poi){
         }
         if(xhr.readyState==4 && xhr.status==200){
             layer.closeAll();//关闭所有弹出层
-            // console.log(xhr.responseText);
+            // console.log(xhr.responseText);return;
             var obj = JSON.parse(xhr.responseText);
             resetpageUrl(obj.pages);
             resetpageNum(curt_page,obj.pages.pageNum);
@@ -250,7 +250,7 @@ function deletec(delete_id){
         }
         if(xhr.readyState==4 && xhr.status==200){
             layer.closeAll('loading');
-            console.log(xhr.responseText);
+            // console.log(xhr.responseText);
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
                     layer.alert('商品信息已移至回收站！',function(){

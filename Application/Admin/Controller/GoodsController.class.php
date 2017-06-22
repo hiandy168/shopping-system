@@ -13,7 +13,7 @@ class GoodsController extends CommenController {
 		if (I('get.tar_page')) {
 			//以下组装$where的条件
 			if (I('get.cat_id')!=='0') {
-				//根据分类查询商品时，获取指定分类及其子分类的所有商品
+				//根据分类查询商品时，获取指定分类及其子分类的所有ID
 				$cat_id_list = $catModel->getLevelId($catres,I('get.cat_id'),'id','parent_id','level');
 
 				//根据指定的分类ID，取出若其为主分类时的商品id
@@ -23,11 +23,10 @@ class GoodsController extends CommenController {
 				$gcids = $gcModel->field('DISTINCT goods_id as id')->where(['cat_id'=>['in',$cat_id_list]])->select();
 				//将两份id数组合并，得到主分类或者扩展分类为指定分类的商品id数组
 				$gids = array_merge($gids,$gcids);
-
 				$ids = [];
 				//遍历上面的id二维数组，得到由商品ID组成的一维数组
 				foreach ($gids as $k=>$v) {
-					if(!in_array($v['id'],$id)){
+					if(!in_array($v['id'],$ids)){
 						$ids[] = $v['id'];
 					}
 				}

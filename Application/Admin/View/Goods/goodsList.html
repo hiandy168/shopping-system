@@ -199,7 +199,7 @@ function searchc(tar_page,poi){
         }
         if(xhr.readyState==4 && xhr.status==200){
             layer.closeAll();//关闭所有弹出层
-            // console.log(xhr.responseText);
+            // console.log(xhr.responseText);return;
             var obj = JSON.parse(xhr.responseText);
             resetpageUrl(obj.pages);
             resetpageNum(curt_page,obj.pages.pageNum);
@@ -224,7 +224,7 @@ function deletec(delete_id){
         }
         if(xhr.readyState==4 && xhr.status==200){
             layer.closeAll('loading');
-            console.log(xhr.responseText);
+            // console.log(xhr.responseText);
             var object=JSON.parse(xhr.responseText,function(key,value){
                 if (value=='success') {
                     layer.alert('商品信息已移至回收站！',function(){
