@@ -58,7 +58,10 @@ class CategoryModel extends Model{
 			return $catData;  // 有缓存直接返回缓存数据
 		}
 	}
+	//获取中间楼层数据
 	public function getFloorData(){
+		$goodsModel = D('Goods');
+		$brandModel = D('Brand');
 		//获取要显示到楼层的一级主分类
 		$res = $this->where([
 			'parent_id'=>['eq',0],
@@ -66,6 +69,7 @@ class CategoryModel extends Model{
 			'is_show'=>['eq','是'],
 		])
 		->select();
+		//获取每一楼层的分类数据和商品数据
 		foreach ($res as $k => $v) {
 			//获取不要显示到楼层的分类数据
 			$res[$k]['subCat'] = $this->where([
@@ -79,10 +83,27 @@ class CategoryModel extends Model{
 				'is_floor'=>['eq','是'],
 				'is_show'=>['eq','是'],
 			])->select();
+			$goodsIds = $goodsModel->getGoodsIdByCatId($res[$k]['id']);
+			$brandIds = [];
+			if(!empty($goodsIds)){
+				$resIds = $goodsModel->
+							field('DISTINCT brand_id')->
+							where(['id'=>['in',$goodsIds]])->
+							select();
+			}
+			foreach($resIds as $v1){
+				if($v1['brand_id']!=0)
+					$brandIds[] = $v1['brand_id'];
+			}
+			shuffle($brandIds);
+			$brandIds = array_slice($brandIds,0,5);
+			if(!empty($brandIds)){
+				$res[$k]['brand_list'] = $brandModel->where(['id'=>['in',$brandIds]])->select();
+			}
+			shuffle($brandIds);
 			foreach ($res[$k]['recSubCat'] as $k0 => $v0) {
 				//为每个显示到楼层的二级分类选取推荐商品
-				$goodsModel = D('Goods');
-        		$res[$k]['recSubCat'][$k0]['goodslist'] = $goodsModel->getPromoteGoods(5,$res[$k]['recSubCat'][$k0]['id']);
+        		$res[$k]['recSubCat'][$k0]['goodslist'] = $goodsModel->getPromoteGoods(8,$res[$k]['recSubCat'][$k0]['id']);
 			}
 		}
 		return $res;
