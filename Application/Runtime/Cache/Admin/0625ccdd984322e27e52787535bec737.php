@@ -210,7 +210,9 @@
 <script>
 $('#goodsAdd').submit(function(evt){
     //收集表单域信息
+    console.log(this);
     var data = new FormData(this);
+    console.log(data);
     loadXMLDoc(data,"/Admin/Goods/goodsAdd",function(){
         if(xhr.readyState!=4){
             //layer加载层

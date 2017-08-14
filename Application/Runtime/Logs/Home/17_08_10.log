@@ -1,0 +1,303 @@
+[ 2017-08-10T11:15:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `ss_category` WHERE `is_show` = '是'  [ RunTime:0.0140s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = 0 AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '1' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '1' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_goods_cat` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0000s ]
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('22','16')  [ RunTime:0.0090s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('22','16')  [ RunTime:0.0030s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' AND `id` IN ('4','6','7','58','71','59') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('17')  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('17')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' AND `id` IN ('100','2','4','105') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('18')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('18')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' AND `id` IN ('88','105') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('19')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('19')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' AND `id` IN ('62','125','6') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('20')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('20')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' AND `id` IN ('108','4') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '2' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '2' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('21')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('21')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('25')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('25')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' AND `id` IN ('3') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('26')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('26')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' AND `id` IN ('45','46','57','82') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '3' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '3' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('30')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('30')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '4' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '4' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '12' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '12' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('')  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:47' AND `promote_end_date` >= '2017-08-10 11:15:47' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.120007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.018001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2017-08-10T11:15:48+08:00 ] 127.0.0.1 /Public/Uploads/Goods/2017-05-31/thumb_mid_592e4cdc59e6d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T11:15:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ss_category` WHERE `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = 0 AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '1' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '1' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_goods_cat` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('22','16')  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('22','16')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' AND `id` IN ('4','6','7','58','71','59') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('17')  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('17')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' AND `id` IN ('100','2','4','105') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('18')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('18')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' AND `id` IN ('88','105') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('19')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('19')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' AND `id` IN ('62','125','6') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('20')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('20')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' AND `id` IN ('108','4') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '2' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '2' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('21')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('21')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('25')  [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('25')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' AND `id` IN ('3') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('26')  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('26')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' AND `id` IN ('45','46','57','82') ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '3' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '3' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('30')  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('30')  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '4' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '4' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '12' AND `is_floor` = '否' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE `parent_id` = '12' AND `is_floor` = '是' AND `is_show` = '是'  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_category` WHERE ( is_show='是' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\ThinkPHP\Library\Think\Level.class.php 第 49 行.
+SQL: SELECT `id` FROM `ss_goods` WHERE `cat_id` IN ('')  [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT goods_id as id FROM `ss_goods_cat` WHERE `cat_id` IN ('')  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`promote_price` FROM `ss_goods` WHERE `promote_price` > 0 AND `promote_start_date` <= '2017-08-10 11:15:48' AND `promote_end_date` >= '2017-08-10 11:15:48' AND `is_on_sale` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_hot` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_best` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`goods_name`,`mid_logo`,`shop_price` FROM `ss_goods` WHERE `is_new` = '是' ORDER BY sort_num asc LIMIT 5   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 158 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined index: children D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 155 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 348 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 349 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 362 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 363 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 376 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 377 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [8] Undefined variable: v D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\shopping-system\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 493 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T11:15:48+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T11:21:33+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
