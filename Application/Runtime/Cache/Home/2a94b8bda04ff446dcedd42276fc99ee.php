@@ -490,9 +490,7 @@
 				<h2><a href="">更多品牌&nbsp;></a><strong>品牌旗舰店</strong></h2>
 				<div class="sidebar_wrap">
 					<ul>
-						<?php foreach ($v['brand'] as $k => $v): ?>
-						<li><a href=""><?php showImage($v['logo']); ?></a></li>
-						<?php endforeach; ?>
+						<?php if(is_array($vol["brand_list"])): $i = 0; $__LIST__ = $vol["brand_list"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><a href="http://<?php echo ($val["site_url"]); ?>" target="blank"><img src="<?php echo ($val["sm_logo"]); ?>" alt=""></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 					</ul>
 				</div>
 			</div>

@@ -44,7 +44,7 @@ class Level{
 	 *
 	 * @return array           		指定分类及其所有后代的ID信息
 	 */
-	public function getSubId($data,$subId,$field_id='id',$field_pid='pid'){
+	public function getSubId($data,$subId=0,$field_id='id',$field_pid='pid'){
 		$this->classify($data,$subId,$field_id,$field_pid,'level',$array);
 		foreach ($array as $v) {
 			$res[] = $v["{$field_id}"];
